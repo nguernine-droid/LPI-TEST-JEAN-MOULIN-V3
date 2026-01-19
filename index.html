@@ -71,22 +71,22 @@
 
         /* NAVIGATION */
         nav {
-            width: 320px;
+            width: 420px;
             background: var(--bg-glass);
             backdrop-filter: blur(12px);
                 border-right: 1px solid rgba(0,0,0,0.08);
             display: flex;
             flex-direction: column;
-            padding: 2.5rem 1.75rem;
+            padding: 3rem 2rem;
             flex-shrink: 0;
             z-index: 1000;
         }
 
         .logo-sidebar { margin-bottom: 2rem; }
         .logo-group { display: flex; align-items: center; gap: 14px; margin-bottom: 0.5rem; }
-        .logo-box { width: 48px; height: 48px; background: white; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); }
+        .logo-box { width: 64px; height: 64px; background: white; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); }
         .logo-box img { max-width: 80%; height: auto; }
-        .logo-title h1 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.5px; }
+        .logo-title h1 { font-size: 1.6rem; font-weight: 800; letter-spacing: -0.5px; }
 
             .inclusive-banner{
                 margin-top: 0.9rem;
@@ -352,30 +352,46 @@
 <!-- Mobile responsive patch added by assistant -->
 <style>
 @media (max-width:767px){
-  .app-layout{flex-direction:column!important;}
-  nav{position:fixed!important;left:0;top:0;bottom:0;width:100%!important}
+    .app-layout{flex-direction:column!important;}
+    nav{width:100%!important;position:relative!important;border-right:none!important;padding:1rem!important;}
+    .nav--hidden{display:none!important;}
+    .mobile-nav-toggle{display:block;position:fixed;top:12px;left:12px;z-index:12000;background:#fff;border:1px solid #ddd;padding:8px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);} 
+    img,iframe,embed,video{max-width:100%;height:auto;}
+    nav, .content, header{padding-left:1rem;padding-right:1rem;}
+}
+</style>
+<!-- Mobile responsive patch added by assistant -->
+<style>
+@media (max-width:767px){
+    .app-layout{flex-direction:column!important;}
+    nav{position:fixed!important;left:0;top:0;bottom:0;width:100%!important}
+    .mobile-nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:12999;display:none}
+    body.nav-open .mobile-nav-backdrop{display:block}
+    body.nav-open nav{transform:none}
+    .mobile-nav-toggle{display:block;position:fixed;top:12px;left:12px;z-index:12000;background:#fff;border:1px solid #ddd;padding:8px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+    img,iframe,embed,video{max-width:100%;height:auto}
+    nav, .content, header{padding-left:1rem;padding-right:1rem}
 }
 </style>
 
 <script>
 (function(){
-  function initMobileNav(){
-    if(document.getElementById('mobile-nav-toggle')) return;
-    var btn=document.createElement('button');
-    btn.id='mobile-nav-toggle';
-    btn.className='mobile-nav-toggle';
-    btn.setAttribute('aria-label','Ouvrir le menu');
-    btn.innerHTML='☰';
-    btn.onclick=function(){var n=document.querySelector('nav'); if(n) n.classList.toggle('nav--hidden');};
-    document.body.appendChild(btn);
-    function update(){ if(window.innerWidth<=767){var el=document.querySelector('nav'); if(el) el.classList.add('nav--hidden');} else {var el=document.querySelector('nav'); if(el) el.classList.remove('nav--hidden');}}
-    window.addEventListener('resize',update);
-    update();
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
+    function initMobileNav(){
+        if(document.getElementById('mobile-nav-toggle')) return;
+        var btn=document.createElement('button');
+        btn.id='mobile-nav-toggle';
+        btn.className='mobile-nav-toggle';
+        btn.setAttribute('aria-label','Ouvrir le menu');
+        btn.innerHTML='☰';
+        btn.onclick=function(){var n=document.querySelector('nav'); if(n) n.classList.toggle('nav--hidden');};
+        document.body.appendChild(btn);
+        function update(){ if(window.innerWidth<=767){var el=document.querySelector('nav'); if(el) el.classList.add('nav--hidden');} else {var el=document.querySelector('nav'); if(el) el.classList.remove('nav--hidden');}}
+        window.addEventListener('resize',update);
+        update();
+    }
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
 })();
 </script>
-
 
 </head>
 <body data-theme="light">
@@ -395,7 +411,7 @@
 </div>
 
 <div class="app-layout">
-    <nav role="navigation">
+    <nav id="mobile-nav" role="navigation" aria-label="Menu principal">
         <div class="logo-sidebar">
             <div class="logo-group">
                 <div class="logo-box">
@@ -421,7 +437,7 @@
         <ul class="nav-links">
             <li class="nav-item active" data-section="accueil"><i class="fa-solid fa-shapes"></i> Dashboard</li>
             <li class="nav-item" data-section="quickstart"><i class="fa-solid fa-rocket"></i> Démarrage Rapide</li>
-            <!-- Plan d'action supprimé -->
+            <li class="nav-item" data-section="plan-action"><i class="fa-solid fa-clipboard-list"></i> Plan d’action (1→10)</li>
             
             <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Accompagnement</div>
             <li class="nav-item" data-section="orientation"><i class="fa-solid fa-signs-post"></i> Orientation</li>
@@ -505,7 +521,7 @@
                         <div style="margin-top: 0.35rem; font-weight: 800;">45 min — démo sur 1 cas réel</div>
                         <div style="margin-top: 0.5rem; opacity: 0.85;">Pilote (direction) + personnes ressources + règles minimales + contact blocage.</div>
                         <div style="margin-top: 0.9rem;">
-                            <!-- lien vers Plan d'action supprimé -->
+                            <a href="#" onclick="switchSection('plan-action'); return false;" style="display:inline-flex; gap:8px; align-items:center; font-weight: 900; color: var(--marianne-blue); text-decoration:none;">Ouvrir le plan (1→10) <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -873,7 +889,54 @@
         </div>
     </section>
 
-    <!-- Plan d'action retiré -->
+    <!-- PARCOURS -->
+    <section id="tpl-parcours">
+        <div class="reveal">
+            <h2>Parcours de l'Élève</h2>
+            <p class="section-desc">Un parcours simplifié en 4 étapes clés.</p>
+            
+            <div class="cartoon-track">
+                <div class="c-line"></div>
+                <!-- STEP 1: DETECT -->
+                <div class="cartoon-step step-1">
+                    <div class="c-bubble">HEIN ?</div>
+                    <div class="c-icon-box">
+                        <div class="c-icon-bg"></div>
+                        <svg viewBox="0 0 100 100" class="c-icon-main" style="width:80px; height:80px; margin-top:5px;">
+                            <circle cx="50" cy="50" r="45" fill="#ffdfbf"/>
+                            <path d="M10,40 Q50,-10 90,40" fill="#4e342e"/>
+                            <circle cx="35" cy="50" r="4" fill="#333"/>
+                            <circle cx="65" cy="50" r="4" fill="#333"/>
+                            <path d="M40,75 Q50,65 60,75" stroke="#333" stroke-width="2" fill="none"/>
+                            <text x="70" y="35" font-family="Arial" font-weight="900" font-size="35" fill="#d32f2f">?</text>
+                        </svg>
+                    </div>
+                    <h4 style="font-size:1.3rem;">1. Détection</h4>
+                    <p style="font-size:0.95rem; margin-top:0.5rem;">L'enseignant repère les besoins (signaux faibles).</p>
+                </div>
+
+                <!-- STEP 2: WRITE -->
+                <div class="cartoon-step step-2">
+                    <div class="c-bubble">CLIC CLIC</div>
+                    <div class="c-icon-box">
+                        <div class="c-icon-bg"></div>
+                        <svg viewBox="0 0 100 100" class="c-icon-main" style="width:80px; height:80px; margin-top:5px;">
+                             <!-- Hair Bun -->
+                            <circle cx="50" cy="15" r="12" fill="#5D4037"/>
+                            <!-- Face -->
+                            <circle cx="50" cy="50" r="38" fill="#ffdfbf"/>
+                            <!-- Hair Front -->
+                            <path d="M15,45 Q50,-5 85,45" fill="#5D4037"/>
+                            <!-- Glasses -->
+                            <g stroke="#333" stroke-width="2" fill="rgba(255,255,255,0.3)">
+                                <circle cx="36" cy="50" r="11"/>
+                                <circle cx="64" cy="50" r="11"/>
+                                <line x1="47" y1="50" x2="53" y2="50"/>
+                            </g>
+                            <!-- Eyes -->
+                            <circle cx="36" cy="50" r="3" fill="#333"/>
+                            <circle cx="64" cy="50" r="3" fill="#333"/>
+                            <!-- Laptop -->
                             <path d="M10,80 L90,80 L85,95 L15,95 Z" fill="#90A4AE"/>
                             <rect x="20" y="85" width="60" height="5" fill="#CFD8DC" rx="2"/>
                         </svg>
