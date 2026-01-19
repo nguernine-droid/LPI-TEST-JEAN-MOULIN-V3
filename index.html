@@ -349,6 +349,37 @@
         }
 
     </style>
+<!-- Mobile responsive patch added by assistant -->
+<style>
+@media (max-width:767px){
+    .app-layout{flex-direction:column!important;}
+    nav{width:100%!important;position:relative!important;border-right:none!important;padding:1rem!important;}
+    .nav--hidden{display:none!important;}
+    .mobile-nav-toggle{display:block;position:fixed;top:12px;left:12px;z-index:12000;background:#fff;border:1px solid #ddd;padding:8px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);} 
+    img,iframe,embed,video{max-width:100%;height:auto;}
+    nav, .content, header{padding-left:1rem;padding-right:1rem;}
+}
+</style>
+
+<script>
+(function(){
+    function initMobileNav(){
+        if(document.getElementById('mobile-nav-toggle')) return;
+        var btn=document.createElement('button');
+        btn.id='mobile-nav-toggle';
+        btn.className='mobile-nav-toggle';
+        btn.setAttribute('aria-label','Ouvrir le menu');
+        btn.innerHTML='☰';
+        btn.onclick=function(){var n=document.querySelector('nav'); if(n) n.classList.toggle('nav--hidden');};
+        document.body.appendChild(btn);
+        function update(){ if(window.innerWidth<=767){var el=document.querySelector('nav'); if(el) el.classList.add('nav--hidden');} else {var el=document.querySelector('nav'); if(el) el.classList.remove('nav--hidden');}}
+        window.addEventListener('resize',update);
+        update();
+    }
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
+})();
+</script>
+
 </head>
 <body data-theme="light">
 
