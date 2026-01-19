@@ -1,0 +1,25 @@
+{
+  "name": "deployement-portail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "run_axe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nguernine-droid/LPI-TEST-JEAN-MOULIN-V3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nguernine-droid/LPI-TEST-JEAN-MOULIN-V3/issues"
+  },
+  "homepage": "https://github.com/nguernine-droid/LPI-TEST-JEAN-MOULIN-V3#readme",
+  "dependencies": {
+    "axe-core": "^4.11.1",
+    "puppeteer": "^24.35.0"
+  }
+}

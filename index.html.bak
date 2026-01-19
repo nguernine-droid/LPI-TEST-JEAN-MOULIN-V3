@@ -38,123 +38,7 @@
             --color-pai: #D93500;
         }
 
-        [data-theme="dark"] {
-            --primary: #ffffff;
-            --text-main: #e2e8f0;
-            --text-light: #94a3b8;
-            --bg-body: #0f172a;
-            --bg-glass: rgba(30, 41, 59, 0.9);
-            --accent-soft: rgba(255, 255, 255, 0.05);
-            --shadow-sm: 0 4px 12px rgba(0,0,0,0.2);
-            --shadow-md: 0 12px 32px rgba(0,0,0,0.3);
-            --marianne-blue-soft: rgba(0, 0, 145, 0.2);
-            --marianne-red-soft: rgba(225, 0, 15, 0.2);
-                --inclusive-green-soft: rgba(0, 169, 95, 0.18);
-        }
-
-        /* RESET & BASE */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body {
-            font-family: "Marianne", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            min-height: 100vh;
-            height: 100dvh;
-            overflow-x: hidden;
-            transition: background-color 0.5s ease;
-        }
-
-        .skip-link { position: absolute; left: -9999px; top: -9999px; background: white; color: var(--marianne-blue); padding: 0.5rem 1rem; border: 2px solid var(--marianne-blue); border-radius: var(--radius-sm); z-index: 11000; }
-        .skip-link:focus { left: 20px; top: 20px; }
-
-        .app-layout { display: flex; width: 100%; min-height: 100vh; height: 100dvh; position: relative; }
-
-        /* NAVIGATION */
-        nav {
-            width: 320px;
-            background: var(--bg-glass);
-            backdrop-filter: blur(12px);
-                border-right: 1px solid rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: column;
-            padding: 2.5rem 1.75rem;
-            flex-shrink: 0;
-            z-index: 1000;
-        }
-
-        .logo-sidebar { margin-bottom: 2rem; }
-        .logo-group { display: flex; align-items: center; gap: 14px; margin-bottom: 0.5rem; }
-        .logo-box { width: 48px; height: 48px; background: white; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); }
-        .logo-box img { max-width: 80%; height: auto; }
-        .logo-title h1 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.5px; }
-
-            .inclusive-banner{
-                margin-top: 0.9rem;
-                padding: 0.95rem 1rem;
-                border-radius: var(--radius-md);
-                border: 1px solid rgba(0,0,0,0.06);
-                background: linear-gradient(90deg, var(--marianne-blue-soft), #fff);
-                box-shadow: var(--shadow-sm);
-                position: relative;
-                overflow: hidden;
-            }
-            .inclusive-banner::before{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 4px;
-                background: linear-gradient(90deg, var(--marianne-blue) 0 33%, #ffffff 33% 66%, var(--marianne-red) 66% 100%);
-                opacity: 0.9;
-            }
-            .inclusive-banner-title{
-                display:flex;
-                align-items:center;
-                gap: 0.55rem;
-                font-weight: 900;
-                color: var(--marianne-blue);
-                letter-spacing: -0.2px;
-            }
-            .inclusive-banner-title i{ color: var(--inclusive-green); }
-            .inclusive-banner-sub{
-                margin-top: 0.25rem;
-                font-size: 0.82rem;
-                font-weight: 700;
-                color: var(--text-light);
-                opacity: 0.95;
-            }
-            [data-theme="dark"] .inclusive-banner{
-                border-color: rgba(255,255,255,0.12);
-                background: rgba(255,255,255,0.06);
-                box-shadow: var(--shadow-sm);
-            }
-            [data-theme="dark"] .inclusive-banner-title{ color: var(--text-main); }
-            [data-theme="dark"] .inclusive-banner-sub{ color: var(--text-light); }
-
-        .search-box { position: relative; margin-bottom: 2rem; }
-        .search-box i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-light); opacity: 0.6; }
-        .search-box input { width: 100%; padding: 0.85rem 1rem 0.85rem 2.8rem; border-radius: var(--radius-md); border: 2px solid transparent; background: var(--accent-soft); font-family: inherit; font-size: 0.9rem; transition: var(--transition); }
-        .search-box input:focus { border-color: var(--marianne-blue); background: white; outline: none; }
-
-        .nav-links { list-style: none; flex-grow: 1; overflow-y: auto; padding-right: 10px; }
-        .nav-links::-webkit-scrollbar { width: 4px; }
-        .nav-links::-webkit-scrollbar-thumb { background: var(--accent-soft); border-radius: 4px; }
-
-        .nav-item { padding: 0.9rem 1.1rem; margin-bottom: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 14px; border-radius: var(--radius-md); color: var(--text-light); font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
-            .nav-item:hover { background: var(--accent-soft); color: var(--marianne-blue); }
-        .nav-item.active { background: var(--marianne-blue); color: white; box-shadow: 0 10px 20px -5px rgba(0, 0, 145, 0.3); }
-        .nav-item.family-nav.active { background: var(--marianne-red); box-shadow: 0 10px 20px -5px rgba(225, 0, 15, 0.3); }
-
-        body[data-kiosk="true"] nav { display: none; }
-        body[data-kiosk="true"] main { padding: 3rem 2.5rem; }
-        body[data-kiosk="true"] .app-layout { height: auto; }
-
-        body[data-print="true"] nav { display: none; }
-        body[data-print="true"] main { padding: 2.5rem 2rem; }
-        body[data-print="true"] html, body { overflow: auto; height: auto; }
-        body[data-print="true"] .app-layout { height: auto; }
-        body[data-print="true"] .card:hover { transform: none; box-shadow: var(--shadow-sm); border-color: rgba(0,0,0,0.04); }
+        <!-- Plan d'action section removed -->
         body[data-print="true"] .reveal > * { opacity: 1 !important; transform: none !important; filter: none !important; }
 
         .print-header {
@@ -352,34 +236,49 @@
 <!-- Mobile responsive patch added by assistant -->
 <style>
 @media (max-width:767px){
-  .app-layout{flex-direction:column!important;}
-  nav{width:100%!important;position:relative!important;border-right:none!important;padding:1rem!important;}
-  .nav--hidden{display:none!important;}
-  .mobile-nav-toggle{display:block;position:fixed;top:12px;left:12px;z-index:12000;background:#fff;border:1px solid #ddd;padding:8px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
-  img,iframe,embed,video{max-width:100%;height:auto;}
-  nav, .content, header{padding-left:1rem;padding-right:1rem;}
+    .app-layout{flex-direction:column!important;}
+    nav{width:100%!important;position:relative!important;border-right:none!important;padding:1rem!important;}
+    .nav--hidden{display:none!important;}
+    .mobile-nav-toggle{display:block;position:fixed;top:12px;left:12px;z-index:12000;background:#fff;border:1px solid #ddd;padding:8px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);} 
+    img,iframe,embed,video{max-width:100%;height:auto;}
+    nav, .content, header{padding-left:1rem;padding-right:1rem;}
 }
+(}</style>
+
+<style>
+/* Scrollbar styling for the sidebar nav */
+nav { overflow-y: auto; scrollbar-width: auto; scrollbar-color: rgba(0,0,0,0.36) transparent; }
+nav::-webkit-scrollbar { width: 18px; }
+nav::-webkit-scrollbar-track { background: transparent; }
+nav::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.36); border-radius: 10px; border: 4px solid rgba(255,255,255,0.6); box-shadow: inset 0 0 0 2px rgba(0,0,0,0.06); }
 </style>
 
 <script>
 (function(){
-  function initMobileNav(){
-    if(document.getElementById('mobile-nav-toggle')) return;
-    var btn=document.createElement('button');
-    btn.id='mobile-nav-toggle';
-    btn.className='mobile-nav-toggle';
-    btn.setAttribute('aria-label','Ouvrir le menu');
-    btn.innerHTML='☰';
-    btn.onclick=function(){var n=document.querySelector('nav'); if(n) n.classList.toggle('nav--hidden');};
-    document.body.appendChild(btn);
-    function update(){ if(window.innerWidth<=767){var el=document.querySelector('nav'); if(el) el.classList.add('nav--hidden');} else {var el=document.querySelector('nav'); if(el) el.classList.remove('nav--hidden');}}
-    window.addEventListener('resize',update);
-    update();
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
+    function initMobileNav(){
+        if(document.getElementById('mobile-nav-toggle')) return;
+        var btn=document.createElement('button');
+        btn.id='mobile-nav-toggle';
+        btn.className='mobile-nav-toggle';
+        btn.setAttribute('aria-label','Ouvrir le menu');
+        btn.innerHTML='☰';
+        btn.onclick=function(){var n=document.querySelector('nav'); if(n) n.classList.toggle('nav--hidden');};
+        document.body.appendChild(btn);
+        function update(){ if(window.innerWidth<=767){var el=document.querySelector('nav'); if(el) el.classList.add('nav--hidden');} else {var el=document.querySelector('nav'); if(el) el.classList.remove('nav--hidden');}}
+        window.addEventListener('resize',update);
+        update();
+    }
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
 })();
 </script>
 
+<style>
+/* Forcefully style sidebar scrollbar including .nav-links to override other rules */
+.nav-links, nav { scrollbar-width: auto !important; scrollbar-color: rgba(0,0,0,0.56) transparent !important; }
+.nav-links::-webkit-scrollbar, nav::-webkit-scrollbar { width: 20px !important; }
+.nav-links::-webkit-scrollbar-track, nav::-webkit-scrollbar-track { background: transparent !important; }
+.nav-links::-webkit-scrollbar-thumb, nav::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.56) !important; border-radius: 12px !important; border: 4px solid rgba(255,255,255,0.6) !important; box-shadow: inset 0 0 0 3px rgba(0,0,0,0.08) !important; }
+</style>
 
 </head>
 <body data-theme="light">
@@ -450,33 +349,29 @@
             <li class="nav-item" data-section="rgpd"><i class="fa-solid fa-scale-balanced"></i> RGPD</li>
         </ul>
 
-        <div class="nav-footer">
-            <button id="theme-toggle" onclick="toggleTheme()" aria-pressed="false" style="background:var(--accent-soft); border:none; padding:10px; border-radius:8px; cursor:pointer; font-weight:700; font-size:0.8rem; color:var(--text-light); text-align:left;">
-                <i class="fa-solid fa-moon"></i> Mode Sombre
-            </button>
-            <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" class="btn-lpi-go">ACCÈS DIRECT LPI</a>
-            <a href="PRESENTATION_LPI_JEAN_MOULIN_DOC_TRAVAIL_12SLIDES.html" target="_blank" class="btn-lpi-go" style="background:var(--marianne-red);">DÉMO PRÉSENTATION (12 SLIDES)</a>
-            <button id="run-tests-btn" style="display:none; margin-top:6px; background:transparent; border:1px dashed rgba(0,0,0,0.06); padding:8px; border-radius:8px; font-weight:700; font-size:0.85rem; color:var(--text-light);">Run tests</button>
-        </div>
-    </nav>
-
-    <main id="main-content" tabindex="-1">
-        <div class="container" id="view-port">
-            <!-- Injecté via JS -->
-        </div>
-    </main>
-</div>
-
-<!-- TEMPLATES -->
-<div id="templates" style="display:none;">
-
-    <!-- ACCUEIL -->
-    <section id="tpl-accueil">
-        <div class="reveal">
-            <h2>Bienvenue sur votre <br><span style="color:var(--marianne-blue)">Espace Inclusif.</span></h2>
-            <p class="section-desc">Coordonnez l'accompagnement de vos élèves avec simplicité et sécurité.</p>
-            
-            <!-- Widgets moved for logical flow -->
+        <ul class="nav-links">
+            <li class="nav-item active" data-section="accueil"><i class="fa-solid fa-shapes"></i> Dashboard</li>
+            <li class="nav-item" data-section="quickstart"><i class="fa-solid fa-rocket"></i> Démarrage Rapide</li>
+            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Accompagnement</div>
+            <li class="nav-item" data-section="orientation"><i class="fa-solid fa-signs-post"></i> Orientation</li>
+            <li class="nav-item" data-section="parcours"><i class="fa-solid fa-route"></i> Parcours Élève</li>
+            <li class="nav-item" data-section="dispositifs"><i class="fa-solid fa-folder-tree"></i> Dispositifs</li>
+            <li class="nav-item" data-section="situations"><i class="fa-solid fa-people-arrows"></i> Cas Spécifiques</li>
+            <li class="nav-item" data-section="segpa-ulyss"><i class="fa-solid fa-hands-holding-child"></i> SEGPA & ULYSS</li>
+            <li class="nav-item" data-section="primaire"><i class="fa-solid fa-school"></i> Primaire & Continuité</li>
+            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Ressources</div>
+            <li class="nav-item" data-section="guides"><i class="fa-solid fa-book-bookmark"></i> Guides Pratiques</li>
+            <li class="nav-item" data-section="calendrier"><i class="fa-solid fa-calendar-alt"></i> Calendrier</li>
+            <li class="nav-item" data-section="demande-droits"><i class="fa-solid fa-users-gear"></i> Acteurs & Périmètres</li>
+            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Infos & Aide</div>
+            <li class="nav-item" data-section="bienvenue"><i class="fa-solid fa-face-smile"></i> Bienvenue</li>
+            <li class="nav-item" data-section="utilite"><i class="fa-solid fa-lightbulb"></i> À quoi ça sert ?</li>
+            <li class="nav-item family-nav" data-section="famille"><i class="fa-solid fa-house-user"></i> Espace Famille</li>
+            <li class="nav-item" data-section="glossaire"><i class="fa-solid fa-language"></i> Glossaire</li>
+            <li class="nav-item" data-section="faq"><i class="fa-solid fa-circle-question"></i> FAQ</li>
+            <li class="nav-item" data-section="contact"><i class="fa-solid fa-paper-plane"></i> Contact</li>
+            <li class="nav-item" data-section="rgpd"><i class="fa-solid fa-scale-balanced"></i> RGPD</li>
+        </ul>
 
             <!-- MISE EN AVANT: UTILITÉ -->
             <div onclick="switchSection('utilite')" style="cursor:pointer; background: linear-gradient(to right, var(--marianne-blue-soft), #fff); border-left: 6px solid var(--marianne-blue); padding: 2rem; border-radius: var(--radius-md); margin-bottom: 3rem; display:flex; flex-wrap:wrap; align-items:center; gap:2rem; box-shadow: var(--shadow-sm); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
@@ -2207,6 +2102,39 @@ Date : __________  Signature : __________________________________</pre>
         });
     }
 
+</script>
+<script>
+// Fallback: delegated handler to ensure nav clicks always trigger
+;(function(){
+    try{
+        const navList = document.querySelector('.nav-links');
+        if(!navList) return;
+        navList.addEventListener('click', function(e){
+            const li = e.target && e.target.closest ? e.target.closest('.nav-item') : null;
+            if(!li) return;
+            const section = li.dataset && li.dataset.section;
+            try{
+                if(typeof switchSection === 'function') switchSection(section);
+                else {
+                    // minimal fallback: set hash and try to inject template
+                    location.hash = section ? ('#' + section) : location.hash;
+                    const tpl = document.getElementById('tpl-' + section);
+                    const viewport = document.getElementById('view-port');
+                    if(tpl && viewport) viewport.innerHTML = tpl.innerHTML;
+                }
+            }catch(err){
+                console.error('nav click handler error', err);
+            }
+            // close mobile nav after selection for small viewports
+            try{
+                if(window.innerWidth <= 767){
+                    const nav = document.querySelector('nav');
+                    if(nav) nav.classList.add('nav--hidden');
+                }
+            }catch(_){/* noop */}
+        }, false);
+    }catch(e){ console.error('nav delegation setup failed', e); }
+})();
 </script>
 
 </body>
