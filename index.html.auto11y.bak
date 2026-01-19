@@ -38,123 +38,7 @@
             --color-pai: #D93500;
         }
 
-        [data-theme="dark"] {
-            --primary: #ffffff;
-            --text-main: #e2e8f0;
-            --text-light: #94a3b8;
-            --bg-body: #0f172a;
-            --bg-glass: rgba(30, 41, 59, 0.9);
-            --accent-soft: rgba(255, 255, 255, 0.05);
-            --shadow-sm: 0 4px 12px rgba(0,0,0,0.2);
-            --shadow-md: 0 12px 32px rgba(0,0,0,0.3);
-            --marianne-blue-soft: rgba(0, 0, 145, 0.2);
-            --marianne-red-soft: rgba(225, 0, 15, 0.2);
-                --inclusive-green-soft: rgba(0, 169, 95, 0.18);
-        }
-
-        /* RESET & BASE */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html, body {
-            font-family: "Marianne", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            min-height: 100vh;
-            height: 100dvh;
-            overflow-x: hidden;
-            transition: background-color 0.5s ease;
-        }
-
-        .skip-link { position: absolute; left: -9999px; top: -9999px; background: white; color: var(--marianne-blue); padding: 0.5rem 1rem; border: 2px solid var(--marianne-blue); border-radius: var(--radius-sm); z-index: 11000; }
-        .skip-link:focus { left: 20px; top: 20px; }
-
-        .app-layout { display: flex; width: 100%; min-height: 100vh; height: 100dvh; position: relative; }
-
-        /* NAVIGATION */
-        nav {
-            width: 320px;
-            background: var(--bg-glass);
-            backdrop-filter: blur(12px);
-                border-right: 1px solid rgba(0,0,0,0.08);
-            display: flex;
-            flex-direction: column;
-            padding: 2.5rem 1.75rem;
-            flex-shrink: 0;
-            z-index: 1000;
-        }
-
-        .logo-sidebar { margin-bottom: 2rem; }
-        .logo-group { display: flex; align-items: center; gap: 14px; margin-bottom: 0.5rem; }
-        .logo-box { width: 48px; height: 48px; background: white; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); }
-        .logo-box img { max-width: 80%; height: auto; }
-        .logo-title h1 { font-size: 1.35rem; font-weight: 800; letter-spacing: -0.5px; }
-
-            .inclusive-banner{
-                margin-top: 0.9rem;
-                padding: 0.95rem 1rem;
-                border-radius: var(--radius-md);
-                border: 1px solid rgba(0,0,0,0.06);
-                background: linear-gradient(90deg, var(--marianne-blue-soft), #fff);
-                box-shadow: var(--shadow-sm);
-                position: relative;
-                overflow: hidden;
-            }
-            .inclusive-banner::before{
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 4px;
-                background: linear-gradient(90deg, var(--marianne-blue) 0 33%, #ffffff 33% 66%, var(--marianne-red) 66% 100%);
-                opacity: 0.9;
-            }
-            .inclusive-banner-title{
-                display:flex;
-                align-items:center;
-                gap: 0.55rem;
-                font-weight: 900;
-                color: var(--marianne-blue);
-                letter-spacing: -0.2px;
-            }
-            .inclusive-banner-title i{ color: var(--inclusive-green); }
-            .inclusive-banner-sub{
-                margin-top: 0.25rem;
-                font-size: 0.82rem;
-                font-weight: 700;
-                color: var(--text-light);
-                opacity: 0.95;
-            }
-            [data-theme="dark"] .inclusive-banner{
-                border-color: rgba(255,255,255,0.12);
-                background: rgba(255,255,255,0.06);
-                box-shadow: var(--shadow-sm);
-            }
-            [data-theme="dark"] .inclusive-banner-title{ color: var(--text-main); }
-            [data-theme="dark"] .inclusive-banner-sub{ color: var(--text-light); }
-
-        .search-box { position: relative; margin-bottom: 2rem; }
-        .search-box i { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-light); opacity: 0.6; }
-        .search-box input { width: 100%; padding: 0.85rem 1rem 0.85rem 2.8rem; border-radius: var(--radius-md); border: 2px solid transparent; background: var(--accent-soft); font-family: inherit; font-size: 0.9rem; transition: var(--transition); }
-        .search-box input:focus { border-color: var(--marianne-blue); background: white; outline: none; }
-
-        .nav-links { list-style: none; flex-grow: 1; overflow-y: auto; padding-right: 10px; }
-        .nav-links::-webkit-scrollbar { width: 4px; }
-        .nav-links::-webkit-scrollbar-thumb { background: var(--accent-soft); border-radius: 4px; }
-
-        .nav-item { padding: 0.9rem 1.1rem; margin-bottom: 0.5rem; cursor: pointer; display: flex; align-items: center; gap: 14px; border-radius: var(--radius-md); color: var(--text-light); font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
-            .nav-item:hover { background: var(--accent-soft); color: var(--marianne-blue); }
-        .nav-item.active { background: var(--marianne-blue); color: white; box-shadow: 0 10px 20px -5px rgba(0, 0, 145, 0.3); }
-        .nav-item.family-nav.active { background: var(--marianne-red); box-shadow: 0 10px 20px -5px rgba(225, 0, 15, 0.3); }
-
-        body[data-kiosk="true"] nav { display: none; }
-        body[data-kiosk="true"] main { padding: 3rem 2.5rem; }
-        body[data-kiosk="true"] .app-layout { height: auto; }
-
-        body[data-print="true"] nav { display: none; }
-        body[data-print="true"] main { padding: 2.5rem 2rem; }
-        body[data-print="true"] html, body { overflow: auto; height: auto; }
-        body[data-print="true"] .app-layout { height: auto; }
-        body[data-print="true"] .card:hover { transform: none; box-shadow: var(--shadow-sm); border-color: rgba(0,0,0,0.04); }
+        
         body[data-print="true"] .reveal > * { opacity: 1 !important; transform: none !important; filter: none !important; }
 
         .print-header {
@@ -254,14 +138,10 @@
         .splash-title { font-size: 4rem; font-weight: 900; letter-spacing: -3px; animation: splashText 1.5s ease-out; }
         @keyframes splashText { from { opacity: 0; filter: blur(20px); transform: scale(0.8); } to { opacity: 1; filter: blur(0); transform: scale(1); } }
 
-
-
         /* REVEAL SYSTEM */
         .reveal > * { opacity: 0; transform: translateY(30px); filter: blur(10px); }
         .reveal.active > * { animation: revealIn 0.8s forwards cubic-bezier(0.16, 1, 0.3, 1); }
         @keyframes revealIn { to { opacity: 1; transform: translateY(0); filter: blur(0); } }
-
-
 
         /* COMPONENT STYLES */
         .badge { display: inline-block; padding: 0.5rem 1rem; border-radius: var(--radius-sm); font-weight: 800; font-size: 0.8rem; color: white; margin-bottom: 1.25rem; }
@@ -352,34 +232,49 @@
 <!-- Mobile responsive patch added by assistant -->
 <style>
 @media (max-width:767px){
-  .app-layout{flex-direction:column!important;}
-  nav{width:100%!important;position:relative!important;border-right:none!important;padding:1rem!important;}
-  .nav--hidden{display:none!important;}
-  .mobile-nav-toggle{display:block;position:fixed;top:12px;left:12px;z-index:12000;background:#fff;border:1px solid #ddd;padding:8px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
-  img,iframe,embed,video{max-width:100%;height:auto;}
-  nav, .content, header{padding-left:1rem;padding-right:1rem;}
+    .app-layout{flex-direction:column!important;}
+    nav{width:100%!important;position:relative!important;border-right:none!important;padding:1rem!important;}
+    .nav--hidden{display:none!important;}
+    .mobile-nav-toggle{display:block;position:fixed;top:12px;left:12px;z-index:12000;background:#fff;border:1px solid #ddd;padding:8px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);} 
+    img,iframe,embed,video{max-width:100%;height:auto;}
+    nav, .content, header{padding-left:1rem;padding-right:1rem;}
 }
+(}</style>
+
+<style>
+/* Scrollbar styling for the sidebar nav */
+nav { overflow-y: auto; scrollbar-width: auto; scrollbar-color: rgba(0,0,0,0.36) transparent; }
+nav::-webkit-scrollbar { width: 18px; }
+nav::-webkit-scrollbar-track { background: transparent; }
+nav::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.36); border-radius: 10px; border: 4px solid rgba(255,255,255,0.6); box-shadow: inset 0 0 0 2px rgba(0,0,0,0.06); }
 </style>
 
 <script>
 (function(){
-  function initMobileNav(){
-    if(document.getElementById('mobile-nav-toggle')) return;
-    var btn=document.createElement('button');
-    btn.id='mobile-nav-toggle';
-    btn.className='mobile-nav-toggle';
-    btn.setAttribute('aria-label','Ouvrir le menu');
-    btn.innerHTML='☰';
-    btn.onclick=function(){var n=document.querySelector('nav'); if(n) n.classList.toggle('nav--hidden');};
-    document.body.appendChild(btn);
-    function update(){ if(window.innerWidth<=767){var el=document.querySelector('nav'); if(el) el.classList.add('nav--hidden');} else {var el=document.querySelector('nav'); if(el) el.classList.remove('nav--hidden');}}
-    window.addEventListener('resize',update);
-    update();
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
+    function initMobileNav(){
+        if(document.getElementById('mobile-nav-toggle')) return;
+        var btn=document.createElement('button');
+        btn.id='mobile-nav-toggle';
+        btn.className='mobile-nav-toggle';
+        btn.setAttribute('aria-label','Ouvrir le menu');
+        btn.innerHTML='☰';
+        btn.onclick=function(){var n=document.querySelector('nav'); if(n) n.classList.toggle('nav--hidden');};
+        document.body.appendChild(btn);
+        function update(){ if(window.innerWidth<=767){var el=document.querySelector('nav'); if(el) el.classList.add('nav--hidden');} else {var el=document.querySelector('nav'); if(el) el.classList.remove('nav--hidden');}}
+        window.addEventListener('resize',update);
+        update();
+    }
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
 })();
 </script>
 
+<style>
+/* Forcefully style sidebar scrollbar including .nav-links to override other rules */
+.nav-links, nav { scrollbar-width: auto !important; scrollbar-color: rgba(0,0,0,0.56) transparent !important; }
+.nav-links::-webkit-scrollbar, nav::-webkit-scrollbar { width: 20px !important; }
+.nav-links::-webkit-scrollbar-track, nav::-webkit-scrollbar-track { background: transparent !important; }
+.nav-links::-webkit-scrollbar-thumb, nav::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.56) !important; border-radius: 12px !important; border: 4px solid rgba(255,255,255,0.6) !important; box-shadow: inset 0 0 0 3px rgba(0,0,0,0.08) !important; }
+</style>
 
 </head>
 <body data-theme="light">
@@ -425,7 +320,6 @@
         <ul class="nav-links">
             <li class="nav-item active" data-section="accueil"><i class="fa-solid fa-shapes"></i> Dashboard</li>
             <li class="nav-item" data-section="quickstart"><i class="fa-solid fa-rocket"></i> Démarrage Rapide</li>
-            <li class="nav-item" data-section="plan-action"><i class="fa-solid fa-clipboard-list"></i> Plan d’action (1→10)</li>
             
             <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Accompagnement</div>
             <li class="nav-item" data-section="orientation"><i class="fa-solid fa-signs-post"></i> Orientation</li>
@@ -450,36 +344,32 @@
             <li class="nav-item" data-section="rgpd"><i class="fa-solid fa-scale-balanced"></i> RGPD</li>
         </ul>
 
-        <div class="nav-footer">
-            <button id="theme-toggle" onclick="toggleTheme()" aria-pressed="false" style="background:var(--accent-soft); border:none; padding:10px; border-radius:8px; cursor:pointer; font-weight:700; font-size:0.8rem; color:var(--text-light); text-align:left;">
-                <i class="fa-solid fa-moon"></i> Mode Sombre
-            </button>
-            <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" class="btn-lpi-go">ACCÈS DIRECT LPI</a>
-            <a href="PRESENTATION_LPI_JEAN_MOULIN_DOC_TRAVAIL_12SLIDES.html" target="_blank" class="btn-lpi-go" style="background:var(--marianne-red);">DÉMO PRÉSENTATION (12 SLIDES)</a>
-            <button id="run-tests-btn" style="display:none; margin-top:6px; background:transparent; border:1px dashed rgba(0,0,0,0.06); padding:8px; border-radius:8px; font-weight:700; font-size:0.85rem; color:var(--text-light);">Run tests</button>
-        </div>
-    </nav>
-
-    <main id="main-content" tabindex="-1">
-        <div class="container" id="view-port">
-            <!-- Injecté via JS -->
-        </div>
-    </main>
-</div>
-
-<!-- TEMPLATES -->
-<div id="templates" style="display:none;">
-
-    <!-- ACCUEIL -->
-    <section id="tpl-accueil">
-        <div class="reveal">
-            <h2>Bienvenue sur votre <br><span style="color:var(--marianne-blue)">Espace Inclusif.</span></h2>
-            <p class="section-desc">Coordonnez l'accompagnement de vos élèves avec simplicité et sécurité.</p>
-            
-            <!-- Widgets moved for logical flow -->
+        <ul class="nav-links">
+            <li class="nav-item active" data-section="accueil"><i class="fa-solid fa-shapes"></i> Dashboard</li>
+            <li class="nav-item" data-section="quickstart"><i class="fa-solid fa-rocket"></i> Démarrage Rapide</li>
+            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Accompagnement</div>
+            <li class="nav-item" data-section="orientation"><i class="fa-solid fa-signs-post"></i> Orientation</li>
+            <li class="nav-item" data-section="parcours"><i class="fa-solid fa-route"></i> Parcours Élève</li>
+            <li class="nav-item" data-section="dispositifs"><i class="fa-solid fa-folder-tree"></i> Dispositifs</li>
+            <li class="nav-item" data-section="situations"><i class="fa-solid fa-people-arrows"></i> Cas Spécifiques</li>
+            <li class="nav-item" data-section="segpa-ulyss"><i class="fa-solid fa-hands-holding-child"></i> SEGPA & ULYSS</li>
+            <li class="nav-item" data-section="primaire"><i class="fa-solid fa-school"></i> Primaire & Continuité</li>
+            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Ressources</div>
+            <li class="nav-item" data-section="guides"><i class="fa-solid fa-book-bookmark"></i> Guides Pratiques</li>
+            <li class="nav-item" data-section="calendrier"><i class="fa-solid fa-calendar-alt"></i> Calendrier</li>
+            <li class="nav-item" data-section="demande-droits"><i class="fa-solid fa-users-gear"></i> Acteurs & Périmètres</li>
+            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Infos & Aide</div>
+            <li class="nav-item" data-section="bienvenue"><i class="fa-solid fa-face-smile"></i> Bienvenue</li>
+            <li class="nav-item" data-section="utilite"><i class="fa-solid fa-lightbulb"></i> À quoi ça sert ?</li>
+            <li class="nav-item family-nav" data-section="famille"><i class="fa-solid fa-house-user"></i> Espace Famille</li>
+            <li class="nav-item" data-section="glossaire"><i class="fa-solid fa-language"></i> Glossaire</li>
+            <li class="nav-item" data-section="faq"><i class="fa-solid fa-circle-question"></i> FAQ</li>
+            <li class="nav-item" data-section="contact"><i class="fa-solid fa-paper-plane"></i> Contact</li>
+            <li class="nav-item" data-section="rgpd"><i class="fa-solid fa-scale-balanced"></i> RGPD</li>
+        </ul>
 
             <!-- MISE EN AVANT: UTILITÉ -->
-            <div onclick="switchSection('utilite')" style="cursor:pointer; background: linear-gradient(to right, var(--marianne-blue-soft), #fff); border-left: 6px solid var(--marianne-blue); padding: 2rem; border-radius: var(--radius-md); margin-bottom: 3rem; display:flex; flex-wrap:wrap; align-items:center; gap:2rem; box-shadow: var(--shadow-sm); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div onclick="switchSection('utilite')" style="cursor:pointer; background: linear-gradient(to right, var(--marianne-blue-soft), #fff); border-left: 6px solid var(--marianne-blue); padding: 2rem; border-radius: var(--radius-md); margin-bottom: 3rem; display:flex; flex-wrap:wrap; align-items:center; gap:2rem; box-shadow: var(--shadow-sm); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'" aria-label="Ouvrir la section utilite" role="button" tabindex="0">
                 <div style="font-size:2.5rem; color:var(--marianne-blue); background:white; width:80px; height:80px; display:flex; align-items:center; justify-content:center; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.05); min-width:80px;"><i class="fa-solid fa-lightbulb"></i></div>
                 <div style="flex-grow:1;">
                     <h3 style="font-size:1.6rem; font-weight:800; margin-bottom:0.5rem; color:var(--text-main);">À quoi sert le LPI ?</h3>
@@ -509,7 +399,6 @@
                         <div style="margin-top: 0.35rem; font-weight: 800;">45 min — démo sur 1 cas réel</div>
                         <div style="margin-top: 0.5rem; opacity: 0.85;">Pilote (direction) + personnes ressources + règles minimales + contact blocage.</div>
                         <div style="margin-top: 0.9rem;">
-                            <a href="#" onclick="switchSection('plan-action'); return false;" style="display:inline-flex; gap:8px; align-items:center; font-weight: 900; color: var(--marianne-blue); text-decoration:none;">Ouvrir le plan (1→10) <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -561,17 +450,17 @@
             </div>
 
             <div class="grid">
-                <div class="card" onclick="switchSection('dispositifs')" style="cursor:pointer;">
+                <div class="card" onclick="switchSection('dispositifs')" style="cursor:pointer;" aria-label="Ouvrir la section dispositifs" role="button" tabindex="0">
                     <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
                     <h4>Quel dispositif ?</h4>
                     <p>Analysez les besoins et déterminez le cadre réglementaire idéal (PPRE, PAP, PPS, PAI).</p>
                 </div>
-                <div class="card" onclick="switchSection('guides')" style="cursor:pointer;">
+                <div class="card" onclick="switchSection('guides')" style="cursor:pointer;" aria-label="Ouvrir la section guides" role="button" tabindex="0">
                     <div class="card-icon"><i class="fa-solid fa-file-signature"></i></div>
                     <h4>Démarrer un livret</h4>
                     <p>Suivez nos guides interactifs pour créer, valider et faire signer un projet inclusif.</p>
                 </div>
-                <div class="card" onclick="switchSection('famille')" style="cursor:pointer;">
+                <div class="card" onclick="switchSection('famille')" style="cursor:pointer;" aria-label="Ouvrir la section famille" role="button" tabindex="0">
                     <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
                     <h4>Lien Parent</h4>
                     <p>Aidez les familles à utiliser ÉduConnect pour consulter les aménagements de leur enfant.</p>
@@ -580,123 +469,8 @@
         </div>
     </section>
 
-    <!-- PLAN D'ACTION (1→10) -->
-    <section id="tpl-plan-action">
-        <div class="reveal">
-            <h2>Plan d’action (1→10)</h2>
-            <p class="section-desc">Document de travail — structure identique au plan (diagnostic → stratégie → objectifs → actions → indicateurs → calendrier 2 ans).</p>
-
-            <div style="background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">1) Point de départ (18/01/2026) — atteints / non atteints</h3>
-                <ul style="margin:0;">
-                    <li><b>Constat d’usage</b> : 3/50 enseignants connectés (~6%), 0 livret actif.</li>
-                    <li><b>Objectif immédiat du plan</b> : 15 connectés + 3 livrets utiles (3 élèves prioritaires).</li>
-                    <li><b>Évaluation au 18/01/2026</b> : <b style="color:var(--marianne-red)">NON atteint</b> (3/50 ; 0 livret).</li>
-                </ul>
-                <div style="margin-top: 1.25rem; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.06); background: var(--marianne-blue-soft);">
-                    <div style="font-weight: 900; color: var(--marianne-blue);">Action à mener : “Démarrage LPI en mode École inclusive”</div>
-                    <div style="margin-top: 0.35rem; opacity: 0.9; font-weight: 800;">45 min — démo sur 1 cas réel + règles minimales + contact blocage.</div>
-                </div>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">2) Stratégie</h3>
-                <ul style="margin:0;">
-                    <li><b>Principe</b> : outil “utilisé” = pilotage + information partagée + preuve d’utilité sur quelques situations réelles.</li>
-                    <li><b>Appui clé</b> : portail = point d’entrée unique (formés / en attente / au cas où / curiosité).</li>
-                    <li><b>Continuité</b> : parents + primaire + lycée/LP (transitions sécurisées).</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">3) Objectifs (2026)</h3>
-                <ul style="margin:0;">
-                    <li><b>Appropriation</b> : plus de personnels connectés et autonomes.</li>
-                    <li><b>Usage utile</b> : livrets réellement exploités sur situations prioritaires (PPS/PAP/PAI).</li>
-                    <li><b>Qualité École inclusive</b> : ESS mieux préparées, information à jour, continuité des parcours.</li>
-                    <li><b>Organisation</b> : pilotage identifié + personnes ressources connues.</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">4) Actions (A/B/C/D)</h3>
-                <div class="grid" style="gap:1.25rem;">
-                    <div class="card" style="cursor:default;">
-                        <div class="card-icon"><i class="fa-solid fa-compass"></i></div>
-                        <h4>A. Pilotage / organisation</h4>
-                        <p>Pilote direction + personnes ressources ; organisation de formation par publics.</p>
-                    </div>
-                    <div class="card" style="cursor:default;">
-                        <div class="card-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
-                        <h4>B. Appropriation</h4>
-                        <p>Démonstration courte sur cas réel + Q/R ; accès autonome via portail.</p>
-                    </div>
-                    <div class="card" style="cursor:default;">
-                        <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                        <h4>C. Communication</h4>
-                        <p>Message unique personnels ; information parents claire et rassurante (cadre + bénéfices + contact).</p>
-                    </div>
-                    <div class="card" style="cursor:default;">
-                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <h4>D. Suivi (ancrage)</h4>
-                        <p>Portail = suivi global (sans nominatif) ; indicateurs simples + point court régulier.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); overflow-x:auto;">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">10) Indicateurs “ultra light” (pilotage sans surcharge)</h3>
-                <table style="width:100%; border-collapse:collapse; min-width:720px;">
-                    <thead>
-                        <tr style="text-align:left; border-bottom:1px solid rgba(0,0,0,0.12);">
-                            <th style="padding:0.75rem;">Indicateur</th>
-                            <th style="padding:0.75rem;">Comment mesurer</th>
-                            <th style="padding:0.75rem;">Fréquence</th>
-                            <th style="padding:0.75rem;">Valeur (18/01/2026)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-                            <td style="padding:0.75rem; font-weight:900;">Connexions</td>
-                            <td style="padding:0.75rem;">nb connectés / total</td>
-                            <td style="padding:0.75rem;">Mensuel</td>
-                            <td style="padding:0.75rem;"><b>3/50</b></td>
-                        </tr>
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-                            <td style="padding:0.75rem; font-weight:900;">Cas utiles</td>
-                            <td style="padding:0.75rem;">nb situations avec livret exploité</td>
-                            <td style="padding:0.75rem;">Mensuel</td>
-                            <td style="padding:0.75rem;"><b>0</b></td>
-                        </tr>
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-                            <td style="padding:0.75rem; font-weight:900;">ESS préparée</td>
-                            <td style="padding:0.75rem;">oui/non (info prête avant ESS)</td>
-                            <td style="padding:0.75rem;">À chaque ESS + mensuel</td>
-                            <td style="padding:0.75rem;">—</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:0.75rem; font-weight:900;">Blocages</td>
-                            <td style="padding:0.75rem;">nb + délai de résolution</td>
-                            <td style="padding:0.75rem;">Mensuel</td>
-                            <td style="padding:0.75rem;">—</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">Objectifs LPI (évaluation)</h3>
-                <ul style="margin:0;">
-                    <li>Mise en place rapide et effective des aménagements/adaptations (banque d’aménagements mobilisable).</li>
-                    <li>Simplification des procédures : PPRE, PAP, GEVA-Sco (1re demande), mise en œuvre du PPS.</li>
-                    <li>Formalisation des plans/projets en association avec les familles.</li>
-                    <li>Circulation d’information école ↔ MDPH via interface dédiée.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUICK START -->
+    
+<!-- QUICK START -->
     <section id="tpl-quickstart">
         <div class="reveal">
             <h2>Démarrage Rapide</h2>
@@ -707,7 +481,7 @@
                     <div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">1</div>
                     <h4>Connexion</h4>
                     <p>Connectez-vous via le portail académique (Arena) ou directement sur EduConnect.</p>
-                     <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" style="display:inline-block; margin-top:1rem; color:var(--marianne-blue); font-weight:700; text-decoration:none;">Accéder au portail <i class="fa-solid fa-arrow-right"></i></a>
+                     <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" style="display:inline-block; margin-top:1rem; color:var(--marianne-blue); font-weight:700; text-decoration:none;" rel="noopener noreferrer">Accéder au portail <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div class="card">
                     <div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">2</div>
@@ -718,7 +492,7 @@
                     <div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">3</div>
                     <h4>Création</h4>
                     <p>Sélectionnez "Nouveau Livret" et choisissez le dispositif adapté (PPRE, PAP, etc.).</p>
-                    <div style="margin-top:1rem; cursor:pointer; color:var(--marianne-blue); font-weight:700;" onclick="switchSection('orientation')">Besoin d'aide pour choisir ?</div>
+                    <div style="margin-top:1rem; cursor:pointer; color:var(--marianne-blue); font-weight:700;" onclick="switchSection('orientation')" aria-label="Ouvrir la section orientation" role="button" tabindex="0">Besoin d'aide pour choisir ?</div>
                 </div>
             </div>
 
@@ -743,7 +517,7 @@
             <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 2.5rem; border: 1px solid #DDD; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm);">
                 <iframe src="https://www.youtube.com/embed/e59usyz_ZQg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
             </div>
-            <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" class="btn-lpi-go" style="display:inline-block; padding: 1rem 2rem;">ACCÉDER AU PORTAIL OFFICIEL</a>
+            <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" class="btn-lpi-go" style="display:inline-block; padding: 1rem 2rem;" rel="noopener noreferrer">ACCÉDER AU PORTAIL OFFICIEL</a>
         </div>
     </section>
 
@@ -834,12 +608,12 @@
 
             <div style="margin-top:2.5rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
                 <!-- Aide contextuelle 1 -->
-                <div class="card" onclick="switchSection('contact')" style="cursor:pointer; border-left:4px solid var(--text-light);">
+                <div class="card" onclick="switchSection('contact')" style="cursor:pointer; border-left:4px solid var(--text-light);" aria-label="Ouvrir la section contact" role="button" tabindex="0">
                     <h4><i class="fa-solid fa-user-doctor" style="margin-right:10px;"></i>Besoin d'un avis ?</h4>
                     <p>Pour le PAP et le PAI, l'avis du service médical est <strong>indispensable</strong>. Contactez l'infirmerie avant de créer le dossier.</p>
                 </div>
                 <!-- Aide contextuelle 2 -->
-                <div class="card" onclick="switchSection('guides')" style="cursor:pointer; border-left:4px solid var(--marianne-blue);">
+                <div class="card" onclick="switchSection('guides')" style="cursor:pointer; border-left:4px solid var(--marianne-blue);" aria-label="Ouvrir la section guides" role="button" tabindex="0">
                     <h4><i class="fa-solid fa-file-pdf" style="margin-right:10px;"></i>Les Fiches Techniques</h4>
                     <p>Accédez aux guides PDF détaillés pour chacun de ces dispositifs dans la rubrique Ressources > Guides.</p>
                 </div>
@@ -1098,7 +872,7 @@
                 <div class="card" style="border-top: 8px solid var(--marianne-red)">
                     <h4>Accès ÉduConnect</h4>
                     <p>Consultez et signez les projets de votre enfant en toute sécurité.</p>
-                    <a href="https://moncompte.educonnect.education.gouv.fr/" target="_blank" style="display:block; margin-top:1.5rem; background:var(--marianne-red); color:white; padding:12px; border-radius:10px; text-align:center; text-decoration:none; font-weight:800;">SE CONNECTER</a>
+                    <a href="https://moncompte.educonnect.education.gouv.fr/" target="_blank" style="display:block; margin-top:1.5rem; background:var(--marianne-red); color:white; padding:12px; border-radius:10px; text-align:center; text-decoration:none; font-weight:800;" rel="noopener noreferrer">SE CONNECTER</a>
                 </div>
                 <div class="card"><h4>Dialogue Parents-École</h4><p>Contactez le professeur principal pour discuter des aménagements mis en place.</p></div>
             </div>
@@ -1245,7 +1019,7 @@
             </div>
             
             <div style="margin-top:2rem; text-align:center;">
-                 <a href="https://eduscol.education.fr/document/11900/download" target="_blank" style="color:var(--text-light); text-decoration:underline; font-size:0.9rem;">Consulter le Guide Complet Chef d'Établissement (PDF)</a>
+                 <a href="https://eduscol.education.fr/document/11900/download" target="_blank" style="color:var(--text-light); text-decoration:underline; font-size:0.9rem;" rel="noopener noreferrer">Consulter le Guide Complet Chef d'Établissement (PDF)</a>
             </div>
         </div>
     </section>
@@ -1273,7 +1047,7 @@
                     <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
                     <h4>Enseignants</h4>
                     <p>Guide complet pour saisir les aménagements et suivre vos élèves.</p>
-                    <a href="https://eduscol.education.fr/document/11903/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;">TÉLÉCHARGER</a>
+                    <a href="https://eduscol.education.fr/document/11903/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;" rel="noopener noreferrer">TÉLÉCHARGER</a>
                 </div>
                 <!-- Direction -->
                 <div class="card">
@@ -1281,8 +1055,8 @@
                     <h4>Direction</h4>
                     <p>Pour les Directeurs d'école et Chefs d'établissement.</p>
                     <div style="display:flex; gap:0.5rem; margin-top:1rem;">
-                        <a href="https://eduscol.education.fr/document/11897/download" class="btn-lpi-go" target="_blank" style="flex:1; font-size:0.75rem;">DIR. ÉCOLE</a>
-                        <a href="https://eduscol.education.fr/document/11900/download" class="btn-lpi-go" target="_blank" style="flex:1; font-size:0.75rem;">CHEF ÉTAB.</a>
+                        <a href="https://eduscol.education.fr/document/11897/download" class="btn-lpi-go" target="_blank" style="flex:1; font-size:0.75rem;" rel="noopener noreferrer">DIR. ÉCOLE</a>
+                        <a href="https://eduscol.education.fr/document/11900/download" class="btn-lpi-go" target="_blank" style="flex:1; font-size:0.75rem;" rel="noopener noreferrer">CHEF ÉTAB.</a>
                     </div>
                 </div>
                 <!-- Famille -->
@@ -1290,7 +1064,7 @@
                     <div class="card-icon"><i class="fa-solid fa-house-user"></i></div>
                     <h4>Familles</h4>
                     <p>Guide de connexion et signature via ÉduConnect.</p>
-                     <a href="https://eduscol.education.fr/document/52038/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;">TÉLÉCHARGER</a>
+                     <a href="https://eduscol.education.fr/document/52038/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;" rel="noopener noreferrer">TÉLÉCHARGER</a>
                 </div>
                 
                 <!-- Créer un livret -->
@@ -1298,40 +1072,40 @@
                     <div class="card-icon"><i class="fa-solid fa-folder-plus"></i></div>
                     <h4>Créer un livret</h4>
                     <p>Fiche métier : Processus de création étape par étape.</p>
-                     <a href="https://eduscol.education.fr/document/11957/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;">TÉLÉCHARGER</a>
+                     <a href="https://eduscol.education.fr/document/11957/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;" rel="noopener noreferrer">TÉLÉCHARGER</a>
                 </div>
             </div>
 
             <h3 style="margin-bottom:1.5rem; font-size:1.8rem;">Fiches Techniques par Dispositif</h3>
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <a href="https://eduscol.education.fr/document/11954/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
+                <a href="https://eduscol.education.fr/document/11954/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" rel="noopener noreferrer">
                     <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-ppre);"></i>
                     <div><h4 style="margin-bottom:0; font-size:1.2rem;">Créer un PPRE</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
                 </a>
-                <a href="https://eduscol.education.fr/document/11951/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
+                <a href="https://eduscol.education.fr/document/11951/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" rel="noopener noreferrer">
                     <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-pap);"></i>
                     <div><h4 style="margin-bottom:0; font-size:1.2rem;">Créer un PAP</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
                 </a>
-                <a href="https://eduscol.education.fr/document/11945/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
+                <a href="https://eduscol.education.fr/document/11945/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" rel="noopener noreferrer">
                     <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-pps);"></i>
                     <div><h4 style="margin-bottom:0; font-size:1.2rem;">Mise en oeuvre PPS</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
                 </a>
-                <a href="https://eduscol.education.fr/document/11948/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
+                <a href="https://eduscol.education.fr/document/11948/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" rel="noopener noreferrer">
                     <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--marianne-blue);"></i>
                     <div><h4 style="margin-bottom:0; font-size:1.2rem;">GEVA-Sco 1ère</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
                 </a>
-                 <a href="https://eduscol.education.fr/document/64946/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
+                 <a href="https://eduscol.education.fr/document/64946/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" rel="noopener noreferrer">
                     <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--marianne-blue);"></i>
                     <div><h4 style="margin-bottom:0; font-size:1.2rem;">GEVA-Sco Réexam</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
                 </a>
-                 <a href="https://eduscol.education.fr/document/11957/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
+                 <a href="https://eduscol.education.fr/document/11957/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" rel="noopener noreferrer">
                     <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:#333;"></i>
                     <div><h4 style="margin-bottom:0; font-size:1.2rem;">Création Livret</h4><span style="font-size:0.8rem; opacity:0.6;">Guide Général</span></div>
                 </a>
             </div>
             
             <div style="margin-top:3rem; text-align:center;">
-                <a href="https://eduscol.education.fr/document/11969/download" target="_blank" style="color:var(--text-light); font-weight:700; text-decoration:underline;">Télécharger la Foire aux Questions (FAQ) officielle</a>
+                <a href="https://eduscol.education.fr/document/11969/download" target="_blank" style="color:var(--text-light); font-weight:700; text-decoration:underline;" rel="noopener noreferrer">Télécharger la Foire aux Questions (FAQ) officielle</a>
             </div>
         </div>
     </section>
@@ -1789,7 +1563,7 @@ Date : __________  Signature : __________________________________</pre>
 
     function renderPrintHeader(activeId){
         if(!IS_PRINT || IS_PRINT_ALL) return '';
-        const quickIds = ['accueil','quickstart','plan-action','orientation','dispositifs','segpa-ulyss','primaire','demande-droits','faq','rgpd'];
+        const quickIds = ['accueil','quickstart','orientation','dispositifs','segpa-ulyss','primaire','demande-droits','faq','rgpd'];
         const chips = quickIds
             .filter(id => document.getElementById('tpl-' + id))
             .map(id => {
@@ -1814,7 +1588,6 @@ Date : __________  Signature : __________________________________</pre>
         return [
             'accueil',
             'quickstart',
-            'plan-action',
             'bienvenue',
             'utilite',
             'orientation',
@@ -2207,6 +1980,39 @@ Date : __________  Signature : __________________________________</pre>
         });
     }
 
+</script>
+<script>
+// Fallback: delegated handler to ensure nav clicks always trigger
+;(function(){
+    try{
+        const navList = document.querySelector('.nav-links');
+        if(!navList) return;
+        navList.addEventListener('click', function(e){
+            const li = e.target && e.target.closest ? e.target.closest('.nav-item') : null;
+            if(!li) return;
+            const section = li.dataset && li.dataset.section;
+            try{
+                if(typeof switchSection === 'function') switchSection(section);
+                else {
+                    // minimal fallback: set hash and try to inject template
+                    location.hash = section ? ('#' + section) : location.hash;
+                    const tpl = document.getElementById('tpl-' + section);
+                    const viewport = document.getElementById('view-port');
+                    if(tpl && viewport) viewport.innerHTML = tpl.innerHTML;
+                }
+            }catch(err){
+                console.error('nav click handler error', err);
+            }
+            // close mobile nav after selection for small viewports
+            try{
+                if(window.innerWidth <= 767){
+                    const nav = document.querySelector('nav');
+                    if(nav) nav.classList.add('nav--hidden');
+                }
+            }catch(_){/* noop */}
+        }, false);
+    }catch(e){ console.error('nav delegation setup failed', e); }
+})();
 </script>
 
 </body>
