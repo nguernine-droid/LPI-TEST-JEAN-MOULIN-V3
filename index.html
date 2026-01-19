@@ -2223,6 +2223,39 @@ Date : __________  Signature : __________________________________</pre>
     }
 
 </script>
+<script>
+// Fallback: delegated handler to ensure nav clicks always trigger
+;(function(){
+    try{
+        const navList = document.querySelector('.nav-links');
+        if(!navList) return;
+        navList.addEventListener('click', function(e){
+            const li = e.target && e.target.closest ? e.target.closest('.nav-item') : null;
+            if(!li) return;
+            const section = li.dataset && li.dataset.section;
+            try{
+                if(typeof switchSection === 'function') switchSection(section);
+                else {
+                    // minimal fallback: set hash and try to inject template
+                    location.hash = section ? ('#' + section) : location.hash;
+                    const tpl = document.getElementById('tpl-' + section);
+                    const viewport = document.getElementById('view-port');
+                    if(tpl && viewport) viewport.innerHTML = tpl.innerHTML;
+                }
+            }catch(err){
+                console.error('nav click handler error', err);
+            }
+            // close mobile nav after selection for small viewports
+            try{
+                if(window.innerWidth <= 767){
+                    const nav = document.querySelector('nav');
+                    if(nav) nav.classList.add('nav--hidden');
+                }
+            }catch(_){/* noop */}
+        }, false);
+    }catch(e){ console.error('nav delegation setup failed', e); }
+})();
+</script>
 
 </body>
 </html>
