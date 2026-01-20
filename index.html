@@ -16,9 +16,9 @@
             --marianne-blue-soft: #f0f0ff;
             --marianne-red: #E1000F;
             --marianne-red-soft: #fff1f1;
-                --inclusive-green: #00A95F;
-                --inclusive-green-soft: rgba(0, 169, 95, 0.12);
-            --primary: #161616;
+                --inclusive-green: #007a44;
+                --inclusive-green-soft: rgba(0, 122, 68, 0.12);
+                --primary: #161616;
             --accent-soft: #F5F5FE;
             --text-main: #1e1e1e;
             --text-light: #333333;
@@ -52,7 +52,8 @@
         }
 
         /* Accessibility overrides */
-        .logo-sidebar > p, .nav-group-label { color: var(--text-main) !important; }
+        .logo-sidebar > p, .nav-group-label { color: var(--text-main) !important; opacity: 1 !important; }
+        .widget-info span, .widget-info h5 { color: var(--text-main) !important; }
 
         /* RESET & BASE */
         * { box-sizing: border-box; margin: 0; padding: 0; }
