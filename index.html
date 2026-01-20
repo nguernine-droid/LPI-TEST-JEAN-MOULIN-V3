@@ -1,17 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portail LPI — Document de travail — Clg Jean Moulin</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portail LPI — Document de travail — Clg Jean Moulin</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<style>
         :root {
             --marianne-blue: #000091;
             --marianne-blue-soft: #f0f0ff;
@@ -373,7 +372,6 @@
     nav, .content, header{padding-left:1rem;padding-right:1rem}
 }
 </style>
-
 <script>
 (function(){
     function initMobileNav(){
@@ -392,1235 +390,1114 @@
     if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initMobileNav); else initMobileNav();
 })();
 </script>
-
 </head>
 <body data-theme="light">
-
-<a href="#main-content" class="skip-link">Aller au contenu</a>
-
+<a class="skip-link" href="#main-content">Aller au contenu</a>
 <!-- OVERLAY DE TRANSITION FLASH -->
 <div id="flash-overlay"></div>
-
 <!-- SPLASH SCREEN -->
-<div id="splash" class="splash-screen">
-    <div class="splash-content">
-        <div class="splash-loader"></div>
-        <div class="splash-title">PORTAIL LPI <span style="font-size:0.8em; opacity:0.7; font-weight:800;">— DOCUMENT DE TRAVAIL</span></div>
-        <p style="margin-top: 1rem; opacity: 0.6; font-weight: 700; letter-spacing: 2px;">V3.0 | ÉCOLE INCLUSIVE</p>
-    </div>
+<div class="splash-screen" id="splash">
+<div class="splash-content">
+<div class="splash-loader"></div>
+<div class="splash-title">PORTAIL LPI <span style="font-size:0.8em; opacity:0.7; font-weight:800;">— DOCUMENT DE TRAVAIL</span></div>
+<p style="margin-top: 1rem; opacity: 0.6; font-weight: 700; letter-spacing: 2px;">V3.0 | ÉCOLE INCLUSIVE</p>
 </div>
-
+</div>
 <div class="app-layout">
-    <nav id="mobile-nav" role="navigation" aria-label="Menu principal">
-        <div class="logo-sidebar">
-            <div class="logo-group">
-                <div class="logo-box">
-                    <img src="./assets/logos/CLG-JM.png" alt="Logo">
-                </div>
-                <div class="logo-title">
-                    <h1>LPI Digital</h1>
-                </div>
-            </div>
-            <p style="font-size: 0.75rem; opacity: 0.5; font-weight: 700;">COLLÈGE JEAN MOULIN</p>
-
-              <div class="inclusive-banner" role="note" aria-label="École inclusive">
-                  <div class="inclusive-banner-title"><i class="fa-solid fa-universal-access"></i> École inclusive</div>
-                  <div class="inclusive-banner-sub">Portail LPI — document de travail</div>
-              </div>
-        </div>
-
-        <div class="search-box">
-            <i class="fa-solid fa-search"></i>
-            <input type="text" id="nav-filter" placeholder="Chercher une section..." onkeyup="filterNav()">
-        </div>
-
-        <ul class="nav-links">
-            <li class="nav-item active" data-section="accueil"><i class="fa-solid fa-shapes"></i> Dashboard</li>
-            <li class="nav-item" data-section="quickstart"><i class="fa-solid fa-rocket"></i> Démarrage Rapide</li>
-            <li class="nav-item" data-section="plan-action"><i class="fa-solid fa-clipboard-list"></i> Plan d’action (1→10)</li>
-            
-            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Accompagnement</div>
-            <li class="nav-item" data-section="orientation"><i class="fa-solid fa-signs-post"></i> Orientation</li>
-            <li class="nav-item" data-section="parcours"><i class="fa-solid fa-route"></i> Parcours Élève</li>
-            <li class="nav-item" data-section="dispositifs"><i class="fa-solid fa-folder-tree"></i> Dispositifs</li>
-            <li class="nav-item" data-section="situations"><i class="fa-solid fa-people-arrows"></i> Cas Spécifiques</li>
-            <li class="nav-item" data-section="segpa-ulyss"><i class="fa-solid fa-hands-holding-child"></i> SEGPA & ULYSS</li>
-            <li class="nav-item" data-section="primaire"><i class="fa-solid fa-school"></i> Primaire & Continuité</li>
-
-            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Ressources</div>
-            <li class="nav-item" data-section="guides"><i class="fa-solid fa-book-bookmark"></i> Guides Pratiques</li>
-            <li class="nav-item" data-section="calendrier"><i class="fa-solid fa-calendar-alt"></i> Calendrier</li>
-            <li class="nav-item" data-section="demande-droits"><i class="fa-solid fa-users-gear"></i> Acteurs & Périmètres</li>
-
-            <div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Infos & Aide</div>
-            <li class="nav-item" data-section="bienvenue"><i class="fa-solid fa-face-smile"></i> Bienvenue</li>
-            <li class="nav-item" data-section="utilite"><i class="fa-solid fa-lightbulb"></i> À quoi ça sert ?</li>
-            <li class="nav-item family-nav" data-section="famille"><i class="fa-solid fa-house-user"></i> Espace Famille</li>
-            <li class="nav-item" data-section="glossaire"><i class="fa-solid fa-language"></i> Glossaire</li>
-            <li class="nav-item" data-section="faq"><i class="fa-solid fa-circle-question"></i> FAQ</li>
-            <li class="nav-item" data-section="contact"><i class="fa-solid fa-paper-plane"></i> Contact</li>
-            <li class="nav-item" data-section="rgpd"><i class="fa-solid fa-scale-balanced"></i> RGPD</li>
-        </ul>
-
-        <div class="nav-footer">
-            <button id="theme-toggle" onclick="toggleTheme()" aria-pressed="false" style="background:var(--accent-soft); border:none; padding:10px; border-radius:8px; cursor:pointer; font-weight:700; font-size:0.8rem; color:var(--text-light); text-align:left;">
-                <i class="fa-solid fa-moon"></i> Mode Sombre
-            </button>
-            <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" class="btn-lpi-go">ACCÈS DIRECT LPI</a>
-            <a href="PRESENTATION_LPI_JEAN_MOULIN_DOC_TRAVAIL_12SLIDES.html" target="_blank" class="btn-lpi-go" style="background:var(--marianne-red);">DÉMO PRÉSENTATION (12 SLIDES)</a>
-            <button id="run-tests-btn" style="display:none; margin-top:6px; background:transparent; border:1px dashed rgba(0,0,0,0.06); padding:8px; border-radius:8px; font-weight:700; font-size:0.85rem; color:var(--text-light);">Run tests</button>
-        </div>
-    </nav>
-
-    <main id="main-content" tabindex="-1">
-        <div class="container" id="view-port">
-            <!-- Injecté via JS -->
-        </div>
-    </main>
+<nav aria-label="Menu principal" id="mobile-nav" role="navigation">
+<div class="logo-sidebar">
+<div class="logo-group">
+<div class="logo-box">
+<img alt="Logo" src="./assets/logos/CLG-JM.png"/>
 </div>
-
+<div class="logo-title">
+<h1>LPI Digital</h1>
+</div>
+</div>
+<p style="font-size: 0.75rem; opacity: 0.5; font-weight: 700;">COLLÈGE JEAN MOULIN</p>
+<div aria-label="École inclusive" class="inclusive-banner" role="note">
+<div class="inclusive-banner-title"><i class="fa-solid fa-universal-access"></i> École inclusive</div>
+<div class="inclusive-banner-sub">Portail LPI — document de travail</div>
+</div>
+</div>
+<div class="search-box">
+<i class="fa-solid fa-search"></i>
+<label for="nav-filter">Chercher une section...</label><input id="nav-filter" onkeyup="filterNav()" placeholder="Chercher une section..." type="text"/>
+</div>
+<ul class="nav-links">
+<li class="nav-item active" data-section="accueil"><i class="fa-solid fa-shapes"></i> Dashboard</li>
+<li class="nav-item" data-section="quickstart"><i class="fa-solid fa-rocket"></i> Démarrage Rapide</li>
+<li class="nav-item" data-section="plan-action"><i class="fa-solid fa-clipboard-list"></i> Plan d’action (1→10)</li>
+<div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Accompagnement</div>
+<li class="nav-item" data-section="orientation"><i class="fa-solid fa-signs-post"></i> Orientation</li>
+<li class="nav-item" data-section="parcours"><i class="fa-solid fa-route"></i> Parcours Élève</li>
+<li class="nav-item" data-section="dispositifs"><i class="fa-solid fa-folder-tree"></i> Dispositifs</li>
+<li class="nav-item" data-section="situations"><i class="fa-solid fa-people-arrows"></i> Cas Spécifiques</li>
+<li class="nav-item" data-section="segpa-ulyss"><i class="fa-solid fa-hands-holding-child"></i> SEGPA &amp; ULYSS</li>
+<li class="nav-item" data-section="primaire"><i class="fa-solid fa-school"></i> Primaire &amp; Continuité</li>
+<div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Ressources</div>
+<li class="nav-item" data-section="guides"><i class="fa-solid fa-book-bookmark"></i> Guides Pratiques</li>
+<li class="nav-item" data-section="calendrier"><i class="fa-solid fa-calendar-alt"></i> Calendrier</li>
+<li class="nav-item" data-section="demande-droits"><i class="fa-solid fa-users-gear"></i> Acteurs &amp; Périmètres</li>
+<div class="nav-group-label" style="font-size:0.75rem; font-weight:800; opacity:0.5; margin:1rem 0 0.5rem 1rem; text-transform:uppercase; color:var(--text-light);">Infos &amp; Aide</div>
+<li class="nav-item" data-section="bienvenue"><i class="fa-solid fa-face-smile"></i> Bienvenue</li>
+<li class="nav-item" data-section="utilite"><i class="fa-solid fa-lightbulb"></i> À quoi ça sert ?</li>
+<li class="nav-item family-nav" data-section="famille"><i class="fa-solid fa-house-user"></i> Espace Famille</li>
+<li class="nav-item" data-section="glossaire"><i class="fa-solid fa-language"></i> Glossaire</li>
+<li class="nav-item" data-section="faq"><i class="fa-solid fa-circle-question"></i> FAQ</li>
+<li class="nav-item" data-section="contact"><i class="fa-solid fa-paper-plane"></i> Contact</li>
+<li class="nav-item" data-section="rgpd"><i class="fa-solid fa-scale-balanced"></i> RGPD</li>
+</ul>
+<div class="nav-footer">
+<button aria-pressed="false" id="theme-toggle" onclick="toggleTheme()" style="background:var(--accent-soft); border:none; padding:10px; border-radius:8px; cursor:pointer; font-weight:700; font-size:0.8rem; color:var(--text-light); text-align:left;">
+<i class="fa-solid fa-moon"></i> Mode Sombre
+            </button>
+<a class="btn-lpi-go" href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank">ACCÈS DIRECT LPI</a>
+<a class="btn-lpi-go" href="PRESENTATION_LPI_JEAN_MOULIN_DOC_TRAVAIL_12SLIDES.html" style="background:var(--marianne-red);" target="_blank">DÉMO PRÉSENTATION (12 SLIDES)</a>
+<button id="run-tests-btn" style="display:none; margin-top:6px; background:transparent; border:1px dashed rgba(0,0,0,0.06); padding:8px; border-radius:8px; font-weight:700; font-size:0.85rem; color:var(--text-light);">Run tests</button>
+</div>
+</nav>
+<main id="main-content" tabindex="-1">
+<div class="container" id="view-port">
+<!-- Injecté via JS -->
+</div>
+</main>
+</div>
 <!-- TEMPLATES -->
 <div id="templates" style="display:none;">
-
-    <!-- ACCUEIL -->
-    <section id="tpl-accueil">
-        <div class="reveal">
-            <h2>Bienvenue sur votre <br><span style="color:var(--marianne-blue)">Espace Inclusif.</span></h2>
-            <p class="section-desc">Coordonnez l'accompagnement de vos élèves avec simplicité et sécurité.</p>
-            
-            <!-- Widgets moved for logical flow -->
-
-            <!-- MISE EN AVANT: UTILITÉ -->
-            <div onclick="switchSection('utilite')" style="cursor:pointer; background: linear-gradient(to right, var(--marianne-blue-soft), #fff); border-left: 6px solid var(--marianne-blue); padding: 2rem; border-radius: var(--radius-md); margin-bottom: 3rem; display:flex; flex-wrap:wrap; align-items:center; gap:2rem; box-shadow: var(--shadow-sm); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-                <div style="font-size:2.5rem; color:var(--marianne-blue); background:white; width:80px; height:80px; display:flex; align-items:center; justify-content:center; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.05); min-width:80px;"><i class="fa-solid fa-lightbulb"></i></div>
-                <div style="flex-grow:1;">
-                    <h3 style="font-size:1.6rem; font-weight:800; margin-bottom:0.5rem; color:var(--text-main);">À quoi sert le LPI ?</h3>
-                    <p style="opacity:0.8; font-size:1.1rem; max-width:650px; line-height:1.6;">Outil central pour les <strong>professionnels de l'éducation</strong> : il garantit la continuité pédagogique, simplifie la gestion administrative et sécurise le partage d'informations avec les familles.</p>
-                </div>
-                <div style="background:var(--marianne-blue); color:white; padding:0.8rem 1.5rem; border-radius:50px; font-weight:700; font-size:0.9rem; white-space:nowrap;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></div>
-            </div>
-
-            <div class="mission-banner" style="margin-top: 4rem; margin-bottom: 2rem; background: white; color: var(--text-main); padding: 2.25rem; border-radius: var(--radius-lg); position: relative; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
-                <h3 style="font-size: 2rem; font-weight: 900; margin-bottom: 1.25rem; text-align: center; color: var(--marianne-blue);">Diagnostic (18/01/2026) — objectifs atteints / non atteints</h3>
-
-                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.25rem;">
-                    <div style="background: var(--accent-soft); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); padding: 1.2rem;">
-                        <div style="font-weight: 900; color: var(--marianne-blue);">Connexions enseignants</div>
-                        <div style="font-size: 1.7rem; font-weight: 900; margin-top: 0.35rem;">3 / 50</div>
-                        <div style="margin-top: 0.25rem; font-weight: 900; color: var(--marianne-red);">NON atteint</div>
-                        <div style="margin-top: 0.5rem; opacity: 0.8;">Cible immédiate : 15 connectés.</div>
-                    </div>
-                    <div style="background: var(--accent-soft); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); padding: 1.2rem;">
-                        <div style="font-weight: 900; color: var(--marianne-blue);">Livrets actifs</div>
-                        <div style="font-size: 1.7rem; font-weight: 900; margin-top: 0.35rem;">0</div>
-                        <div style="margin-top: 0.25rem; font-weight: 900; color: var(--marianne-red);">NON atteint</div>
-                        <div style="margin-top: 0.5rem; opacity: 0.8;">Cible immédiate : 3 livrets utiles.</div>
-                    </div>
-                    <div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); padding: 1.2rem;">
-                        <div style="font-weight: 900; color: var(--inclusive-green);">Action de démarrage</div>
-                        <div style="margin-top: 0.35rem; font-weight: 800;">45 min — démo sur 1 cas réel</div>
-                        <div style="margin-top: 0.5rem; opacity: 0.85;">Pilote (direction) + personnes ressources + règles minimales + contact blocage.</div>
-                        <div style="margin-top: 0.9rem;">
-                            <a href="#" onclick="switchSection('plan-action'); return false;" style="display:inline-flex; gap:8px; align-items:center; font-weight: 900; color: var(--marianne-blue); text-decoration:none;">Ouvrir le plan (1→10) <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mission-banner" style="margin-top: 0; margin-bottom: 2.25rem; background: white; color: var(--text-main); padding: 3rem; border-radius: var(--radius-lg); position: relative; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
-                <h3 style="font-size: 2rem; font-weight: 900; margin-bottom: 2.5rem; text-align: center; color: var(--marianne-blue);">Objectifs LPI (pour l’évaluation)</h3>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: var(--marianne-blue-soft); color: var(--marianne-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                        <h4 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">Aménagements rapides & effectifs</h4>
-                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Mise en place rapide dès l’identification d’un besoin éducatif particulier, avec appui sur une banque d’aménagements/adaptations mobilisable tout au long du parcours.</p>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: var(--marianne-red-soft); color: var(--marianne-red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-file-pen"></i></div>
-                        <h4 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">Procédures simplifiées</h4>
-                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Simplification du renseignement et de l’édition : PPRE, PAP, GEVA-Sco première demande, document de mise en œuvre du PPS.</p>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: var(--inclusive-green-soft); color: var(--inclusive-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-people-group"></i></div>
-                        <h4 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">Formalisation avec les familles</h4>
-                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Formalisation des plans/projets et organisation, si besoin, du recours à divers aménagements, en association avec les familles.</p>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: #fff; border: 1px solid rgba(0,0,0,0.08); color: var(--marianne-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-right-left"></i></div>
-                        <h4 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">Interface école ↔ MDPH</h4>
-                        <p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Circulation d’information entre l’école et la MDPH via une interface dédiée.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="widgets" style="margin-bottom: 4rem;">
-                <div class="widget">
-                    <div class="widget-icon"><i class="fa-solid fa-users"></i></div>
-                    <div class="widget-info"><span>Connexions (18/01/2026)</span><h5>3 / 50</h5></div>
-                </div>
-                <div class="widget">
-                    <div class="widget-icon"><i class="fa-solid fa-file-circle-check"></i></div>
-                    <div class="widget-info"><span>Livrets actifs</span><h5>0</h5></div>
-                </div>
-                <div class="widget">
-                    <div class="widget-icon"><i class="fa-solid fa-bullseye"></i></div>
-                    <div class="widget-info"><span>Cible immédiate</span><h5>15 + 3</h5></div>
-                </div>
-            </div>
-
-            <div class="grid">
-                <div class="card" onclick="switchSection('dispositifs')" style="cursor:pointer;">
-                    <div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                    <h4>Quel dispositif ?</h4>
-                    <p>Analysez les besoins et déterminez le cadre réglementaire idéal (PPRE, PAP, PPS, PAI).</p>
-                </div>
-                <div class="card" onclick="switchSection('guides')" style="cursor:pointer;">
-                    <div class="card-icon"><i class="fa-solid fa-file-signature"></i></div>
-                    <h4>Démarrer un livret</h4>
-                    <p>Suivez nos guides interactifs pour créer, valider et faire signer un projet inclusif.</p>
-                </div>
-                <div class="card" onclick="switchSection('famille')" style="cursor:pointer;">
-                    <div class="card-icon"><i class="fa-solid fa-comments"></i></div>
-                    <h4>Lien Parent</h4>
-                    <p>Aidez les familles à utiliser ÉduConnect pour consulter les aménagements de leur enfant.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PLAN D'ACTION (1→10) -->
-    <section id="tpl-plan-action">
-        <div class="reveal">
-            <h2>Plan d’action (1→10)</h2>
-            <p class="section-desc">Document de travail — structure identique au plan (diagnostic → stratégie → objectifs → actions → indicateurs → calendrier 2 ans).</p>
-
-            <div style="background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">1) Point de départ (18/01/2026) — atteints / non atteints</h3>
-                <ul style="margin:0;">
-                    <li><b>Constat d’usage</b> : 3/50 enseignants connectés (~6%), 0 livret actif.</li>
-                    <li><b>Objectif immédiat du plan</b> : 15 connectés + 3 livrets utiles (3 élèves prioritaires).</li>
-                    <li><b>Évaluation au 18/01/2026</b> : <b style="color:var(--marianne-red)">NON atteint</b> (3/50 ; 0 livret).</li>
-                </ul>
-                <div style="margin-top: 1.25rem; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.06); background: var(--marianne-blue-soft);">
-                    <div style="font-weight: 900; color: var(--marianne-blue);">Action à mener : “Démarrage LPI en mode École inclusive”</div>
-                    <div style="margin-top: 0.35rem; opacity: 0.9; font-weight: 800;">45 min — démo sur 1 cas réel + règles minimales + contact blocage.</div>
-                </div>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">2) Stratégie</h3>
-                <ul style="margin:0;">
-                    <li><b>Principe</b> : outil “utilisé” = pilotage + information partagée + preuve d’utilité sur quelques situations réelles.</li>
-                    <li><b>Appui clé</b> : portail = point d’entrée unique (formés / en attente / au cas où / curiosité).</li>
-                    <li><b>Continuité</b> : parents + primaire + lycée/LP (transitions sécurisées).</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">3) Objectifs (2026)</h3>
-                <ul style="margin:0;">
-                    <li><b>Appropriation</b> : plus de personnels connectés et autonomes.</li>
-                    <li><b>Usage utile</b> : livrets réellement exploités sur situations prioritaires (PPS/PAP/PAI).</li>
-                    <li><b>Qualité École inclusive</b> : ESS mieux préparées, information à jour, continuité des parcours.</li>
-                    <li><b>Organisation</b> : pilotage identifié + personnes ressources connues.</li>
-                </ul>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">4) Actions (A/B/C/D)</h3>
-                <div class="grid" style="gap:1.25rem;">
-                    <div class="card" style="cursor:default;">
-                        <div class="card-icon"><i class="fa-solid fa-compass"></i></div>
-                        <h4>A. Pilotage / organisation</h4>
-                        <p>Pilote direction + personnes ressources ; organisation de formation par publics.</p>
-                    </div>
-                    <div class="card" style="cursor:default;">
-                        <div class="card-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
-                        <h4>B. Appropriation</h4>
-                        <p>Démonstration courte sur cas réel + Q/R ; accès autonome via portail.</p>
-                    </div>
-                    <div class="card" style="cursor:default;">
-                        <div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
-                        <h4>C. Communication</h4>
-                        <p>Message unique personnels ; information parents claire et rassurante (cadre + bénéfices + contact).</p>
-                    </div>
-                    <div class="card" style="cursor:default;">
-                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <h4>D. Suivi (ancrage)</h4>
-                        <p>Portail = suivi global (sans nominatif) ; indicateurs simples + point court régulier.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); overflow-x:auto;">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">10) Indicateurs “ultra light” (pilotage sans surcharge)</h3>
-                <table style="width:100%; border-collapse:collapse; min-width:720px;">
-                    <thead>
-                        <tr style="text-align:left; border-bottom:1px solid rgba(0,0,0,0.12);">
-                            <th style="padding:0.75rem;">Indicateur</th>
-                            <th style="padding:0.75rem;">Comment mesurer</th>
-                            <th style="padding:0.75rem;">Fréquence</th>
-                            <th style="padding:0.75rem;">Valeur (18/01/2026)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-                            <td style="padding:0.75rem; font-weight:900;">Connexions</td>
-                            <td style="padding:0.75rem;">nb connectés / total</td>
-                            <td style="padding:0.75rem;">Mensuel</td>
-                            <td style="padding:0.75rem;"><b>3/50</b></td>
-                        </tr>
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-                            <td style="padding:0.75rem; font-weight:900;">Cas utiles</td>
-                            <td style="padding:0.75rem;">nb situations avec livret exploité</td>
-                            <td style="padding:0.75rem;">Mensuel</td>
-                            <td style="padding:0.75rem;"><b>0</b></td>
-                        </tr>
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
-                            <td style="padding:0.75rem; font-weight:900;">ESS préparée</td>
-                            <td style="padding:0.75rem;">oui/non (info prête avant ESS)</td>
-                            <td style="padding:0.75rem;">À chaque ESS + mensuel</td>
-                            <td style="padding:0.75rem;">—</td>
-                        </tr>
-                        <tr>
-                            <td style="padding:0.75rem; font-weight:900;">Blocages</td>
-                            <td style="padding:0.75rem;">nb + délai de résolution</td>
-                            <td style="padding:0.75rem;">Mensuel</td>
-                            <td style="padding:0.75rem;">—</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
-                <h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">Objectifs LPI (évaluation)</h3>
-                <ul style="margin:0;">
-                    <li>Mise en place rapide et effective des aménagements/adaptations (banque d’aménagements mobilisable).</li>
-                    <li>Simplification des procédures : PPRE, PAP, GEVA-Sco (1re demande), mise en œuvre du PPS.</li>
-                    <li>Formalisation des plans/projets en association avec les familles.</li>
-                    <li>Circulation d’information école ↔ MDPH via interface dédiée.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- QUICK START -->
-    <section id="tpl-quickstart">
-        <div class="reveal">
-            <h2>Démarrage Rapide</h2>
-            <p class="section-desc">Maîtrisez l'essentiel du LPI en quelques minutes.</p>
-
-            <div class="grid" style="margin-bottom: 3rem;">
-                <div class="card">
-                    <div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">1</div>
-                    <h4>Connexion</h4>
-                    <p>Connectez-vous via le portail académique (Arena) ou directement sur EduConnect.</p>
-                     <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" style="display:inline-block; margin-top:1rem; color:var(--marianne-blue); font-weight:700; text-decoration:none;">Accéder au portail <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="card">
-                    <div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">2</div>
-                    <h4>Recherche</h4>
-                    <p>Depuis le tableau de bord, recherchez l'élève par nom ou classe pour accéder à son dossier.</p>
-                </div>
-                <div class="card">
-                    <div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">3</div>
-                    <h4>Création</h4>
-                    <p>Sélectionnez "Nouveau Livret" et choisissez le dispositif adapté (PPRE, PAP, etc.).</p>
-                    <div style="margin-top:1rem; cursor:pointer; color:var(--marianne-blue); font-weight:700;" onclick="switchSection('orientation')">Besoin d'aide pour choisir ?</div>
-                </div>
-            </div>
-
-            <div style="background: white; padding: 2rem; border-radius: var(--radius-lg); border-left: 6px solid var(--color-ppre); box-shadow: var(--shadow-sm);">
-                <h3 style="font-size: 1.5rem; margin-bottom: 1rem;"><i class="fa-solid fa-video" style="margin-right:10px; color:var(--color-ppre);"></i>Tutoriel Vidéo</h3>
-                <p style="margin-bottom: 1rem; opacity: 0.8;">Découvrez comment créer votre premier PPRE en moins de 3 minutes.</p>
-                <div style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; background:#eee;">
-                     <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#999; flex-direction:column;">
-                        <i class="fa-solid fa-play-circle" style="font-size:4rem; margin-bottom:1rem; opacity:0.5;"></i>
-                        <span>La vidéo de démonstration sera bientôt disponible.</span>
-                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BIENVENUE -->
-    <section id="tpl-bienvenue">
-        <div class="reveal">
-            <h2>Livret de Parcours Inclusif <br><span style="color:var(--marianne-blue)">Une école pour tous.</span></h2>
-            <p class="section-desc">Le LPI est l'outil numérique national qui garantit la continuité des aménagements pédagogiques pour chaque élève à besoins éducatifs particuliers.</p>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 2.5rem; border: 1px solid #DDD; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm);">
-                <iframe src="https://www.youtube.com/embed/e59usyz_ZQg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <a href="https://lpi.phm.education.gouv.fr/lpi/connexion" target="_blank" class="btn-lpi-go" style="display:inline-block; padding: 1rem 2rem;">ACCÉDER AU PORTAIL OFFICIEL</a>
-        </div>
-    </section>
-
-    <!-- UTILITE -->
-    <section id="tpl-utilite">
-        <div class="reveal">
-            <h2>À quoi ça sert ?</h2>
-            <p class="section-desc">Le LPI simplifie le quotidien des enseignants, des élèves et des familles.</p>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-                    <h4>Enseignants</h4>
-                    <p>Accédez à une bibliothèque de 1000+ aménagements et suivez l'évolution de vos élèves sans ressaisie annuelle.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h4>Élèves</h4>
-                    <p>Bénéficiez d'un accompagnement personnalisé qui vous suit, même en changeant de classe ou d'établissement.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
-                    <h4>Familles</h4>
-                    <p>Suivez les décisions en temps réel et signez les documents officiels directement sur votre smartphone.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ORIENTATION (Aide au choix) -->
-    <section id="tpl-orientation">
-        <div class="reveal">
-            <h2>Orientation</h2>
-            <p class="section-desc">Tableau comparatif pour déterminer le plan adapté aux besoins de l'élève.</p>
-            
-            <div style="background:var(--bg-glass); border-radius:var(--radius-lg); padding:2rem; overflow-x:auto; border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow-sm);">
-                <table style="width:100%; border-collapse:collapse; min-width:600px;">
-                    <thead>
-                        <tr style="border-bottom:2px solid var(--text-light); text-align:left;">
-                            <th style="padding:1rem; color:var(--text-light);">Dispositif</th>
-                            <th style="padding:1rem; color:var(--text-light);">Cible</th>
-                            <th style="padding:1rem; color:var(--text-light);">Validateur</th>
-                            <th style="padding:1rem; color:var(--text-light);">Durée</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- PPRE -->
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.05);">
-                            <td style="padding:1.2rem 1rem;">
-                                <div class="badge bg-ppre" style="margin:0;">PPRE</div>
-                                <div style="font-size:0.8rem; font-weight:700; margin-top:4px;">Prog. Personnalisé de Réussite Éducative</div>
-                            </td>
-                            <td style="padding:1.2rem 1rem; font-size:0.95rem;">Difficultés scolaires ponctuelles ou légères.</td>
-                            <td style="padding:1.2rem 1rem; font-size:0.95rem;"><strong>Directeur / Chef d'étab.</strong><br><span style="opacity:0.6; font-size:0.85rem;">(Interne établissement)</span></td>
-                             <td style="padding:1.2rem 1rem; font-size:0.95rem;">Temporaire<br><span style="opacity:0.6; font-size:0.85rem;">(Quelques semaines)</span></td>
-                        </tr>
-                        <!-- PAP -->
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.05);">
-                            <td style="padding:1.2rem 1rem;">
-                                <div class="badge bg-pap" style="margin:0;">PAP</div>
-                                <div style="font-size:0.8rem; font-weight:700; margin-top:4px;">Plan d'Accompagnement Personnalisé</div>
-                            </td>
-                            <td style="padding:1.2rem 1rem; font-size:0.95rem;">Troubles des apprentissages (Dys, TDAH) durables.</td>
-                            <td style="padding:1.2rem 1rem; font-size:0.95rem;"><strong>Médecin Scolaire</strong><br><span style="opacity:0.6; font-size:0.85rem;">(Avis obligatoire)</span></td>
-                             <td style="padding:1.2rem 1rem; font-size:0.95rem;">Cycle / Scolarité<br><span style="opacity:0.6; font-size:0.85rem;">(Révisable)</span></td>
-                        </tr>
-                        <!-- PAI -->
-                        <tr style="border-bottom:1px solid rgba(0,0,0,0.05);">
-                            <td style="padding:1.2rem 1rem;">
-                                <div class="badge bg-pai" style="margin:0;">PAI</div>
-                                <div style="font-size:0.8rem; font-weight:700; margin-top:4px;">Projet d'Accueil Individualisé</div>
-                            </td>
-                            <td style="padding:1.2rem 1rem; font-size:0.95rem;">Pathologies chroniques, allergies, intolérances.</td>
-                            <td style="padding:1.2rem 1rem; font-size:0.95rem;"><strong>Médecin Scolaire</strong><br><span style="opacity:0.6; font-size:0.85rem;">(+ Famille & Mairie)</span></td>
-                             <td style="padding:1.2rem 1rem; font-size:0.95rem;">Annuel<br><span style="opacity:0.6; font-size:0.85rem;">(Reconductible)</span></td>
-                        </tr>
-                        <!-- PPS -->
-                        <tr>
-                            <td style="padding:1.2rem 1rem;">
-                                <div class="badge bg-pps" style="margin:0;">PPS</div>
-                                <div style="font-size:0.8rem; font-weight:700; margin-top:4px;">Projet Personnalisé de Scolarisation</div>
-                            </td>
-                            <td style="padding:1.2rem 1rem; font-size:0.95rem;">Situation de Handicap reconnue par la MDPH.</td>
-                            <td style="padding:1.2rem 1rem; font-size:0.95rem;"><strong>CDAPH (MDPH)</strong><br><span style="opacity:0.6; font-size:0.85rem;">(Notification officielle)</span></td>
-                             <td style="padding:1.2rem 1rem; font-size:0.95rem;">Long terme<br><span style="opacity:0.6; font-size:0.85rem;">(Selon notification)</span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div style="margin-top:2.5rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
-                <!-- Aide contextuelle 1 -->
-                <div class="card" onclick="switchSection('contact')" style="cursor:pointer; border-left:4px solid var(--text-light);">
-                    <h4><i class="fa-solid fa-user-doctor" style="margin-right:10px;"></i>Besoin d'un avis ?</h4>
-                    <p>Pour le PAP et le PAI, l'avis du service médical est <strong>indispensable</strong>. Contactez l'infirmerie avant de créer le dossier.</p>
-                </div>
-                <!-- Aide contextuelle 2 -->
-                <div class="card" onclick="switchSection('guides')" style="cursor:pointer; border-left:4px solid var(--marianne-blue);">
-                    <h4><i class="fa-solid fa-file-pdf" style="margin-right:10px;"></i>Les Fiches Techniques</h4>
-                    <p>Accédez aux guides PDF détaillés pour chacun de ces dispositifs dans la rubrique Ressources > Guides.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DISPOSITIFS -->
-    <section id="tpl-dispositifs">
-        <div class="reveal">
-            <h2>Les Dispositifs</h2>
-            <p class="section-desc">Identifier le cadre légal adapté à la situation de l'élève.</p>
-            <div class="grid">
-                <div class="card">
-                    <div class="badge bg-ppre">PPRE</div>
-                    <h4>Réussite Éducative</h4>
-                    <p>Pour les difficultés scolaires légères ou ponctuelles. Pas besoin de diagnostic médical.</p>
-                </div>
-                <div class="card">
-                    <div class="badge bg-pap">PAP</div>
-                    <h4>Accompagnement</h4>
-                    <p>Pour les élèves avec troubles des apprentissages (Dys, TDAH). Nécessite l'avis du médecin scolaire.</p>
-                </div>
-                <div class="card">
-                    <div class="badge bg-pps">PPS</div>
-                    <h4>Scolarisation</h4>
-                    <p>En cas de handicap reconnu par la MDPH. Permet l'accès à une AESH ou du matériel adapté.</p>
-                </div>
-                <div class="card">
-                    <div class="badge bg-pai">PAI</div>
-                    <h4>Accueil Individualisé</h4>
-                    <p>Pour les problèmes de santé, allergies ou pathologies chroniques.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PARCOURS -->
-    <section id="tpl-parcours">
-        <div class="reveal">
-            <h2>Parcours de l'Élève</h2>
-            <p class="section-desc">Un parcours simplifié en 4 étapes clés.</p>
-            
-            <div class="cartoon-track">
-                <div class="c-line"></div>
-                <!-- STEP 1: DETECT -->
-                <div class="cartoon-step step-1">
-                    <div class="c-bubble">HEIN ?</div>
-                    <div class="c-icon-box">
-                        <div class="c-icon-bg"></div>
-                        <svg viewBox="0 0 100 100" class="c-icon-main" style="width:80px; height:80px; margin-top:5px;">
-                            <circle cx="50" cy="50" r="45" fill="#ffdfbf"/>
-                            <path d="M10,40 Q50,-10 90,40" fill="#4e342e"/>
-                            <circle cx="35" cy="50" r="4" fill="#333"/>
-                            <circle cx="65" cy="50" r="4" fill="#333"/>
-                            <path d="M40,75 Q50,65 60,75" stroke="#333" stroke-width="2" fill="none"/>
-                            <text x="70" y="35" font-family="Arial" font-weight="900" font-size="35" fill="#d32f2f">?</text>
-                        </svg>
-                    </div>
-                    <h4 style="font-size:1.3rem;">1. Détection</h4>
-                    <p style="font-size:0.95rem; margin-top:0.5rem;">L'enseignant repère les besoins (signaux faibles).</p>
-                </div>
-
-                <!-- STEP 2: WRITE -->
-                <div class="cartoon-step step-2">
-                    <div class="c-bubble">CLIC CLIC</div>
-                    <div class="c-icon-box">
-                        <div class="c-icon-bg"></div>
-                        <svg viewBox="0 0 100 100" class="c-icon-main" style="width:80px; height:80px; margin-top:5px;">
-                             <!-- Hair Bun -->
-                            <circle cx="50" cy="15" r="12" fill="#5D4037"/>
-                            <!-- Face -->
-                            <circle cx="50" cy="50" r="38" fill="#ffdfbf"/>
-                            <!-- Hair Front -->
-                            <path d="M15,45 Q50,-5 85,45" fill="#5D4037"/>
-                            <!-- Glasses -->
-                            <g stroke="#333" stroke-width="2" fill="rgba(255,255,255,0.3)">
-                                <circle cx="36" cy="50" r="11"/>
-                                <circle cx="64" cy="50" r="11"/>
-                                <line x1="47" y1="50" x2="53" y2="50"/>
-                            </g>
-                            <!-- Eyes -->
-                            <circle cx="36" cy="50" r="3" fill="#333"/>
-                            <circle cx="64" cy="50" r="3" fill="#333"/>
-                            <!-- Laptop -->
-                            <path d="M10,80 L90,80 L85,95 L15,95 Z" fill="#90A4AE"/>
-                            <rect x="20" y="85" width="60" height="5" fill="#CFD8DC" rx="2"/>
-                        </svg>
-                    </div>
-                    <h4 style="font-size:1.3rem;">2. Saisie</h4>
-                    <p style="font-size:0.95rem; margin-top:0.5rem;">L'enseignante saisit les aménagements.</p>
-                </div>
-
-                <!-- STEP 3: VALIDATE -->
-                <div class="cartoon-step step-3">
-                    <div class="c-bubble">TEAM</div>
-                    <div class="c-icon-box">
-                        <div class="c-icon-bg"></div>
-                        <svg viewBox="0 0 100 100" class="c-icon-main" style="width:80px; height:80px; margin-top:5px;">
-                            <!-- Team members back -->
-                            <circle cx="25" cy="55" r="18" fill="#ffdfbf" />
-                            <path d="M10,48 Q25,25 40,48" fill="#5D4037" />
-                            <circle cx="75" cy="55" r="18" fill="#E0C7A6" />
-                            <path d="M60,48 Q75,25 90,48" fill="#3E2723" />
-                            
-                            <!-- Member Front -->
-                            <circle cx="50" cy="50" r="22" fill="#ffdfbf" stroke="#fff" stroke-width="2"/>
-                            <path d="M30,40 Q50,15 70,40" fill="#FFB74D" />
-                            <circle cx="43" cy="52" r="2.5" fill="#333"/>
-                            <circle cx="57" cy="52" r="2.5" fill="#333"/>
-                            <path d="M45,62 Q50,68 55,62" stroke="#333" stroke-width="1.5" fill="none"/>
-                            
-                            <!-- Table/Paper -->
-                            <rect x="25" y="75" width="50" height="20" fill="white" stroke="#333" stroke-width="1.5" rx="2"/>
-                            
-                            <!-- Check -->
-                            <circle cx="70" cy="85" r="12" fill="#4CAF50" stroke="#fff" stroke-width="2"/>
-                            <path d="M65,85 L69,89 L76,80" stroke="white" stroke-width="2.5" fill="none"/>
-                        </svg>
-                    </div>
-                    <h4 style="font-size:1.3rem;">3. Validation</h4>
-                    <p style="font-size:0.95rem; margin-top:0.5rem;">L'équipe et la direction valident le projet.</p>
-                </div>
-
-                <!-- STEP 4: SIGN -->
-                <div class="cartoon-step step-4">
-                    <div class="c-bubble">SIGNÉ !</div>
-                    <div class="c-icon-box">
-                        <div class="c-icon-bg"></div>
-                        <svg viewBox="0 0 100 100" class="c-icon-main" style="width:80px; height:80px; margin-top:5px;">
-                            <!-- Dad (Left Back) -->
-                            <circle cx="25" cy="42" r="14" fill="#E0C7A6" />
-                            <path d="M12,38 Q25,18 38,38" fill="#3E2723" />
-                            <!-- Mom (Right Back) -->
-                            <circle cx="75" cy="42" r="14" fill="#FFDFBF" />
-                            <path d="M62,38 Q75,10 88,38 L88,52 Q75,48 62,52 Z" fill="#FBC02D" />
-                            <!-- Child (Front) -->
-                            <circle cx="50" cy="62" r="17" fill="#FFDFBF" stroke="#fff" stroke-width="2"/>
-                            <path d="M33,55 Q50,38 67,55" fill="#5D4037" />
-                            <circle cx="44" cy="60" r="2" fill="#333"/>
-                            <circle cx="56" cy="60" r="2" fill="#333"/>
-                            <path d="M47,68 Q50,72 53,68" stroke="#333" stroke-width="1.5" fill="none"/>
-                            <!-- Signing Action -->
-                            <rect x="25" y="78" width="50" height="18" fill="#EEEEEE" stroke="#333" stroke-width="1" rx="3"/>
-                            <path d="M58,72 L68,85" stroke="#1976D2" stroke-width="3" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h4 style="font-size:1.3rem;">4. Accord</h4>
-                    <p style="font-size:0.95rem; margin-top:0.5rem;">La famille signe via ÉduConnect.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DEMANDE DE DROITS & ACTEURS PEX -->
-    <section id="tpl-demande-droits">
-        <div class="reveal">
-            <h2>Acteurs & Périmètres (PEX)</h2>
-            <p class="section-desc">Détail des rôles et des niveaux d'habilitation technique (Périmètre d'Exercice) au sein du portail LPI.</p>
-            
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom:4rem;">
-                <!-- DIRECTION -->
-                <div class="card" style="border-left: 6px solid var(--marianne-blue);">
-                    <div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Administration</div>
-                    <h4 style="font-size:1.3rem;">Direction</h4>
-                    <ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Gestion des comptes & droits</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Validation finale des livrets</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Pilotage des statistiques</li>
-                    </ul>
-                </div>
-
-                <!-- ENSEIGNANTS -->
-                <div class="card" style="border-left: 6px solid var(--color-pap);">
-                    <div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Pédagogie</div>
-                    <h4 style="font-size:1.3rem;">Enseignants / PP</h4>
-                    <ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Rédaction des aménagements</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Suivi des élèves (classe)</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Invitation des familles</li>
-                    </ul>
-                </div>
-
-                <!-- MEDICAL -->
-                <div class="card" style="border-left: 6px solid var(--color-pai);">
-                    <div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Santé</div>
-                    <h4 style="font-size:1.3rem;">Médecin / Infirmier</h4>
-                    <ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Validation PAI & PAP</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Recommandations médicales</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-lock" style="color:var(--text-light); margin-right:8px;"></i>Données confidentielles</li>
-                    </ul>
-                </div>
-
-                <!-- HANDICAP -->
-                <div class="card" style="border-left: 6px solid var(--color-pps);">
-                    <div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">MDPH / ERSEH</div>
-                    <h4 style="font-size:1.3rem;">Référent Handicap</h4>
-                    <ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Suivi des notifications PPS</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Lien avec la MDPH</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Coordination ESS</li>
-                    </ul>
-                </div>
-                
-                <!-- FAMILLE -->
-                <div class="card" style="border-left: 6px solid var(--marianne-red);">
-                    <div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Responsables</div>
-                    <h4 style="font-size:1.3rem;">Famille & Élève</h4>
-                    <ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-eye" style="color:var(--marianne-blue); margin-right:8px;"></i>Consultation des livrets</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-pen-nib" style="color:var(--marianne-blue); margin-right:8px;"></i>Signature en ligne</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-comments" style="color:var(--marianne-blue); margin-right:8px;"></i>Demande d'informations</li>
-                    </ul>
-                </div>
-
-                <!-- AESH -->
-                <div class="card" style="border-left: 6px solid var(--primary);">
-                    <div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Accompagnement</div>
-                    <h4 style="font-size:1.3rem;">AESH</h4>
-                    <ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-eye" style="color:var(--marianne-blue); margin-right:8px;"></i>Consultation des aménagements</li>
-                        <li style="margin-bottom:8px;"><i class="fa-solid fa-handshake-angle" style="color:var(--marianne-blue); margin-right:8px;"></i>Aide à la mise en œuvre</li>
-                    </ul>
-                </div>
-            </div>
-
-            <hr style="border:0; border-top:1px solid rgba(0,0,0,0.1); margin: 3rem 0;">
-
-            <h3>Demande d'extension de droits</h3>
-            <p class="section-desc">Si vous n'avez pas accès aux modules nécessaires à votre mission (PEX manquant), utilisez ce formulaire.</p>
-            <div class="card" style="padding:1.5rem; max-width:800px;">
-                <div id="req-error" style="color:#E1000F; display:none; font-weight:700; margin-bottom:0.5rem;"></div>
-                <label style="display:block; font-weight:700; margin-bottom:0.5rem;">Nom et Prénom</label>
-                <input id="req-name" style="width:100%; padding:0.6rem; border-radius:8px; margin-bottom:0.75rem; border:1px solid rgba(0,0,0,0.06);" />
-                
-                <label style="display:block; font-weight:700; margin-bottom:0.5rem;">Rôle actuel</label>
-                <input id="req-role" style="width:100%; padding:0.6rem; border-radius:8px; margin-bottom:0.75rem; border:1px solid rgba(0,0,0,0.06);" placeholder="Ex: Enseignant Maths / CPE" />
-                
-                <label style="display:block; font-weight:700; margin-bottom:0.5rem;">Motif de la demande</label>
-                <textarea id="req-reason" style="width:100%; padding:0.6rem; border-radius:8px; margin-bottom:0.75rem; border:1px solid rgba(0,0,0,0.06);" placeholder="Ex: Je suis PP de la 6e B et je ne vois pas l'onglet PPRE..."></textarea>
-                
-                <div style="display:flex; gap:1rem; margin-top:1rem;">
-                    <a id="mailto-request" href="#" class="btn-lpi-go" aria-label="Ouvrir mon client de messagerie pour demander des droits">Envoyer la demande (Mail)</a>
-                    <button onclick="(function(){document.getElementById('req-name').value='';document.getElementById('req-role').value='';document.getElementById('req-reason').value='';})();" class="btn-lpi-go" style="background:var(--accent-soft); color:var(--marianne-blue); border:none; cursor:pointer;">Effacer</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ET TOUTE LA SUITE DES SECTIONS... -->
-    <section id="tpl-famille">
-        <div class="reveal">
-            <h2>Espace Famille</h2>
-            <div class="grid">
-                <div class="card" style="border-top: 8px solid var(--marianne-red)">
-                    <h4>Accès ÉduConnect</h4>
-                    <p>Consultez et signez les projets de votre enfant en toute sécurité.</p>
-                    <a href="https://moncompte.educonnect.education.gouv.fr/" target="_blank" style="display:block; margin-top:1.5rem; background:var(--marianne-red); color:white; padding:12px; border-radius:10px; text-align:center; text-decoration:none; font-weight:800;">SE CONNECTER</a>
-                </div>
-                <div class="card"><h4>Dialogue Parents-École</h4><p>Contactez le professeur principal pour discuter des aménagements mis en place.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="tpl-rgpd">
-        <div class="reveal">
-            <h2>RGPD & Données</h2>
-            <div class="card" style="border-left: 8px solid var(--marianne-blue)">
-                <h4>Hébergement Ministériel</h4>
-                <p>Vos données sont protégées sur les serveurs de l'Éducation Nationale. Seuls les délégués à la protection des données (DPD) académiques supervisent cet outil.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="tpl-faq">
-        <div class="reveal">
-            <h2>Foire Aux Questions</h2>
-            <p class="section-desc">Les réponses aux interrogations les plus fréquentes sur le LPI.</p>
-
-            <!-- Q1 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>1. Qui a accès au Livret de Parcours Inclusif ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>L'accès est réservé aux enseignants, directeurs/chefs d'établissement, médecins de l'Éducation nationale et psychologues scolaires. Les familles ont un accès en consultation et signature via ÉduConnect.</p></div>
-            </div>
-
-            <!-- Q2 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>2. Comment me connecter au LPI ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>Pour les professionnels : via votre portail académique (Arena) rubrique "Scolarité". Pour les familles : via le portail "Scolarité Services" avec vos identifiants ÉduConnect.</p></div>
-            </div>
-
-            <!-- Q3 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>3. Je ne vois pas tous mes élèves, pourquoi ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>La synchronisation dépend des bases élèves (ONDE/SIECLE). Vérifiez que vous êtes bien affecté à la classe ou au groupe dans l'emploi du temps officiel. Si le problème persiste, le chef d'établissement doit vérifier les délégations.</p></div>
-            </div>
-
-            <!-- Q4 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>4. Quelle différence entre PPRE, PAP, PPS et PAI ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body">
-                    <ul style="padding-left:1.5rem; margin-top:0.5rem;">
-                        <li><strong>PPRE :</strong> Difficultés scolaires ponctuelles (équipe péda).</li>
-                        <li><strong>PAP :</strong> Troubles des apprentissages durables (médecin scolaire).</li>
-                        <li><strong>PPS :</strong> Handicap reconnu (MDPH).</li>
-                        <li><strong>PAI :</strong> Problème de santé (médecin scolaire).</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Q5 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>5. Qui valide le PAP (Plan d'Accompagnement Personnalisé) ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>Le PAP est élaboré par l'équipe pédagogique mais **doit obligatoirement être validé par le médecin de l'Éducation nationale** pour être actif.</p></div>
-            </div>
-
-            <!-- Q6 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>6. Les aménagements sont-ils conservés l'année suivante ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>Oui, le LPI assure la portabilité des données. Lors du passage en classe supérieure ou du changement d'établissement (école -> collège), le dossier suit l'élève automatiquement.</p></div>
-            </div>
-
-            <!-- Q7 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>7. La famille peut-elle modifier le livret ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>Non, la famille a un accès en **lecture seule**. Elle peut consulter les aménagements et viser/signer le document final, mais ne peut pas modifier le contenu technique.</p></div>
-            </div>
-
-            <!-- Q8 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>8. Est-ce que le LPI remplace le dossier MDPH ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>Le LPI facilite la transmission des informations (GEVA-Sco) vers la MDPH, mais ne remplace pas l'instruction du dossier administratif par la MDPH elle-même.</p></div>
-            </div>
-
-            <!-- Q9 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>9. Comment imprimer le projet pour la signature papier ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>Un bouton "Éditer le PDF" est disponible à chaque étape de validation. Toutefois, la signature numérique via ÉduConnect est à privilégier pour simplifier le circuit.</p></div>
-            </div>
-
-            <!-- Q10 -->
-            <div class="faq-v3" onclick="this.classList.toggle('open')">
-                <div class="faq-v3-header"><span>10. Qui contacter en cas de blocage technique ?</span><i class="fa-solid fa-chevron-down"></i></div>
-                <div class="faq-v3-body"><p>En premier niveau : le référent numérique de votre établissement ou le directeur/chef d'établissement. En second niveau : via la plateforme d'assistance académique.</p></div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="tpl-glossaire">
-        <div class="reveal">
-            <h2>Glossaire</h2>
-            <p class="section-desc">Définitions clés inspirées du Guide Chef d'Établissement et des référentiels Eduscol.</p>
-            
-            <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:2rem;">
-                
-                <!-- PEX : Concept central du Guide Direction -->
-                <div class="card" style="border-top: 4px solid var(--marianne-blue);">
-                    <h4 style="color:var(--marianne-blue); margin-bottom:0.5rem;">PEX (Périmètre d'Exercice)</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;">Action d'administration permettant au Chef d'Établissement ou Directeur de déléguer des droits d'accès sélectifs (classe, groupe, établissement) à des membres du personnel non-enseignant ou partenaires.</p>
-                </div>
-
-                <div class="card">
-                    <h4 style="margin-bottom:0.5rem;">GEVA-Sco</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;"><strong>Guide d'Évaluation Scolaire.</strong> Document officiel normalisé permettant à l'équipe éducative de transmettre à la MDPH une évaluation des besoins de l'élève en situation scolaire.</p>
-                </div>
-
-                <div class="card">
-                    <h4 style="margin-bottom:0.5rem;">ERSEH</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;"><strong>Enseignant Référent de Scolarisation.</strong> Interlocuteur pivot qui assure le lien entre l'école, la famille et la MDPH. Il organise et anime les réunions de l'Équipe de Suivi (ESS).</p>
-                </div>
-
-                <div class="card">
-                    <h4 style="margin-bottom:0.5rem;">CDAPH</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;"><strong>Commission des Droits et de l'Autonomie.</strong> Instance décisionnaire de la MDPH qui valide les demandes (ex: attribution d'une AESH, orientation ULIS, PPS).</p>
-                </div>
-
-                <div class="card">
-                    <h4 style="margin-bottom:0.5rem;">ÉduConnect</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;">Portail d'authentification national sécurisé. C'est le <strong>seul point d'entrée pour les familles</strong> leur permettant de consulter le LPI et de signer numériquement les documents.</p>
-                </div>
-
-                <div class="card">
-                    <h4 style="margin-bottom:0.5rem;">SIECLE / ONDE</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;">Bases de données nationales (2nd degré / 1er degré) qui alimentent le LPI quotidiennement. <br><em>Note : Le LPI ne permet pas de modifier l'état civil d'un élève, la modification doit se faire dans ces bases.</em></p>
-                </div>
-
-                <div class="card">
-                    <h4 style="margin-bottom:0.5rem;">ESS</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;"><strong>Équipe de Suivi de Scolarisation.</strong> Groupe de travail réuni au moins une fois par an pour le PPS, comprenant les parents, l'ERSEH, les enseignants et les partenaires de soin.</p>
-                </div>
-
-                 <div class="card">
-                    <h4 style="margin-bottom:0.5rem;">AESH</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;"><strong>Accompagnant d'Élève en Situation de Handicap.</strong> Personnel notifié par la CDAPH pour apporter une aide humaine (individuelle, mutualisée) dans les activités scolaires.</p>
-                </div>
-
-                 <div class="card">
-                    <h4 style="margin-bottom:0.5rem;">ARENA</h4>
-                    <p style="font-size:0.95rem; opacity:0.8;">Portail intranet académique par lequel les personnels de l'Éducation nationale accèdent au téléservice LPI (rubrique Scolarité ou Enquêtes et Pilotage).</p>
-                </div>
-            </div>
-            
-            <div style="margin-top:2rem; text-align:center;">
-                 <a href="https://eduscol.education.fr/document/11900/download" target="_blank" style="color:var(--text-light); text-decoration:underline; font-size:0.9rem;">Consulter le Guide Complet Chef d'Établissement (PDF)</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="tpl-contact">
-        <div class="reveal">
-            <h2>Assistance</h2>
-            <div class="grid">
-                <div class="card"><h4>Secrétariat</h4><p>ce.000000x@ac-acad.fr</p></div>
-                <div class="card"><h4>Professeur Référent</h4><p>m.leroy@education.gouv.fr</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GUIDES PRATIQUES -->
-    <section id="tpl-guides">
-        <div class="reveal">
-            <h2>Guides Pratiques</h2>
-            <p class="section-desc">Accédez à toute la documentation officielle pour maîtriser le LPI selon votre rôle ou votre besoin.</p>
-
-            <h3 style="margin-bottom:1.5rem; font-size:1.8rem;">Guides par Profil</h3>
-            <div class="grid" style="margin-bottom:4rem;">
-                <!-- Enseignant -->
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
-                    <h4>Enseignants</h4>
-                    <p>Guide complet pour saisir les aménagements et suivre vos élèves.</p>
-                    <a href="https://eduscol.education.fr/document/11903/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;">TÉLÉCHARGER</a>
-                </div>
-                <!-- Direction -->
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-school-flag"></i></div>
-                    <h4>Direction</h4>
-                    <p>Pour les Directeurs d'école et Chefs d'établissement.</p>
-                    <div style="display:flex; gap:0.5rem; margin-top:1rem;">
-                        <a href="https://eduscol.education.fr/document/11897/download" class="btn-lpi-go" target="_blank" style="flex:1; font-size:0.75rem;">DIR. ÉCOLE</a>
-                        <a href="https://eduscol.education.fr/document/11900/download" class="btn-lpi-go" target="_blank" style="flex:1; font-size:0.75rem;">CHEF ÉTAB.</a>
-                    </div>
-                </div>
-                <!-- Famille -->
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-house-user"></i></div>
-                    <h4>Familles</h4>
-                    <p>Guide de connexion et signature via ÉduConnect.</p>
-                     <a href="https://eduscol.education.fr/document/52038/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;">TÉLÉCHARGER</a>
-                </div>
-                
-                <!-- Créer un livret -->
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-folder-plus"></i></div>
-                    <h4>Créer un livret</h4>
-                    <p>Fiche métier : Processus de création étape par étape.</p>
-                     <a href="https://eduscol.education.fr/document/11957/download" class="btn-lpi-go" target="_blank" style="display:inline-block; margin-top:1rem; width:100%;">TÉLÉCHARGER</a>
-                </div>
-            </div>
-
-            <h3 style="margin-bottom:1.5rem; font-size:1.8rem;">Fiches Techniques par Dispositif</h3>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <a href="https://eduscol.education.fr/document/11954/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
-                    <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-ppre);"></i>
-                    <div><h4 style="margin-bottom:0; font-size:1.2rem;">Créer un PPRE</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
-                </a>
-                <a href="https://eduscol.education.fr/document/11951/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
-                    <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-pap);"></i>
-                    <div><h4 style="margin-bottom:0; font-size:1.2rem;">Créer un PAP</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
-                </a>
-                <a href="https://eduscol.education.fr/document/11945/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
-                    <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-pps);"></i>
-                    <div><h4 style="margin-bottom:0; font-size:1.2rem;">Mise en oeuvre PPS</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
-                </a>
-                <a href="https://eduscol.education.fr/document/11948/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
-                    <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--marianne-blue);"></i>
-                    <div><h4 style="margin-bottom:0; font-size:1.2rem;">GEVA-Sco 1ère</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
-                </a>
-                 <a href="https://eduscol.education.fr/document/64946/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
-                    <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--marianne-blue);"></i>
-                    <div><h4 style="margin-bottom:0; font-size:1.2rem;">GEVA-Sco Réexam</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
-                </a>
-                 <a href="https://eduscol.education.fr/document/11957/download" target="_blank" class="card" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;">
-                    <i class="fa-solid fa-file-pdf" style="font-size:2rem; color:#333;"></i>
-                    <div><h4 style="margin-bottom:0; font-size:1.2rem;">Création Livret</h4><span style="font-size:0.8rem; opacity:0.6;">Guide Général</span></div>
-                </a>
-            </div>
-            
-            <div style="margin-top:3rem; text-align:center;">
-                <a href="https://eduscol.education.fr/document/11969/download" target="_blank" style="color:var(--text-light); font-weight:700; text-decoration:underline;">Télécharger la Foire aux Questions (FAQ) officielle</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CALENDRIER -->
-    <section id="tpl-calendrier">
-        <div class="reveal">
-            <h2>Calendrier Scolaire</h2>
-            <p class="section-desc">Dates importantes pour les livrables LPI et les échéances réglementaires.</p>
-            <div class="timeline-v3">
-                <div class="tm-step"><div class="tm-dot">Sept</div><h4>Rentrée</h4><p>Mise à jour des livrets existants.</p></div>
-                <div class="tm-step"><div class="tm-dot">Oct</div><h4>Évaluations</h4><p>Premiers bilans et ajustements.</p></div>
-                <div class="tm-step"><div class="tm-dot">Déc</div><h4>Signatures</h4><p>Validation des projets pour le trimestre.</p></div>
-                <div class="tm-step"><div class="tm-dot">Juin</div><h4>Fin d'année</h4><p>Archivage et préparation de la rentrée.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SEGPA & ULYSS -->
-    <section id="tpl-segpa-ulyss">
-        <div class="reveal">
-            <h2>SEGPA & ULYSS</h2>
-            <p class="section-desc">Dispositifs spécialisés : ressources et cas d'usage adaptés à vos structures.</p>
-
-            <div class="grid" style="margin-bottom: 3rem;">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h4>SEGPA</h4>
-                    <p>Section d'Enseignement Général et Professionnel Adapté : PPRE et PAP pour difficultés scolaires.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-wheelchair"></i></div>
-                    <h4>ULYSS</h4>
-                    <p>Unité Localisée pour l'Inclusion : PPS et coordination MDPH pour élèves en situation de handicap.</p>
-                </div>
-            </div>
-
-            <!-- SEGPA CONTENT -->
-            <h3 style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(0,0,0,0.1);">📚 SEGPA - Section d'Enseignement Adapté</h3>
-            
-            <div style="background: white; padding: 2rem; border-radius: 16px; margin: 2rem 0; border-left: 5px solid #FF6B35; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                <h4>Contexte SEGPA et LPI</h4>
-                <p>La SEGPA accueille des élèves en difficulté scolaire profonde. Le LPI intervient principalement via le <strong>PPRE</strong> (suivi des difficultés) et le <strong>PAP</strong> (aménagements formels).</p>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="badge bg-ppre">PPRE</div>
-                    <h4>Parcours PPRE en SEGPA</h4>
-                    <p><strong>Cas concret :</strong> Élève avec difficultés en calcul. Le PPRE formalise les objectifs trimestriels et les stratégies d'enseignement adaptées. Suivi tous les 4-6 semaines.</p>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.9rem;">
-                        <strong>Points clés :</strong><br>
-                        ✓ Objectifs mesurables (ex: lire 80% des énoncés)<br>
-                        ✓ Stratégies pédagogiques spécifiques<br>
+<!-- ACCUEIL -->
+<section id="tpl-accueil">
+<div class="reveal">
+<h2>Bienvenue sur votre <br/><span style="color:var(--marianne-blue)">Espace Inclusif.</span></h2>
+<p class="section-desc">Coordonnez l'accompagnement de vos élèves avec simplicité et sécurité.</p>
+<!-- Widgets moved for logical flow -->
+<!-- MISE EN AVANT: UTILITÉ -->
+<div onclick="switchSection('utilite')" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-5px)'" style="cursor:pointer; background: linear-gradient(to right, var(--marianne-blue-soft), #fff); border-left: 6px solid var(--marianne-blue); padding: 2rem; border-radius: var(--radius-md); margin-bottom: 3rem; display:flex; flex-wrap:wrap; align-items:center; gap:2rem; box-shadow: var(--shadow-sm); transition: transform 0.2s ease;">
+<div style="font-size:2.5rem; color:var(--marianne-blue); background:white; width:80px; height:80px; display:flex; align-items:center; justify-content:center; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.05); min-width:80px;"><i class="fa-solid fa-lightbulb"></i></div>
+<div style="flex-grow:1;">
+<h3 style="font-size:1.6rem; font-weight:800; margin-bottom:0.5rem; color:var(--text-main);">À quoi sert le LPI ?</h3>
+<p style="opacity:0.8; font-size:1.1rem; max-width:650px; line-height:1.6;">Outil central pour les <strong>professionnels de l'éducation</strong> : il garantit la continuité pédagogique, simplifie la gestion administrative et sécurise le partage d'informations avec les familles.</p>
+</div>
+<div style="background:var(--marianne-blue); color:white; padding:0.8rem 1.5rem; border-radius:50px; font-weight:700; font-size:0.9rem; white-space:nowrap;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left:8px;"></i></div>
+</div>
+<div class="mission-banner" style="margin-top: 4rem; margin-bottom: 2rem; background: white; color: var(--text-main); padding: 2.25rem; border-radius: var(--radius-lg); position: relative; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+<h3 style="font-size: 2rem; font-weight: 900; margin-bottom: 1.25rem; text-align: center; color: var(--marianne-blue);">Diagnostic (18/01/2026) — objectifs atteints / non atteints</h3>
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1.25rem;">
+<div style="background: var(--accent-soft); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); padding: 1.2rem;">
+<div style="font-weight: 900; color: var(--marianne-blue);">Connexions enseignants</div>
+<div style="font-size: 1.7rem; font-weight: 900; margin-top: 0.35rem;">3 / 50</div>
+<div style="margin-top: 0.25rem; font-weight: 900; color: var(--marianne-red);">NON atteint</div>
+<div style="margin-top: 0.5rem; opacity: 0.8;">Cible immédiate : 15 connectés.</div>
+</div>
+<div style="background: var(--accent-soft); border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); padding: 1.2rem;">
+<div style="font-weight: 900; color: var(--marianne-blue);">Livrets actifs</div>
+<div style="font-size: 1.7rem; font-weight: 900; margin-top: 0.35rem;">0</div>
+<div style="margin-top: 0.25rem; font-weight: 900; color: var(--marianne-red);">NON atteint</div>
+<div style="margin-top: 0.5rem; opacity: 0.8;">Cible immédiate : 3 livrets utiles.</div>
+</div>
+<div style="background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: var(--radius-md); padding: 1.2rem;">
+<div style="font-weight: 900; color: var(--inclusive-green);">Action de démarrage</div>
+<div style="margin-top: 0.35rem; font-weight: 800;">45 min — démo sur 1 cas réel</div>
+<div style="margin-top: 0.5rem; opacity: 0.85;">Pilote (direction) + personnes ressources + règles minimales + contact blocage.</div>
+<div style="margin-top: 0.9rem;">
+<a href="#" onclick="switchSection('plan-action'); return false;" style="display:inline-flex; gap:8px; align-items:center; font-weight: 900; color: var(--marianne-blue); text-decoration:none;">Ouvrir le plan (1→10) <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="mission-banner" style="margin-top: 0; margin-bottom: 2.25rem; background: white; color: var(--text-main); padding: 3rem; border-radius: var(--radius-lg); position: relative; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+<h3 style="font-size: 2rem; font-weight: 900; margin-bottom: 2.5rem; text-align: center; color: var(--marianne-blue);">Objectifs LPI (pour l’évaluation)</h3>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+<div style="text-align: center;">
+<div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: var(--marianne-blue-soft); color: var(--marianne-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+<h4 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">Aménagements rapides &amp; effectifs</h4>
+<p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Mise en place rapide dès l’identification d’un besoin éducatif particulier, avec appui sur une banque d’aménagements/adaptations mobilisable tout au long du parcours.</p>
+</div>
+<div style="text-align: center;">
+<div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: var(--marianne-red-soft); color: var(--marianne-red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-file-pen"></i></div>
+<h4 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">Procédures simplifiées</h4>
+<p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Simplification du renseignement et de l’édition : PPRE, PAP, GEVA-Sco première demande, document de mise en œuvre du PPS.</p>
+</div>
+<div style="text-align: center;">
+<div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: var(--inclusive-green-soft); color: var(--inclusive-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-people-group"></i></div>
+<h4 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">Formalisation avec les familles</h4>
+<p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Formalisation des plans/projets et organisation, si besoin, du recours à divers aménagements, en association avec les familles.</p>
+</div>
+<div style="text-align: center;">
+<div style="width: 60px; height: 60px; margin: 0 auto 1rem; background: #fff; border: 1px solid rgba(0,0,0,0.08); color: var(--marianne-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="fa-solid fa-right-left"></i></div>
+<h4 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">Interface école ↔ MDPH</h4>
+<p style="font-size: 0.95rem; line-height: 1.6; opacity: 0.85;">Circulation d’information entre l’école et la MDPH via une interface dédiée.</p>
+</div>
+</div>
+</div>
+<div class="widgets" style="margin-bottom: 4rem;">
+<div class="widget">
+<div class="widget-icon"><i class="fa-solid fa-users"></i></div>
+<div class="widget-info"><span>Connexions (18/01/2026)</span><h5>3 / 50</h5></div>
+</div>
+<div class="widget">
+<div class="widget-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+<div class="widget-info"><span>Livrets actifs</span><h5>0</h5></div>
+</div>
+<div class="widget">
+<div class="widget-icon"><i class="fa-solid fa-bullseye"></i></div>
+<div class="widget-info"><span>Cible immédiate</span><h5>15 + 3</h5></div>
+</div>
+</div>
+<div class="grid">
+<div class="card" onclick="switchSection('dispositifs')" style="cursor:pointer;">
+<div class="card-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+<h4>Quel dispositif ?</h4>
+<p>Analysez les besoins et déterminez le cadre réglementaire idéal (PPRE, PAP, PPS, PAI).</p>
+</div>
+<div class="card" onclick="switchSection('guides')" style="cursor:pointer;">
+<div class="card-icon"><i class="fa-solid fa-file-signature"></i></div>
+<h4>Démarrer un livret</h4>
+<p>Suivez nos guides interactifs pour créer, valider et faire signer un projet inclusif.</p>
+</div>
+<div class="card" onclick="switchSection('famille')" style="cursor:pointer;">
+<div class="card-icon"><i class="fa-solid fa-comments"></i></div>
+<h4>Lien Parent</h4>
+<p>Aidez les familles à utiliser ÉduConnect pour consulter les aménagements de leur enfant.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PLAN D'ACTION (1→10) -->
+<section id="tpl-plan-action">
+<div class="reveal">
+<h2>Plan d’action (1→10)</h2>
+<p class="section-desc">Document de travail — structure identique au plan (diagnostic → stratégie → objectifs → actions → indicateurs → calendrier 2 ans).</p>
+<div style="background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
+<h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">1) Point de départ (18/01/2026) — atteints / non atteints</h3>
+<ul style="margin:0;">
+<li><b>Constat d’usage</b> : 3/50 enseignants connectés (~6%), 0 livret actif.</li>
+<li><b>Objectif immédiat du plan</b> : 15 connectés + 3 livrets utiles (3 élèves prioritaires).</li>
+<li><b>Évaluation au 18/01/2026</b> : <b style="color:var(--marianne-red)">NON atteint</b> (3/50 ; 0 livret).</li>
+</ul>
+<div style="margin-top: 1.25rem; padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid rgba(0,0,0,0.06); background: var(--marianne-blue-soft);">
+<div style="font-weight: 900; color: var(--marianne-blue);">Action à mener : “Démarrage LPI en mode École inclusive”</div>
+<div style="margin-top: 0.35rem; opacity: 0.9; font-weight: 800;">45 min — démo sur 1 cas réel + règles minimales + contact blocage.</div>
+</div>
+</div>
+<div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
+<h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">2) Stratégie</h3>
+<ul style="margin:0;">
+<li><b>Principe</b> : outil “utilisé” = pilotage + information partagée + preuve d’utilité sur quelques situations réelles.</li>
+<li><b>Appui clé</b> : portail = point d’entrée unique (formés / en attente / au cas où / curiosité).</li>
+<li><b>Continuité</b> : parents + primaire + lycée/LP (transitions sécurisées).</li>
+</ul>
+</div>
+<div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
+<h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">3) Objectifs (2026)</h3>
+<ul style="margin:0;">
+<li><b>Appropriation</b> : plus de personnels connectés et autonomes.</li>
+<li><b>Usage utile</b> : livrets réellement exploités sur situations prioritaires (PPS/PAP/PAI).</li>
+<li><b>Qualité École inclusive</b> : ESS mieux préparées, information à jour, continuité des parcours.</li>
+<li><b>Organisation</b> : pilotage identifié + personnes ressources connues.</li>
+</ul>
+</div>
+<div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
+<h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">4) Actions (A/B/C/D)</h3>
+<div class="grid" style="gap:1.25rem;">
+<div class="card" style="cursor:default;">
+<div class="card-icon"><i class="fa-solid fa-compass"></i></div>
+<h4>A. Pilotage / organisation</h4>
+<p>Pilote direction + personnes ressources ; organisation de formation par publics.</p>
+</div>
+<div class="card" style="cursor:default;">
+<div class="card-icon"><i class="fa-solid fa-person-chalkboard"></i></div>
+<h4>B. Appropriation</h4>
+<p>Démonstration courte sur cas réel + Q/R ; accès autonome via portail.</p>
+</div>
+<div class="card" style="cursor:default;">
+<div class="card-icon"><i class="fa-solid fa-bullhorn"></i></div>
+<h4>C. Communication</h4>
+<p>Message unique personnels ; information parents claire et rassurante (cadre + bénéfices + contact).</p>
+</div>
+<div class="card" style="cursor:default;">
+<div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+<h4>D. Suivi (ancrage)</h4>
+<p>Portail = suivi global (sans nominatif) ; indicateurs simples + point court régulier.</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm); overflow-x:auto;">
+<h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">10) Indicateurs “ultra light” (pilotage sans surcharge)</h3>
+<table style="width:100%; border-collapse:collapse; min-width:720px;">
+<thead>
+<tr style="text-align:left; border-bottom:1px solid rgba(0,0,0,0.12);">
+<th style="padding:0.75rem;">Indicateur</th>
+<th style="padding:0.75rem;">Comment mesurer</th>
+<th style="padding:0.75rem;">Fréquence</th>
+<th style="padding:0.75rem;">Valeur (18/01/2026)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
+<td style="padding:0.75rem; font-weight:900;">Connexions</td>
+<td style="padding:0.75rem;">nb connectés / total</td>
+<td style="padding:0.75rem;">Mensuel</td>
+<td style="padding:0.75rem;"><b>3/50</b></td>
+</tr>
+<tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
+<td style="padding:0.75rem; font-weight:900;">Cas utiles</td>
+<td style="padding:0.75rem;">nb situations avec livret exploité</td>
+<td style="padding:0.75rem;">Mensuel</td>
+<td style="padding:0.75rem;"><b>0</b></td>
+</tr>
+<tr style="border-bottom:1px solid rgba(0,0,0,0.06);">
+<td style="padding:0.75rem; font-weight:900;">ESS préparée</td>
+<td style="padding:0.75rem;">oui/non (info prête avant ESS)</td>
+<td style="padding:0.75rem;">À chaque ESS + mensuel</td>
+<td style="padding:0.75rem;">—</td>
+</tr>
+<tr>
+<td style="padding:0.75rem; font-weight:900;">Blocages</td>
+<td style="padding:0.75rem;">nb + délai de résolution</td>
+<td style="padding:0.75rem;">Mensuel</td>
+<td style="padding:0.75rem;">—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="margin-top: 1.5rem; background:white; border:1px solid rgba(0,0,0,0.06); border-radius: var(--radius-lg); padding: 2rem; box-shadow: var(--shadow-sm);">
+<h3 style="font-size:1.35rem; font-weight:900; color: var(--marianne-blue); margin-bottom: 1rem;">Objectifs LPI (évaluation)</h3>
+<ul style="margin:0;">
+<li>Mise en place rapide et effective des aménagements/adaptations (banque d’aménagements mobilisable).</li>
+<li>Simplification des procédures : PPRE, PAP, GEVA-Sco (1re demande), mise en œuvre du PPS.</li>
+<li>Formalisation des plans/projets en association avec les familles.</li>
+<li>Circulation d’information école ↔ MDPH via interface dédiée.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- QUICK START -->
+<section id="tpl-quickstart">
+<div class="reveal">
+<h2>Démarrage Rapide</h2>
+<p class="section-desc">Maîtrisez l'essentiel du LPI en quelques minutes.</p>
+<div class="grid" style="margin-bottom: 3rem;">
+<div class="card">
+<div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">1</div>
+<h4>Connexion</h4>
+<p>Connectez-vous via le portail académique (Arena) ou directement sur EduConnect.</p>
+<a href="https://lpi.phm.education.gouv.fr/lpi/connexion" style="display:inline-block; margin-top:1rem; color:var(--marianne-blue); font-weight:700; text-decoration:none;" target="_blank">Accéder au portail <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+<div class="card">
+<div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">2</div>
+<h4>Recherche</h4>
+<p>Depuis le tableau de bord, recherchez l'élève par nom ou classe pour accéder à son dossier.</p>
+</div>
+<div class="card">
+<div style="background:var(--marianne-blue); color:white; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.2rem; margin-bottom:1rem;">3</div>
+<h4>Création</h4>
+<p>Sélectionnez "Nouveau Livret" et choisissez le dispositif adapté (PPRE, PAP, etc.).</p>
+<div onclick="switchSection('orientation')" style="margin-top:1rem; cursor:pointer; color:var(--marianne-blue); font-weight:700;">Besoin d'aide pour choisir ?</div>
+</div>
+</div>
+<div style="background: white; padding: 2rem; border-radius: var(--radius-lg); border-left: 6px solid var(--color-ppre); box-shadow: var(--shadow-sm);">
+<h3 style="font-size: 1.5rem; margin-bottom: 1rem;"><i class="fa-solid fa-video" style="margin-right:10px; color:var(--color-ppre);"></i>Tutoriel Vidéo</h3>
+<p style="margin-bottom: 1rem; opacity: 0.8;">Découvrez comment créer votre premier PPRE en moins de 3 minutes.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; background:#eee;">
+<div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#999; flex-direction:column;">
+<i class="fa-solid fa-play-circle" style="font-size:4rem; margin-bottom:1rem; opacity:0.5;"></i>
+<span>La vidéo de démonstration sera bientôt disponible.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BIENVENUE -->
+<section id="tpl-bienvenue">
+<div class="reveal">
+<h2>Livret de Parcours Inclusif <br/><span style="color:var(--marianne-blue)">Une école pour tous.</span></h2>
+<p class="section-desc">Le LPI est l'outil numérique national qui garantit la continuité des aménagements pédagogiques pour chaque élève à besoins éducatifs particuliers.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 2.5rem; border: 1px solid #DDD; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm);">
+<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/e59usyz_ZQg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+<a class="btn-lpi-go" href="https://lpi.phm.education.gouv.fr/lpi/connexion" style="display:inline-block; padding: 1rem 2rem;" target="_blank">ACCÉDER AU PORTAIL OFFICIEL</a>
+</div>
+</section>
+<!-- UTILITE -->
+<section id="tpl-utilite">
+<div class="reveal">
+<h2>À quoi ça sert ?</h2>
+<p class="section-desc">Le LPI simplifie le quotidien des enseignants, des élèves et des familles.</p>
+<div class="grid">
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+<h4>Enseignants</h4>
+<p>Accédez à une bibliothèque de 1000+ aménagements et suivez l'évolution de vos élèves sans ressaisie annuelle.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+<h4>Élèves</h4>
+<p>Bénéficiez d'un accompagnement personnalisé qui vous suit, même en changeant de classe ou d'établissement.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
+<h4>Familles</h4>
+<p>Suivez les décisions en temps réel et signez les documents officiels directement sur votre smartphone.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ORIENTATION (Aide au choix) -->
+<section id="tpl-orientation">
+<div class="reveal">
+<h2>Orientation</h2>
+<p class="section-desc">Tableau comparatif pour déterminer le plan adapté aux besoins de l'élève.</p>
+<div style="background:var(--bg-glass); border-radius:var(--radius-lg); padding:2rem; overflow-x:auto; border:1px solid rgba(0,0,0,0.05); box-shadow:var(--shadow-sm);">
+<table style="width:100%; border-collapse:collapse; min-width:600px;">
+<thead>
+<tr style="border-bottom:2px solid var(--text-light); text-align:left;">
+<th style="padding:1rem; color:var(--text-light);">Dispositif</th>
+<th style="padding:1rem; color:var(--text-light);">Cible</th>
+<th style="padding:1rem; color:var(--text-light);">Validateur</th>
+<th style="padding:1rem; color:var(--text-light);">Durée</th>
+</tr>
+</thead>
+<tbody>
+<!-- PPRE -->
+<tr style="border-bottom:1px solid rgba(0,0,0,0.05);">
+<td style="padding:1.2rem 1rem;">
+<div class="badge bg-ppre" style="margin:0;">PPRE</div>
+<div style="font-size:0.8rem; font-weight:700; margin-top:4px;">Prog. Personnalisé de Réussite Éducative</div>
+</td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;">Difficultés scolaires ponctuelles ou légères.</td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;"><strong>Directeur / Chef d'étab.</strong><br/><span style="opacity:0.6; font-size:0.85rem;">(Interne établissement)</span></td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;">Temporaire<br/><span style="opacity:0.6; font-size:0.85rem;">(Quelques semaines)</span></td>
+</tr>
+<!-- PAP -->
+<tr style="border-bottom:1px solid rgba(0,0,0,0.05);">
+<td style="padding:1.2rem 1rem;">
+<div class="badge bg-pap" style="margin:0;">PAP</div>
+<div style="font-size:0.8rem; font-weight:700; margin-top:4px;">Plan d'Accompagnement Personnalisé</div>
+</td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;">Troubles des apprentissages (Dys, TDAH) durables.</td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;"><strong>Médecin Scolaire</strong><br/><span style="opacity:0.6; font-size:0.85rem;">(Avis obligatoire)</span></td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;">Cycle / Scolarité<br/><span style="opacity:0.6; font-size:0.85rem;">(Révisable)</span></td>
+</tr>
+<!-- PAI -->
+<tr style="border-bottom:1px solid rgba(0,0,0,0.05);">
+<td style="padding:1.2rem 1rem;">
+<div class="badge bg-pai" style="margin:0;">PAI</div>
+<div style="font-size:0.8rem; font-weight:700; margin-top:4px;">Projet d'Accueil Individualisé</div>
+</td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;">Pathologies chroniques, allergies, intolérances.</td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;"><strong>Médecin Scolaire</strong><br/><span style="opacity:0.6; font-size:0.85rem;">(+ Famille &amp; Mairie)</span></td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;">Annuel<br/><span style="opacity:0.6; font-size:0.85rem;">(Reconductible)</span></td>
+</tr>
+<!-- PPS -->
+<tr>
+<td style="padding:1.2rem 1rem;">
+<div class="badge bg-pps" style="margin:0;">PPS</div>
+<div style="font-size:0.8rem; font-weight:700; margin-top:4px;">Projet Personnalisé de Scolarisation</div>
+</td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;">Situation de Handicap reconnue par la MDPH.</td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;"><strong>CDAPH (MDPH)</strong><br/><span style="opacity:0.6; font-size:0.85rem;">(Notification officielle)</span></td>
+<td style="padding:1.2rem 1rem; font-size:0.95rem;">Long terme<br/><span style="opacity:0.6; font-size:0.85rem;">(Selon notification)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="margin-top:2.5rem; display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
+<!-- Aide contextuelle 1 -->
+<div class="card" onclick="switchSection('contact')" style="cursor:pointer; border-left:4px solid var(--text-light);">
+<h4><i class="fa-solid fa-user-doctor" style="margin-right:10px;"></i>Besoin d'un avis ?</h4>
+<p>Pour le PAP et le PAI, l'avis du service médical est <strong>indispensable</strong>. Contactez l'infirmerie avant de créer le dossier.</p>
+</div>
+<!-- Aide contextuelle 2 -->
+<div class="card" onclick="switchSection('guides')" style="cursor:pointer; border-left:4px solid var(--marianne-blue);">
+<h4><i class="fa-solid fa-file-pdf" style="margin-right:10px;"></i>Les Fiches Techniques</h4>
+<p>Accédez aux guides PDF détaillés pour chacun de ces dispositifs dans la rubrique Ressources &gt; Guides.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- DISPOSITIFS -->
+<section id="tpl-dispositifs">
+<div class="reveal">
+<h2>Les Dispositifs</h2>
+<p class="section-desc">Identifier le cadre légal adapté à la situation de l'élève.</p>
+<div class="grid">
+<div class="card">
+<div class="badge bg-ppre">PPRE</div>
+<h4>Réussite Éducative</h4>
+<p>Pour les difficultés scolaires légères ou ponctuelles. Pas besoin de diagnostic médical.</p>
+</div>
+<div class="card">
+<div class="badge bg-pap">PAP</div>
+<h4>Accompagnement</h4>
+<p>Pour les élèves avec troubles des apprentissages (Dys, TDAH). Nécessite l'avis du médecin scolaire.</p>
+</div>
+<div class="card">
+<div class="badge bg-pps">PPS</div>
+<h4>Scolarisation</h4>
+<p>En cas de handicap reconnu par la MDPH. Permet l'accès à une AESH ou du matériel adapté.</p>
+</div>
+<div class="card">
+<div class="badge bg-pai">PAI</div>
+<h4>Accueil Individualisé</h4>
+<p>Pour les problèmes de santé, allergies ou pathologies chroniques.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- PARCOURS -->
+<section id="tpl-parcours">
+<div class="reveal">
+<h2>Parcours de l'Élève</h2>
+<p class="section-desc">Un parcours simplifié en 4 étapes clés.</p>
+<div class="cartoon-track">
+<div class="c-line"></div>
+<!-- STEP 1: DETECT -->
+<div class="cartoon-step step-1">
+<div class="c-bubble">HEIN ?</div>
+<div class="c-icon-box">
+<div class="c-icon-bg"></div>
+<svg class="c-icon-main" style="width:80px; height:80px; margin-top:5px;" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="#ffdfbf" r="45"></circle>
+<path d="M10,40 Q50,-10 90,40" fill="#4e342e"></path>
+<circle cx="35" cy="50" fill="#333" r="4"></circle>
+<circle cx="65" cy="50" fill="#333" r="4"></circle>
+<path d="M40,75 Q50,65 60,75" fill="none" stroke="#333" stroke-width="2"></path>
+<text fill="#d32f2f" font-family="Arial" font-size="35" font-weight="900" x="70" y="35">?</text>
+</svg>
+</div>
+<h4 style="font-size:1.3rem;">1. Détection</h4>
+<p style="font-size:0.95rem; margin-top:0.5rem;">L'enseignant repère les besoins (signaux faibles).</p>
+</div>
+<!-- STEP 2: WRITE -->
+<div class="cartoon-step step-2">
+<div class="c-bubble">CLIC CLIC</div>
+<div class="c-icon-box">
+<div class="c-icon-bg"></div>
+<svg class="c-icon-main" style="width:80px; height:80px; margin-top:5px;" viewbox="0 0 100 100">
+<!-- Hair Bun -->
+<circle cx="50" cy="15" fill="#5D4037" r="12"></circle>
+<!-- Face -->
+<circle cx="50" cy="50" fill="#ffdfbf" r="38"></circle>
+<!-- Hair Front -->
+<path d="M15,45 Q50,-5 85,45" fill="#5D4037"></path>
+<!-- Glasses -->
+<g fill="rgba(255,255,255,0.3)" stroke="#333" stroke-width="2">
+<circle cx="36" cy="50" r="11"></circle>
+<circle cx="64" cy="50" r="11"></circle>
+<line x1="47" x2="53" y1="50" y2="50"></line>
+</g>
+<!-- Eyes -->
+<circle cx="36" cy="50" fill="#333" r="3"></circle>
+<circle cx="64" cy="50" fill="#333" r="3"></circle>
+<!-- Laptop -->
+<path d="M10,80 L90,80 L85,95 L15,95 Z" fill="#90A4AE"></path>
+<rect fill="#CFD8DC" height="5" rx="2" width="60" x="20" y="85"></rect>
+</svg>
+</div>
+<h4 style="font-size:1.3rem;">2. Saisie</h4>
+<p style="font-size:0.95rem; margin-top:0.5rem;">L'enseignante saisit les aménagements.</p>
+</div>
+<!-- STEP 3: VALIDATE -->
+<div class="cartoon-step step-3">
+<div class="c-bubble">TEAM</div>
+<div class="c-icon-box">
+<div class="c-icon-bg"></div>
+<svg class="c-icon-main" style="width:80px; height:80px; margin-top:5px;" viewbox="0 0 100 100">
+<!-- Team members back -->
+<circle cx="25" cy="55" fill="#ffdfbf" r="18"></circle>
+<path d="M10,48 Q25,25 40,48" fill="#5D4037"></path>
+<circle cx="75" cy="55" fill="#E0C7A6" r="18"></circle>
+<path d="M60,48 Q75,25 90,48" fill="#3E2723"></path>
+<!-- Member Front -->
+<circle cx="50" cy="50" fill="#ffdfbf" r="22" stroke="#fff" stroke-width="2"></circle>
+<path d="M30,40 Q50,15 70,40" fill="#FFB74D"></path>
+<circle cx="43" cy="52" fill="#333" r="2.5"></circle>
+<circle cx="57" cy="52" fill="#333" r="2.5"></circle>
+<path d="M45,62 Q50,68 55,62" fill="none" stroke="#333" stroke-width="1.5"></path>
+<!-- Table/Paper -->
+<rect fill="white" height="20" rx="2" stroke="#333" stroke-width="1.5" width="50" x="25" y="75"></rect>
+<!-- Check -->
+<circle cx="70" cy="85" fill="#4CAF50" r="12" stroke="#fff" stroke-width="2"></circle>
+<path d="M65,85 L69,89 L76,80" fill="none" stroke="white" stroke-width="2.5"></path>
+</svg>
+</div>
+<h4 style="font-size:1.3rem;">3. Validation</h4>
+<p style="font-size:0.95rem; margin-top:0.5rem;">L'équipe et la direction valident le projet.</p>
+</div>
+<!-- STEP 4: SIGN -->
+<div class="cartoon-step step-4">
+<div class="c-bubble">SIGNÉ !</div>
+<div class="c-icon-box">
+<div class="c-icon-bg"></div>
+<svg class="c-icon-main" style="width:80px; height:80px; margin-top:5px;" viewbox="0 0 100 100">
+<!-- Dad (Left Back) -->
+<circle cx="25" cy="42" fill="#E0C7A6" r="14"></circle>
+<path d="M12,38 Q25,18 38,38" fill="#3E2723"></path>
+<!-- Mom (Right Back) -->
+<circle cx="75" cy="42" fill="#FFDFBF" r="14"></circle>
+<path d="M62,38 Q75,10 88,38 L88,52 Q75,48 62,52 Z" fill="#FBC02D"></path>
+<!-- Child (Front) -->
+<circle cx="50" cy="62" fill="#FFDFBF" r="17" stroke="#fff" stroke-width="2"></circle>
+<path d="M33,55 Q50,38 67,55" fill="#5D4037"></path>
+<circle cx="44" cy="60" fill="#333" r="2"></circle>
+<circle cx="56" cy="60" fill="#333" r="2"></circle>
+<path d="M47,68 Q50,72 53,68" fill="none" stroke="#333" stroke-width="1.5"></path>
+<!-- Signing Action -->
+<rect fill="#EEEEEE" height="18" rx="3" stroke="#333" stroke-width="1" width="50" x="25" y="78"></rect>
+<path d="M58,72 L68,85" stroke="#1976D2" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+<h4 style="font-size:1.3rem;">4. Accord</h4>
+<p style="font-size:0.95rem; margin-top:0.5rem;">La famille signe via ÉduConnect.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- DEMANDE DE DROITS & ACTEURS PEX -->
+<section id="tpl-demande-droits">
+<div class="reveal">
+<h2>Acteurs &amp; Périmètres (PEX)</h2>
+<p class="section-desc">Détail des rôles et des niveaux d'habilitation technique (Périmètre d'Exercice) au sein du portail LPI.</p>
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom:4rem;">
+<!-- DIRECTION -->
+<div class="card" style="border-left: 6px solid var(--marianne-blue);">
+<div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Administration</div>
+<h4 style="font-size:1.3rem;">Direction</h4>
+<ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Gestion des comptes &amp; droits</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Validation finale des livrets</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Pilotage des statistiques</li>
+</ul>
+</div>
+<!-- ENSEIGNANTS -->
+<div class="card" style="border-left: 6px solid var(--color-pap);">
+<div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Pédagogie</div>
+<h4 style="font-size:1.3rem;">Enseignants / PP</h4>
+<ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Rédaction des aménagements</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Suivi des élèves (classe)</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Invitation des familles</li>
+</ul>
+</div>
+<!-- MEDICAL -->
+<div class="card" style="border-left: 6px solid var(--color-pai);">
+<div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Santé</div>
+<h4 style="font-size:1.3rem;">Médecin / Infirmier</h4>
+<ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Validation PAI &amp; PAP</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Recommandations médicales</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-lock" style="color:var(--text-light); margin-right:8px;"></i>Données confidentielles</li>
+</ul>
+</div>
+<!-- HANDICAP -->
+<div class="card" style="border-left: 6px solid var(--color-pps);">
+<div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">MDPH / ERSEH</div>
+<h4 style="font-size:1.3rem;">Référent Handicap</h4>
+<ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Suivi des notifications PPS</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Lien avec la MDPH</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-check" style="color:var(--color-ppre); margin-right:8px;"></i>Coordination ESS</li>
+</ul>
+</div>
+<!-- FAMILLE -->
+<div class="card" style="border-left: 6px solid var(--marianne-red);">
+<div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Responsables</div>
+<h4 style="font-size:1.3rem;">Famille &amp; Élève</h4>
+<ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
+<li style="margin-bottom:8px;"><i class="fa-solid fa-eye" style="color:var(--marianne-blue); margin-right:8px;"></i>Consultation des livrets</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-pen-nib" style="color:var(--marianne-blue); margin-right:8px;"></i>Signature en ligne</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-comments" style="color:var(--marianne-blue); margin-right:8px;"></i>Demande d'informations</li>
+</ul>
+</div>
+<!-- AESH -->
+<div class="card" style="border-left: 6px solid var(--primary);">
+<div style="font-size:0.8rem; font-weight:800; opacity:0.6; text-transform:uppercase; margin-bottom:0.5rem;">Accompagnement</div>
+<h4 style="font-size:1.3rem;">AESH</h4>
+<ul style="list-style:none; margin-top:1rem; opacity:0.8; font-size:0.95rem;">
+<li style="margin-bottom:8px;"><i class="fa-solid fa-eye" style="color:var(--marianne-blue); margin-right:8px;"></i>Consultation des aménagements</li>
+<li style="margin-bottom:8px;"><i class="fa-solid fa-handshake-angle" style="color:var(--marianne-blue); margin-right:8px;"></i>Aide à la mise en œuvre</li>
+</ul>
+</div>
+</div>
+<hr style="border:0; border-top:1px solid rgba(0,0,0,0.1); margin: 3rem 0;"/>
+<h3>Demande d'extension de droits</h3>
+<p class="section-desc">Si vous n'avez pas accès aux modules nécessaires à votre mission (PEX manquant), utilisez ce formulaire.</p>
+<div class="card" style="padding:1.5rem; max-width:800px;">
+<div id="req-error" style="color:#E1000F; display:none; font-weight:700; margin-bottom:0.5rem;"></div>
+<label style="display:block; font-weight:700; margin-bottom:0.5rem;">Nom et Prénom</label>
+<label for="req-name">Champ de formulaire</label><input id="req-name" style="width:100%; padding:0.6rem; border-radius:8px; margin-bottom:0.75rem; border:1px solid rgba(0,0,0,0.06);">
+<label style="display:block; font-weight:700; margin-bottom:0.5rem;">Rôle actuel</label>
+<label for="req-role">Ex: Enseignant Maths / CPE</label><input id="req-role" placeholder="Ex: Enseignant Maths / CPE" style="width:100%; padding:0.6rem; border-radius:8px; margin-bottom:0.75rem; border:1px solid rgba(0,0,0,0.06);"/>
+<label style="display:block; font-weight:700; margin-bottom:0.5rem;">Motif de la demande</label>
+<label for="req-reason">Ex: Je suis PP de la 6e B et je ne vois pas l'onglet PPRE...</label><textarea id="req-reason" placeholder="Ex: Je suis PP de la 6e B et je ne vois pas l'onglet PPRE..." style="width:100%; padding:0.6rem; border-radius:8px; margin-bottom:0.75rem; border:1px solid rgba(0,0,0,0.06);"></textarea>
+<div style="display:flex; gap:1rem; margin-top:1rem;">
+<a aria-label="Ouvrir mon client de messagerie pour demander des droits" class="btn-lpi-go" href="#" id="mailto-request">Envoyer la demande (Mail)</a>
+<button class="btn-lpi-go" onclick="(function(){document.getElementById('req-name').value='';document.getElementById('req-role').value='';document.getElementById('req-reason').value='';})();" style="background:var(--accent-soft); color:var(--marianne-blue); border:none; cursor:pointer;">Effacer</button>
+</div>
+</input></div>
+</div>
+</section>
+<!-- ET TOUTE LA SUITE DES SECTIONS... -->
+<section id="tpl-famille">
+<div class="reveal">
+<h2>Espace Famille</h2>
+<div class="grid">
+<div class="card" style="border-top: 8px solid var(--marianne-red)">
+<h4>Accès ÉduConnect</h4>
+<p>Consultez et signez les projets de votre enfant en toute sécurité.</p>
+<a href="https://moncompte.educonnect.education.gouv.fr/" style="display:block; margin-top:1.5rem; background:var(--marianne-red); color:white; padding:12px; border-radius:10px; text-align:center; text-decoration:none; font-weight:800;" target="_blank">SE CONNECTER</a>
+</div>
+<div class="card"><h4>Dialogue Parents-École</h4><p>Contactez le professeur principal pour discuter des aménagements mis en place.</p></div>
+</div>
+</div>
+</section>
+<section id="tpl-rgpd">
+<div class="reveal">
+<h2>RGPD &amp; Données</h2>
+<div class="card" style="border-left: 8px solid var(--marianne-blue)">
+<h4>Hébergement Ministériel</h4>
+<p>Vos données sont protégées sur les serveurs de l'Éducation Nationale. Seuls les délégués à la protection des données (DPD) académiques supervisent cet outil.</p>
+</div>
+</div>
+</section>
+<section id="tpl-faq">
+<div class="reveal">
+<h2>Foire Aux Questions</h2>
+<p class="section-desc">Les réponses aux interrogations les plus fréquentes sur le LPI.</p>
+<!-- Q1 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>1. Qui a accès au Livret de Parcours Inclusif ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>L'accès est réservé aux enseignants, directeurs/chefs d'établissement, médecins de l'Éducation nationale et psychologues scolaires. Les familles ont un accès en consultation et signature via ÉduConnect.</p></div>
+</div>
+<!-- Q2 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>2. Comment me connecter au LPI ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>Pour les professionnels : via votre portail académique (Arena) rubrique "Scolarité". Pour les familles : via le portail "Scolarité Services" avec vos identifiants ÉduConnect.</p></div>
+</div>
+<!-- Q3 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>3. Je ne vois pas tous mes élèves, pourquoi ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>La synchronisation dépend des bases élèves (ONDE/SIECLE). Vérifiez que vous êtes bien affecté à la classe ou au groupe dans l'emploi du temps officiel. Si le problème persiste, le chef d'établissement doit vérifier les délégations.</p></div>
+</div>
+<!-- Q4 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>4. Quelle différence entre PPRE, PAP, PPS et PAI ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body">
+<ul style="padding-left:1.5rem; margin-top:0.5rem;">
+<li><strong>PPRE :</strong> Difficultés scolaires ponctuelles (équipe péda).</li>
+<li><strong>PAP :</strong> Troubles des apprentissages durables (médecin scolaire).</li>
+<li><strong>PPS :</strong> Handicap reconnu (MDPH).</li>
+<li><strong>PAI :</strong> Problème de santé (médecin scolaire).</li>
+</ul>
+</div>
+</div>
+<!-- Q5 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>5. Qui valide le PAP (Plan d'Accompagnement Personnalisé) ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>Le PAP est élaboré par l'équipe pédagogique mais **doit obligatoirement être validé par le médecin de l'Éducation nationale** pour être actif.</p></div>
+</div>
+<!-- Q6 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>6. Les aménagements sont-ils conservés l'année suivante ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>Oui, le LPI assure la portabilité des données. Lors du passage en classe supérieure ou du changement d'établissement (école -&gt; collège), le dossier suit l'élève automatiquement.</p></div>
+</div>
+<!-- Q7 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>7. La famille peut-elle modifier le livret ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>Non, la famille a un accès en **lecture seule**. Elle peut consulter les aménagements et viser/signer le document final, mais ne peut pas modifier le contenu technique.</p></div>
+</div>
+<!-- Q8 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>8. Est-ce que le LPI remplace le dossier MDPH ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>Le LPI facilite la transmission des informations (GEVA-Sco) vers la MDPH, mais ne remplace pas l'instruction du dossier administratif par la MDPH elle-même.</p></div>
+</div>
+<!-- Q9 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>9. Comment imprimer le projet pour la signature papier ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>Un bouton "Éditer le PDF" est disponible à chaque étape de validation. Toutefois, la signature numérique via ÉduConnect est à privilégier pour simplifier le circuit.</p></div>
+</div>
+<!-- Q10 -->
+<div class="faq-v3" onclick="this.classList.toggle('open')">
+<div class="faq-v3-header"><span>10. Qui contacter en cas de blocage technique ?</span><i class="fa-solid fa-chevron-down"></i></div>
+<div class="faq-v3-body"><p>En premier niveau : le référent numérique de votre établissement ou le directeur/chef d'établissement. En second niveau : via la plateforme d'assistance académique.</p></div>
+</div>
+</div>
+</section>
+<section id="tpl-glossaire">
+<div class="reveal">
+<h2>Glossaire</h2>
+<p class="section-desc">Définitions clés inspirées du Guide Chef d'Établissement et des référentiels Eduscol.</p>
+<div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap:2rem;">
+<!-- PEX : Concept central du Guide Direction -->
+<div class="card" style="border-top: 4px solid var(--marianne-blue);">
+<h4 style="color:var(--marianne-blue); margin-bottom:0.5rem;">PEX (Périmètre d'Exercice)</h4>
+<p style="font-size:0.95rem; opacity:0.8;">Action d'administration permettant au Chef d'Établissement ou Directeur de déléguer des droits d'accès sélectifs (classe, groupe, établissement) à des membres du personnel non-enseignant ou partenaires.</p>
+</div>
+<div class="card">
+<h4 style="margin-bottom:0.5rem;">GEVA-Sco</h4>
+<p style="font-size:0.95rem; opacity:0.8;"><strong>Guide d'Évaluation Scolaire.</strong> Document officiel normalisé permettant à l'équipe éducative de transmettre à la MDPH une évaluation des besoins de l'élève en situation scolaire.</p>
+</div>
+<div class="card">
+<h4 style="margin-bottom:0.5rem;">ERSEH</h4>
+<p style="font-size:0.95rem; opacity:0.8;"><strong>Enseignant Référent de Scolarisation.</strong> Interlocuteur pivot qui assure le lien entre l'école, la famille et la MDPH. Il organise et anime les réunions de l'Équipe de Suivi (ESS).</p>
+</div>
+<div class="card">
+<h4 style="margin-bottom:0.5rem;">CDAPH</h4>
+<p style="font-size:0.95rem; opacity:0.8;"><strong>Commission des Droits et de l'Autonomie.</strong> Instance décisionnaire de la MDPH qui valide les demandes (ex: attribution d'une AESH, orientation ULIS, PPS).</p>
+</div>
+<div class="card">
+<h4 style="margin-bottom:0.5rem;">ÉduConnect</h4>
+<p style="font-size:0.95rem; opacity:0.8;">Portail d'authentification national sécurisé. C'est le <strong>seul point d'entrée pour les familles</strong> leur permettant de consulter le LPI et de signer numériquement les documents.</p>
+</div>
+<div class="card">
+<h4 style="margin-bottom:0.5rem;">SIECLE / ONDE</h4>
+<p style="font-size:0.95rem; opacity:0.8;">Bases de données nationales (2nd degré / 1er degré) qui alimentent le LPI quotidiennement. <br/><em>Note : Le LPI ne permet pas de modifier l'état civil d'un élève, la modification doit se faire dans ces bases.</em></p>
+</div>
+<div class="card">
+<h4 style="margin-bottom:0.5rem;">ESS</h4>
+<p style="font-size:0.95rem; opacity:0.8;"><strong>Équipe de Suivi de Scolarisation.</strong> Groupe de travail réuni au moins une fois par an pour le PPS, comprenant les parents, l'ERSEH, les enseignants et les partenaires de soin.</p>
+</div>
+<div class="card">
+<h4 style="margin-bottom:0.5rem;">AESH</h4>
+<p style="font-size:0.95rem; opacity:0.8;"><strong>Accompagnant d'Élève en Situation de Handicap.</strong> Personnel notifié par la CDAPH pour apporter une aide humaine (individuelle, mutualisée) dans les activités scolaires.</p>
+</div>
+<div class="card">
+<h4 style="margin-bottom:0.5rem;">ARENA</h4>
+<p style="font-size:0.95rem; opacity:0.8;">Portail intranet académique par lequel les personnels de l'Éducation nationale accèdent au téléservice LPI (rubrique Scolarité ou Enquêtes et Pilotage).</p>
+</div>
+</div>
+<div style="margin-top:2rem; text-align:center;">
+<a href="https://eduscol.education.fr/document/11900/download" style="color:var(--text-light); text-decoration:underline; font-size:0.9rem;" target="_blank">Consulter le Guide Complet Chef d'Établissement (PDF)</a>
+</div>
+</div>
+</section>
+<section id="tpl-contact">
+<div class="reveal">
+<h2>Assistance</h2>
+<div class="grid">
+<div class="card"><h4>Secrétariat</h4><p>ce.000000x@ac-acad.fr</p></div>
+<div class="card"><h4>Professeur Référent</h4><p>m.leroy@education.gouv.fr</p></div>
+</div>
+</div>
+</section>
+<!-- GUIDES PRATIQUES -->
+<section id="tpl-guides">
+<div class="reveal">
+<h2>Guides Pratiques</h2>
+<p class="section-desc">Accédez à toute la documentation officielle pour maîtriser le LPI selon votre rôle ou votre besoin.</p>
+<h3 style="margin-bottom:1.5rem; font-size:1.8rem;">Guides par Profil</h3>
+<div class="grid" style="margin-bottom:4rem;">
+<!-- Enseignant -->
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+<h4>Enseignants</h4>
+<p>Guide complet pour saisir les aménagements et suivre vos élèves.</p>
+<a class="btn-lpi-go" href="https://eduscol.education.fr/document/11903/download" style="display:inline-block; margin-top:1rem; width:100%;" target="_blank">TÉLÉCHARGER</a>
+</div>
+<!-- Direction -->
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-school-flag"></i></div>
+<h4>Direction</h4>
+<p>Pour les Directeurs d'école et Chefs d'établissement.</p>
+<div style="display:flex; gap:0.5rem; margin-top:1rem;">
+<a class="btn-lpi-go" href="https://eduscol.education.fr/document/11897/download" style="flex:1; font-size:0.75rem;" target="_blank">DIR. ÉCOLE</a>
+<a class="btn-lpi-go" href="https://eduscol.education.fr/document/11900/download" style="flex:1; font-size:0.75rem;" target="_blank">CHEF ÉTAB.</a>
+</div>
+</div>
+<!-- Famille -->
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-house-user"></i></div>
+<h4>Familles</h4>
+<p>Guide de connexion et signature via ÉduConnect.</p>
+<a class="btn-lpi-go" href="https://eduscol.education.fr/document/52038/download" style="display:inline-block; margin-top:1rem; width:100%;" target="_blank">TÉLÉCHARGER</a>
+</div>
+<!-- Créer un livret -->
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-folder-plus"></i></div>
+<h4>Créer un livret</h4>
+<p>Fiche métier : Processus de création étape par étape.</p>
+<a class="btn-lpi-go" href="https://eduscol.education.fr/document/11957/download" style="display:inline-block; margin-top:1rem; width:100%;" target="_blank">TÉLÉCHARGER</a>
+</div>
+</div>
+<h3 style="margin-bottom:1.5rem; font-size:1.8rem;">Fiches Techniques par Dispositif</h3>
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+<a class="card" href="https://eduscol.education.fr/document/11954/download" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" target="_blank">
+<i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-ppre);"></i>
+<div><h4 style="margin-bottom:0; font-size:1.2rem;">Créer un PPRE</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
+</a>
+<a class="card" href="https://eduscol.education.fr/document/11951/download" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" target="_blank">
+<i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-pap);"></i>
+<div><h4 style="margin-bottom:0; font-size:1.2rem;">Créer un PAP</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
+</a>
+<a class="card" href="https://eduscol.education.fr/document/11945/download" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" target="_blank">
+<i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--color-pps);"></i>
+<div><h4 style="margin-bottom:0; font-size:1.2rem;">Mise en oeuvre PPS</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
+</a>
+<a class="card" href="https://eduscol.education.fr/document/11948/download" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" target="_blank">
+<i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--marianne-blue);"></i>
+<div><h4 style="margin-bottom:0; font-size:1.2rem;">GEVA-Sco 1ère</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
+</a>
+<a class="card" href="https://eduscol.education.fr/document/64946/download" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" target="_blank">
+<i class="fa-solid fa-file-pdf" style="font-size:2rem; color:var(--marianne-blue);"></i>
+<div><h4 style="margin-bottom:0; font-size:1.2rem;">GEVA-Sco Réexam</h4><span style="font-size:0.8rem; opacity:0.6;">Fiche Pratique</span></div>
+</a>
+<a class="card" href="https://eduscol.education.fr/document/11957/download" style="text-decoration:none; color:inherit; display:flex; flex-direction:row; align-items:center; gap:1rem; padding:1.5rem;" target="_blank">
+<i class="fa-solid fa-file-pdf" style="font-size:2rem; color:#333;"></i>
+<div><h4 style="margin-bottom:0; font-size:1.2rem;">Création Livret</h4><span style="font-size:0.8rem; opacity:0.6;">Guide Général</span></div>
+</a>
+</div>
+<div style="margin-top:3rem; text-align:center;">
+<a href="https://eduscol.education.fr/document/11969/download" style="color:var(--text-light); font-weight:700; text-decoration:underline;" target="_blank">Télécharger la Foire aux Questions (FAQ) officielle</a>
+</div>
+</div>
+</section>
+<!-- CALENDRIER -->
+<section id="tpl-calendrier">
+<div class="reveal">
+<h2>Calendrier Scolaire</h2>
+<p class="section-desc">Dates importantes pour les livrables LPI et les échéances réglementaires.</p>
+<div class="timeline-v3">
+<div class="tm-step"><div class="tm-dot">Sept</div><h4>Rentrée</h4><p>Mise à jour des livrets existants.</p></div>
+<div class="tm-step"><div class="tm-dot">Oct</div><h4>Évaluations</h4><p>Premiers bilans et ajustements.</p></div>
+<div class="tm-step"><div class="tm-dot">Déc</div><h4>Signatures</h4><p>Validation des projets pour le trimestre.</p></div>
+<div class="tm-step"><div class="tm-dot">Juin</div><h4>Fin d'année</h4><p>Archivage et préparation de la rentrée.</p></div>
+</div>
+</div>
+</section>
+<!-- SEGPA & ULYSS -->
+<section id="tpl-segpa-ulyss">
+<div class="reveal">
+<h2>SEGPA &amp; ULYSS</h2>
+<p class="section-desc">Dispositifs spécialisés : ressources et cas d'usage adaptés à vos structures.</p>
+<div class="grid" style="margin-bottom: 3rem;">
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+<h4>SEGPA</h4>
+<p>Section d'Enseignement Général et Professionnel Adapté : PPRE et PAP pour difficultés scolaires.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-wheelchair"></i></div>
+<h4>ULYSS</h4>
+<p>Unité Localisée pour l'Inclusion : PPS et coordination MDPH pour élèves en situation de handicap.</p>
+</div>
+</div>
+<!-- SEGPA CONTENT -->
+<h3 style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(0,0,0,0.1);">📚 SEGPA - Section d'Enseignement Adapté</h3>
+<div style="background: white; padding: 2rem; border-radius: 16px; margin: 2rem 0; border-left: 5px solid #FF6B35; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<h4>Contexte SEGPA et LPI</h4>
+<p>La SEGPA accueille des élèves en difficulté scolaire profonde. Le LPI intervient principalement via le <strong>PPRE</strong> (suivi des difficultés) et le <strong>PAP</strong> (aménagements formels).</p>
+</div>
+<div class="grid">
+<div class="card">
+<div class="badge bg-ppre">PPRE</div>
+<h4>Parcours PPRE en SEGPA</h4>
+<p><strong>Cas concret :</strong> Élève avec difficultés en calcul. Le PPRE formalise les objectifs trimestriels et les stratégies d'enseignement adaptées. Suivi tous les 4-6 semaines.</p>
+<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.9rem;">
+<strong>Points clés :</strong><br/>
+                        ✓ Objectifs mesurables (ex: lire 80% des énoncés)<br/>
+                        ✓ Stratégies pédagogiques spécifiques<br/>
                         ✓ Évaluation régulière des progrès
                     </div>
-                </div>
-                <div class="card">
-                    <div class="badge bg-pap">PAP</div>
-                    <h4>Parcours PAP en SEGPA</h4>
-                    <p><strong>Cas concret :</strong> Élève DYS en enseignement professionnel. Le PAP formalise les aménagements (outils, temps, supports) pour toute sa scolarité.</p>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.9rem;">
-                        <strong>Points clés :</strong><br>
-                        ✓ Diagnostic médical (médecin scolaire)<br>
-                        ✓ Aménagements sur mesure (logiciels, oraux, etc.)<br>
+</div>
+<div class="card">
+<div class="badge bg-pap">PAP</div>
+<h4>Parcours PAP en SEGPA</h4>
+<p><strong>Cas concret :</strong> Élève DYS en enseignement professionnel. Le PAP formalise les aménagements (outils, temps, supports) pour toute sa scolarité.</p>
+<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.9rem;">
+<strong>Points clés :</strong><br/>
+                        ✓ Diagnostic médical (médecin scolaire)<br/>
+                        ✓ Aménagements sur mesure (logiciels, oraux, etc.)<br/>
                         ✓ Suivi multidisciplinaire
                     </div>
-                </div>
-            </div>
-
-            <div style="background: rgba(255, 107, 53, 0.1); padding: 2rem; border-radius: 16px; border-left: 5px solid #FF6B35; margin: 2rem 0;">
-                <h4 style="color: #FF6B35; margin-top: 0;">🔗 Coordination SEGPA ↔ Classes Générales</h4>
-                <p><strong>Enjeu :</strong> Assurer la continuité des aménagements lors des transitions (notamment 3e SEGPA → Lycée pro).</p>
-                <ul style="padding-left: 1.5rem; line-height: 2;">
-                    <li><strong>Transition en cours d'année :</strong> PAP/PPRE partagés automatiquement au nouvel établissement</li>
-                    <li><strong>Suivi inter-établissements :</strong> LPI synchronisé avec lycée d'accueil</li>
-                    <li><strong>Communication parents :</strong> Documents finalisés et signés via LPI</li>
-                    <li><strong>Continuité pédagogique :</strong> Aménagements conservés, enrichis au lycée</li>
-                </ul>
-            </div>
-
-            <!-- ULYSS CONTENT -->
-            <h3 style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(0,0,0,0.1);">♿ ULYSS - Unité Localisée pour l'Inclusion</h3>
-            
-            <div style="background: white; padding: 2rem; border-radius: 16px; margin: 2rem 0; border-left: 5px solid #6E445A; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                <h4>Contexte ULYSS et LPI</h4>
-                <p>L'ULYSS accueille des élèves en situation de handicap reconnu par la MDPH. Le <strong>PPS</strong> (Projet Personnalisé de Scolarisation) est l'outil central, avec coordination MDPH, AESH, et enseignants.</p>
-            </div>
-
-            <div class="grid">
-                <div class="card">
-                    <div class="badge bg-pps">PPS</div>
-                    <h4>Parcours PPS en ULYSS</h4>
-                    <p><strong>Cas concret :</strong> Élève moteur en inclusion partielle. Le PPS coordonne les horaires, l'AESH, les aménagements, et les partenaires externes (kinésio, orthophonie).</p>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.9rem;">
-                        <strong>Points clés :</strong><br>
-                        ✓ Notification MDPH obligatoire<br>
-                        ✓ Dossier AESH centralisé<br>
+</div>
+</div>
+<div style="background: rgba(255, 107, 53, 0.1); padding: 2rem; border-radius: 16px; border-left: 5px solid #FF6B35; margin: 2rem 0;">
+<h4 style="color: #FF6B35; margin-top: 0;">🔗 Coordination SEGPA ↔ Classes Générales</h4>
+<p><strong>Enjeu :</strong> Assurer la continuité des aménagements lors des transitions (notamment 3e SEGPA → Lycée pro).</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li><strong>Transition en cours d'année :</strong> PAP/PPRE partagés automatiquement au nouvel établissement</li>
+<li><strong>Suivi inter-établissements :</strong> LPI synchronisé avec lycée d'accueil</li>
+<li><strong>Communication parents :</strong> Documents finalisés et signés via LPI</li>
+<li><strong>Continuité pédagogique :</strong> Aménagements conservés, enrichis au lycée</li>
+</ul>
+</div>
+<!-- ULYSS CONTENT -->
+<h3 style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(0,0,0,0.1);">♿ ULYSS - Unité Localisée pour l'Inclusion</h3>
+<div style="background: white; padding: 2rem; border-radius: 16px; margin: 2rem 0; border-left: 5px solid #6E445A; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<h4>Contexte ULYSS et LPI</h4>
+<p>L'ULYSS accueille des élèves en situation de handicap reconnu par la MDPH. Le <strong>PPS</strong> (Projet Personnalisé de Scolarisation) est l'outil central, avec coordination MDPH, AESH, et enseignants.</p>
+</div>
+<div class="grid">
+<div class="card">
+<div class="badge bg-pps">PPS</div>
+<h4>Parcours PPS en ULYSS</h4>
+<p><strong>Cas concret :</strong> Élève moteur en inclusion partielle. Le PPS coordonne les horaires, l'AESH, les aménagements, et les partenaires externes (kinésio, orthophonie).</p>
+<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.9rem;">
+<strong>Points clés :</strong><br/>
+                        ✓ Notification MDPH obligatoire<br/>
+                        ✓ Dossier AESH centralisé<br/>
                         ✓ Réunion annuelle ESS (équipe éducative spécialisée)
                     </div>
-                </div>
-                <div class="card">
-                    <div class="badge bg-pai">PAI</div>
-                    <h4>Parcours PAI en ULYSS</h4>
-                    <p><strong>Cas concret :</strong> Élève avec pathologie chronique + handicap. Le PAI gère les problèmes de santé (administrations de médicaments, surveillance médicale).</p>
-                    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.9rem;">
-                        <strong>Points clés :</strong><br>
-                        ✓ Coordonné avec médecin scolaire<br>
-                        ✓ Procédures d'urgence documentées<br>
+</div>
+<div class="card">
+<div class="badge bg-pai">PAI</div>
+<h4>Parcours PAI en ULYSS</h4>
+<p><strong>Cas concret :</strong> Élève avec pathologie chronique + handicap. Le PAI gère les problèmes de santé (administrations de médicaments, surveillance médicale).</p>
+<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(0,0,0,0.1); font-size: 0.9rem;">
+<strong>Points clés :</strong><br/>
+                        ✓ Coordonné avec médecin scolaire<br/>
+                        ✓ Procédures d'urgence documentées<br/>
                         ✓ Partage d'informations sécurisé (AESH, infirmerie)
                     </div>
-                </div>
-            </div>
-
-            <div style="background: rgba(110, 68, 90, 0.1); padding: 2rem; border-radius: 16px; border-left: 5px solid #6E445A; margin: 2rem 0;">
-                <h4 style="color: #6E445A; margin-top: 0;">🤝 Rôle de l'AESH dans le LPI</h4>
-                <p>L'Accompagnant d'Élèves en Situation de Handicap (AESH) est un élément clé du suivi LPI.</p>
-                <ul style="padding-left: 1.5rem; line-height: 2;">
-                    <li><strong>Observation :</strong> L'AESH documente les comportements et progression</li>
-                    <li><strong>Coordination :</strong> Lien entre enseignants, famille, partenaires médicaux</li>
-                    <li><strong>Mise en œuvre :</strong> Applique les aménagements du PPS au quotidien</li>
-                    <li><strong>Feedback :</strong> Retours essentiels pour ajuster le projet</li>
-                </ul>
-            </div>
-
-            <div style="background: rgba(24, 117, 60, 0.1); padding: 2rem; border-radius: 16px; border-left: 5px solid #18753C; margin: 2rem 0;">
-                <h4 style="color: #18753C; margin-top: 0;">📋 Liaison MDPH ↔ LPI</h4>
-                <p>La MDPH (Maison Départementale des Personnes en situation de Handicap) délivre la notification officielle de handicap. Le LPI en formalise la mise en œuvre à l'école.</p>
-                <ul style="padding-left: 1.5rem; line-height: 2;">
-                    <li><strong>Notification MDPH :</strong> Valide l'accès au PPS + AESH + aménagements</li>
-                    <li><strong>PPS dans LPI :</strong> Décline la notification en actions concrètes</li>
-                    <li><strong>Suivi CDAPH :</strong> Réunion annuelle pour ajuster le projet</li>
-                    <li><strong>Transmission :</strong> LPI partagé avec MDPH pour dossier officiel</li>
-                </ul>
-            </div>
-
-            <div style="background: white; padding: 2rem; border-radius: 16px; margin: 2rem 0; border-left: 5px solid #0066FF; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                <h4 style="color: #0066FF; margin-top: 0;">🚀 Inclusion Progressive</h4>
-                <p><strong>Exemple :</strong> Élève ULYSS intégré en classe générale sur certains créneaux.</p>
-                <ul style="padding-left: 1.5rem; line-height: 2;">
-                    <li><strong>Mois 1-2 :</strong> Observation en classe avec AESH (1-2 heures)</li>
-                    <li><strong>Mois 3-4 :</strong> Participation active sur créneaux structurés (maths, français)</li>
-                    <li><strong>Mois 5+ :</strong> Intégration complète avec aménagements du PPS</li>
-                    <li><strong>Révision :</strong> ESS tous les 2-3 mois pour ajuster</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRIMAIRE & CONTINUITÉ -->
-    <section id="tpl-primaire">
-        <div class="reveal">
-            <h2>Primaire & Continuité Pédagogique</h2>
-            <p class="section-desc">Rôle décisif de l'école primaire dans le suivi de l'élève et la continuité vers le collège.</p>
-
-            <!-- CONTEXT -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 8px; margin-bottom: 2rem; color: white;">
-                <h3 style="color: white; margin-top: 0;">🎓 Pourquoi la Primaire est Cruciale</h3>
-                <p><strong>Vous êtes les premiers détecteurs.</strong> Les observations en primaire (cycle 2-3) définissent le parcours collège. LPI centralise cette détection pour continuité fluide.</p>
-                <ul style="columns: 2; gap: 2rem;">
-                    <li><strong>Détection précoce :</strong> Trouble apprentissage → intervention rapide</li>
-                    <li><strong>Documentation :</strong> PPRE primaire → suivis collège connus</li>
-                    <li><strong>Liaison :</strong> Dossier transmission → collège anticipé</li>
-                    <li><strong>Implication RASED :</strong> Bilans centralisés → coordonne suite</li>
-                </ul>
-            </div>
-
-            <!-- DÉTECTION PPRE PRIMAIRE -->
-            <h3>📋 Détection & Documentation PPRE en Primaire</h3>
-            <p>PPRE = outil clé pour élèves en difficulté temporaire (pas trouble structurel).</p>
-
-            <div class="grid" style="grid-template-columns: 1fr 1fr;">
-                <div class="card" style="border-left: 4px solid #008941;">
-                    <h4>Cas 1 : Élève Dyscalculie Suspectée (Cycle 3)</h4>
-                    <div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
-                        <p><strong>Observation :</strong> Reversals chiffres, confusion quantités, calcul lent persistant.</p>
-                        <p><strong>Action :</strong> Proposer PPRE classe (pas médical d'abord).</p>
-                        <p><strong>Documentation :</strong> Constats objectifs en classe (exemples travaux).</p>
-                        <p><strong>Suivi :</strong> Renforcement calcul 3-4x/semaine, point mi-parcours.</p>
-                        <p><strong>Transmission collège :</strong> Dossier → "Attention : surveillance calcul en 6e"</p>
-                    </div>
-                </div>
-
-                <div class="card" style="border-left: 4px solid #008941;">
-                    <h4>Cas 2 : Élève Trouble Apprentissage (Dyslexie Suspecte)</h4>
-                    <div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
-                        <p><strong>Observation :</strong> Lecture lente, inversion lettres, compréhension faible lecture.</p>
-                        <p><strong>Action :</strong> Demander bilans RASED (ortho, psychologue scolaire).</p>
-                        <p><strong>Documentation :</strong> Résultats tests + observations classe.</p>
-                        <p><strong>Décision :</strong> Si trouble confirmé → PAP primaire commencé.</p>
-                        <p><strong>Transmission collège :</strong> Diagnostic + aménagements en place.</p>
-                    </div>
-                </div>
-
-                <div class="card" style="border-left: 4px solid #008941;">
-                    <h4>Cas 3 : Élève Suivi RASED Actif</h4>
-                    <div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
-                        <p><strong>Situation :</strong> Élève en projet RASED (renforcement, rééducation).</p>
-                        <p><strong>Coordination :</strong> Réunions régulières direction + RASED + enseignant.</p>
-                        <p><strong>Documentation :</strong> Bilans RASED intégrés au dossier élève.</p>
-                        <p><strong>Continuité :</strong> Collège reprend suivi (parfois même professionnel RASED).</p>
-                        <p><strong>Impact :</strong> Pas "perte info" en transition 6e.</p>
-                    </div>
-                </div>
-
-                <div class="card" style="border-left: 4px solid #008941;">
-                    <h4>Cas 4 : Élève "Surveillance" (Pas Problème Immédiat)</h4>
-                    <div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
-                        <p><strong>Observation :</strong> Performance normale MAIS effort visible, fatigabilité, anxiété.</p>
-                        <p><strong>Action :</strong> Documenter observations, discuter avec parents.</p>
-                        <p><strong>Notation :</strong> "À surveiller" dans dossier → vigilance collège.</p>
-                        <p><strong>Bénéfice :</strong> Détection précoce trouble si s'aggrave + moindre stress.</p>
-                        <p><strong>Transmission :</strong> Alerte douce au collège (prudence constructive).</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- RÔLE DIRECTEUR PRIMAIRE -->
-            <h3>👨‍💼 Rôle du Directeur Primaire dans LPI</h3>
-            <div style="background: #f0f7ff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
-                <ul>
-                    <li><strong>Signature PPRE :</strong> Officialise engagement école</li>
-                    <li><strong>Communication RASED :</strong> Coordonne bilans complexes</li>
-                    <li><strong>MDPH :</strong> Signalement handicap si nécessaire</li>
-                    <li><strong>Liaison collège :</strong> Participe réunion transition 6e</li>
-                    <li><strong>Sensibilisation équipe :</strong> Rappelle importance documentation LPI</li>
-                </ul>
-            </div>
-
-            <!-- LIAISON RASED/MDPH -->
-            <h3>🔗 Communication RASED & MDPH</h3>
-
-            <div class="grid" style="grid-template-columns: 1fr 1fr;">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-stethoscope" style="color: #0066FF;"></i></div>
-                    <h4>Demande RASED</h4>
-                    <p><strong>Quand :</strong> Soupçon trouble apprentissage (dyslexie, TDAH, etc).</p>
-                    <p><strong>Qui :</strong> Directeur + enseignant.</p>
-                    <p><strong>Délai :</strong> Trier avant décembre (bilan M1).</p>
-                    <p><strong>Résultat :</strong> Bilan ordo/psycho → base PAP possible.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-handshake" style="color: #D93500;"></i></div>
-                    <h4>Signalement MDPH</h4>
-                    <p><strong>Quand :</strong> Suspicion handicap (autisme, déficience, troubles sévères).</p>
-                    <p><strong>Qui :</strong> Parents + direction (accord parents crucial).</p>
-                    <p><strong>Délai :</strong> Trier tôt (MDPH = 3-4 mois traitement).</p>
-                    <p><strong>Résultat :</strong> Reconnaissance handicap → PPS possible (AESH, classes spécialisées).</p>
-                </div>
-            </div>
-
-            <!-- LIAISON PRIMAIRE COLLÈGE -->
-            <h3>📬 Transmission Dossier Primaire → Collège</h3>
-
-            <div style="background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%); padding: 2rem; border-radius: 8px; color: white; margin-bottom: 2rem;">
-                <h4 style="color: white; margin-top: 0;">Checklist Transmission</h4>
-                <div style="columns: 2; gap: 2rem;">
-                    <div>
-                        <p><input type="checkbox"> Livret scolaire complet (copies notes)</p>
-                        <p><input type="checkbox"> PPRE (si actif) copie signée</p>
-                        <p><input type="checkbox"> Bilans RASED (ortho, psycho si pertinent)</p>
-                    </div>
-                    <div>
-                        <p><input type="checkbox"> Communication MDPH (si en cours)</p>
-                        <p><input type="checkbox"> Observations "attention" (surveillance recommandée)</p>
-                        <p><input type="checkbox"> Coordonnées parents (mise à jour)</p>
-                    </div>
-                </div>
-                <p><strong>⏰ Timeline :</strong> Constituer dossier juin primaire → transmettre collège avant juillet.</p>
-            </div>
-
-            <!-- FORMULAIRE LIAISON -->
-            <h3>📋 Formulaire Liaison Primaire-Collège</h3>
-            <p>Modèle simple (1 page) à remplir directeur primaire pour collège :</p>
-
-            <div style="background: white; border: 2px solid #e0e0e0; padding: 1.5rem; border-radius: 8px; margin: 1rem 0; font-family: monospace; font-size: 0.9rem;">
+</div>
+</div>
+<div style="background: rgba(110, 68, 90, 0.1); padding: 2rem; border-radius: 16px; border-left: 5px solid #6E445A; margin: 2rem 0;">
+<h4 style="color: #6E445A; margin-top: 0;">🤝 Rôle de l'AESH dans le LPI</h4>
+<p>L'Accompagnant d'Élèves en Situation de Handicap (AESH) est un élément clé du suivi LPI.</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li><strong>Observation :</strong> L'AESH documente les comportements et progression</li>
+<li><strong>Coordination :</strong> Lien entre enseignants, famille, partenaires médicaux</li>
+<li><strong>Mise en œuvre :</strong> Applique les aménagements du PPS au quotidien</li>
+<li><strong>Feedback :</strong> Retours essentiels pour ajuster le projet</li>
+</ul>
+</div>
+<div style="background: rgba(24, 117, 60, 0.1); padding: 2rem; border-radius: 16px; border-left: 5px solid #18753C; margin: 2rem 0;">
+<h4 style="color: #18753C; margin-top: 0;">📋 Liaison MDPH ↔ LPI</h4>
+<p>La MDPH (Maison Départementale des Personnes en situation de Handicap) délivre la notification officielle de handicap. Le LPI en formalise la mise en œuvre à l'école.</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li><strong>Notification MDPH :</strong> Valide l'accès au PPS + AESH + aménagements</li>
+<li><strong>PPS dans LPI :</strong> Décline la notification en actions concrètes</li>
+<li><strong>Suivi CDAPH :</strong> Réunion annuelle pour ajuster le projet</li>
+<li><strong>Transmission :</strong> LPI partagé avec MDPH pour dossier officiel</li>
+</ul>
+</div>
+<div style="background: white; padding: 2rem; border-radius: 16px; margin: 2rem 0; border-left: 5px solid #0066FF; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<h4 style="color: #0066FF; margin-top: 0;">🚀 Inclusion Progressive</h4>
+<p><strong>Exemple :</strong> Élève ULYSS intégré en classe générale sur certains créneaux.</p>
+<ul style="padding-left: 1.5rem; line-height: 2;">
+<li><strong>Mois 1-2 :</strong> Observation en classe avec AESH (1-2 heures)</li>
+<li><strong>Mois 3-4 :</strong> Participation active sur créneaux structurés (maths, français)</li>
+<li><strong>Mois 5+ :</strong> Intégration complète avec aménagements du PPS</li>
+<li><strong>Révision :</strong> ESS tous les 2-3 mois pour ajuster</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- PRIMAIRE & CONTINUITÉ -->
+<section id="tpl-primaire">
+<div class="reveal">
+<h2>Primaire &amp; Continuité Pédagogique</h2>
+<p class="section-desc">Rôle décisif de l'école primaire dans le suivi de l'élève et la continuité vers le collège.</p>
+<!-- CONTEXT -->
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 8px; margin-bottom: 2rem; color: white;">
+<h3 style="color: white; margin-top: 0;">🎓 Pourquoi la Primaire est Cruciale</h3>
+<p><strong>Vous êtes les premiers détecteurs.</strong> Les observations en primaire (cycle 2-3) définissent le parcours collège. LPI centralise cette détection pour continuité fluide.</p>
+<ul style="columns: 2; gap: 2rem;">
+<li><strong>Détection précoce :</strong> Trouble apprentissage → intervention rapide</li>
+<li><strong>Documentation :</strong> PPRE primaire → suivis collège connus</li>
+<li><strong>Liaison :</strong> Dossier transmission → collège anticipé</li>
+<li><strong>Implication RASED :</strong> Bilans centralisés → coordonne suite</li>
+</ul>
+</div>
+<!-- DÉTECTION PPRE PRIMAIRE -->
+<h3>📋 Détection &amp; Documentation PPRE en Primaire</h3>
+<p>PPRE = outil clé pour élèves en difficulté temporaire (pas trouble structurel).</p>
+<div class="grid" style="grid-template-columns: 1fr 1fr;">
+<div class="card" style="border-left: 4px solid #008941;">
+<h4>Cas 1 : Élève Dyscalculie Suspectée (Cycle 3)</h4>
+<div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
+<p><strong>Observation :</strong> Reversals chiffres, confusion quantités, calcul lent persistant.</p>
+<p><strong>Action :</strong> Proposer PPRE classe (pas médical d'abord).</p>
+<p><strong>Documentation :</strong> Constats objectifs en classe (exemples travaux).</p>
+<p><strong>Suivi :</strong> Renforcement calcul 3-4x/semaine, point mi-parcours.</p>
+<p><strong>Transmission collège :</strong> Dossier → "Attention : surveillance calcul en 6e"</p>
+</div>
+</div>
+<div class="card" style="border-left: 4px solid #008941;">
+<h4>Cas 2 : Élève Trouble Apprentissage (Dyslexie Suspecte)</h4>
+<div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
+<p><strong>Observation :</strong> Lecture lente, inversion lettres, compréhension faible lecture.</p>
+<p><strong>Action :</strong> Demander bilans RASED (ortho, psychologue scolaire).</p>
+<p><strong>Documentation :</strong> Résultats tests + observations classe.</p>
+<p><strong>Décision :</strong> Si trouble confirmé → PAP primaire commencé.</p>
+<p><strong>Transmission collège :</strong> Diagnostic + aménagements en place.</p>
+</div>
+</div>
+<div class="card" style="border-left: 4px solid #008941;">
+<h4>Cas 3 : Élève Suivi RASED Actif</h4>
+<div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
+<p><strong>Situation :</strong> Élève en projet RASED (renforcement, rééducation).</p>
+<p><strong>Coordination :</strong> Réunions régulières direction + RASED + enseignant.</p>
+<p><strong>Documentation :</strong> Bilans RASED intégrés au dossier élève.</p>
+<p><strong>Continuité :</strong> Collège reprend suivi (parfois même professionnel RASED).</p>
+<p><strong>Impact :</strong> Pas "perte info" en transition 6e.</p>
+</div>
+</div>
+<div class="card" style="border-left: 4px solid #008941;">
+<h4>Cas 4 : Élève "Surveillance" (Pas Problème Immédiat)</h4>
+<div style="background: #f5f5f5; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
+<p><strong>Observation :</strong> Performance normale MAIS effort visible, fatigabilité, anxiété.</p>
+<p><strong>Action :</strong> Documenter observations, discuter avec parents.</p>
+<p><strong>Notation :</strong> "À surveiller" dans dossier → vigilance collège.</p>
+<p><strong>Bénéfice :</strong> Détection précoce trouble si s'aggrave + moindre stress.</p>
+<p><strong>Transmission :</strong> Alerte douce au collège (prudence constructive).</p>
+</div>
+</div>
+</div>
+<!-- RÔLE DIRECTEUR PRIMAIRE -->
+<h3>👨‍💼 Rôle du Directeur Primaire dans LPI</h3>
+<div style="background: #f0f7ff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem;">
+<ul>
+<li><strong>Signature PPRE :</strong> Officialise engagement école</li>
+<li><strong>Communication RASED :</strong> Coordonne bilans complexes</li>
+<li><strong>MDPH :</strong> Signalement handicap si nécessaire</li>
+<li><strong>Liaison collège :</strong> Participe réunion transition 6e</li>
+<li><strong>Sensibilisation équipe :</strong> Rappelle importance documentation LPI</li>
+</ul>
+</div>
+<!-- LIAISON RASED/MDPH -->
+<h3>🔗 Communication RASED &amp; MDPH</h3>
+<div class="grid" style="grid-template-columns: 1fr 1fr;">
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-stethoscope" style="color: #0066FF;"></i></div>
+<h4>Demande RASED</h4>
+<p><strong>Quand :</strong> Soupçon trouble apprentissage (dyslexie, TDAH, etc).</p>
+<p><strong>Qui :</strong> Directeur + enseignant.</p>
+<p><strong>Délai :</strong> Trier avant décembre (bilan M1).</p>
+<p><strong>Résultat :</strong> Bilan ordo/psycho → base PAP possible.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-handshake" style="color: #D93500;"></i></div>
+<h4>Signalement MDPH</h4>
+<p><strong>Quand :</strong> Suspicion handicap (autisme, déficience, troubles sévères).</p>
+<p><strong>Qui :</strong> Parents + direction (accord parents crucial).</p>
+<p><strong>Délai :</strong> Trier tôt (MDPH = 3-4 mois traitement).</p>
+<p><strong>Résultat :</strong> Reconnaissance handicap → PPS possible (AESH, classes spécialisées).</p>
+</div>
+</div>
+<!-- LIAISON PRIMAIRE COLLÈGE -->
+<h3>📬 Transmission Dossier Primaire → Collège</h3>
+<div style="background: linear-gradient(135deg, #F093FB 0%, #F5576C 100%); padding: 2rem; border-radius: 8px; color: white; margin-bottom: 2rem;">
+<h4 style="color: white; margin-top: 0;">Checklist Transmission</h4>
+<div style="columns: 2; gap: 2rem;">
+<div>
+<p><label for="auto-input-1"><input id="auto-input-1" type="checkbox"/> Livret scolaire complet (copies notes)</label> Livret scolaire complet (copies notes)</p>
+<p><label for="auto-input-2"><input id="auto-input-2" type="checkbox"/> PPRE (si actif) copie signée</label> PPRE (si actif) copie signée</p>
+<p><label for="auto-input-3"><input id="auto-input-3" type="checkbox"/> Bilans RASED (ortho, psycho si pertinent)</label> Bilans RASED (ortho, psycho si pertinent)</p>
+</div>
+<div>
+<p><label for="auto-input-4"><input id="auto-input-4" type="checkbox"/> Communication MDPH (si en cours)</label> Communication MDPH (si en cours)</p>
+<p><label for="auto-input-5"><input id="auto-input-5" type="checkbox"/> Observations "attention" (surveillance recommandée)</label> Observations "attention" (surveillance recommandée)</p>
+<p><label for="auto-input-6"><input id="auto-input-6" type="checkbox"/> Coordonnées parents (mise à jour)</label> Coordonnées parents (mise à jour)</p>
+</div>
+</div>
+<p><strong>⏰ Timeline :</strong> Constituer dossier juin primaire → transmettre collège avant juillet.</p>
+</div>
+<!-- FORMULAIRE LIAISON -->
+<h3>📋 Formulaire Liaison Primaire-Collège</h3>
+<p>Modèle simple (1 page) à remplir directeur primaire pour collège :</p>
+<div style="background: white; border: 2px solid #e0e0e0; padding: 1.5rem; border-radius: 8px; margin: 1rem 0; font-family: monospace; font-size: 0.9rem;">
 <pre>LIAISON PRIMAIRE-COLLÈGE : [Nom Élève]
 
 École primaire : ____________________  |  Classe 2024-25 : ____
@@ -1644,141 +1521,127 @@ COORDINATION RECOMMANDÉE :
 CONTACT DIRECTEUR PRIMAIRE : ___________________________________
 
 Date : __________  Signature : __________________________________</pre>
-            </div>
-
-            <!-- IMPLICATION PARENTS -->
-            <h3>👨‍👩‍👧 Implication Parents en Primaire</h3>
-            <div class="grid" style="grid-template-columns: 1fr 1fr;">
-                <div class="card">
-                    <h4>✓ À Faire</h4>
-                    <ul>
-                        <li>Signaler changement situation (déménagement, divorce)</li>
-                        <li>Participer réunion transition 6e</li>
-                        <li>Signer documents PPRE/PAP</li>
-                        <li>Partager infos médicales (allergies, traitement)</li>
-                        <li>Consulter livret régulièrement</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h4>✗ À Éviter</h4>
-                    <ul>
-                        <li>Délai signature (retarde processus)</li>
-                        <li>Absence réunion transition (rupture info)</li>
-                        <li>Cacher infos santé (risque élève)</li>
-                        <li>Attendre "trop tard" pour signaler difficulté</li>
-                        <li>Supposer collège sait déjà (redire!)</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- FAQ PRIMAIRE -->
-            <h3>❓ FAQ Primaire</h3>
-            <div style="background: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
-                <details style="margin-bottom: 1rem;">
-                    <summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : Si élève a eu PPRE primaire, automatique collège ?</summary>
-                    <div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
-                        <p><strong>Non.</strong> Collège réévalue situation S1 (peut continuer, arrêter ou PAP si nouveau diagnostic). PPRE primaire = point départ, pas automatisme.</p>
-                    </div>
-                </details>
-
-                <details style="margin-bottom: 1rem;">
-                    <summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : RASED obligation ou volontaire ?</summary>
-                    <div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
-                        <p><strong>Recommandé (pas obligation).</strong> Demande directeur si suspicion trouble. Parents peuvent refuser (rare). Permet diagnostic avant collège = meilleur suivi.</p>
-                    </div>
-                </details>
-
-                <details style="margin-bottom: 1rem;">
-                    <summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : Combien de temps avant transition infos arrivent collège ?</summary>
-                    <div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
-                        <p><strong>Idéalement juin-juillet.</strong> Permet collège préparer intégration été. Si retard, réunion ESS rapide (septembre possible).</p>
-                    </div>
-                </details>
-
-                <details style="margin-bottom: 1rem;">
-                    <summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : Et si élève "va bien" mais parents demandent PPRE préventivement ?</summary>
-                    <div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
-                        <p><strong>À évaluer.</strong> PPRE = outil pour élèves en difficulté réelle (pas prévention générale). Discuter avec parents : vigilance oui, PPRE peut-être excessive.</p>
-                    </div>
-                </details>
-
-                <details style="margin-bottom: 1rem;">
-                    <summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : Confidentiel dossier PPRE → collège ?</summary>
-                    <div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
-                        <p><strong>Non, transmission obligatoire.</strong> PPRE = document officiel enseignant-direction-parents. Collège = légalement informé pour continuité. RGPD = respecté (transfert éducatif).</p>
-                    </div>
-                </details>
-            </div>
-
-            <!-- RESSOURCES TÉLÉCHARGEABLES -->
-            <h3>📥 Ressources Téléchargeables</h3>
-            <div class="grid">
-                <div class="card" style="text-align: center;">
-                    <div class="card-icon"><i class="fa-solid fa-file-pdf" style="color: #D93500;"></i></div>
-                    <h4>Modèle PPRE Primaire</h4>
-                    <p>Template remplissable 1 page pour PPRE classe élémentaire.</p>
-                    <button style="background: #D93500; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Télécharger</button>
-                </div>
-
-                <div class="card" style="text-align: center;">
-                    <div class="card-icon"><i class="fa-solid fa-file-pdf" style="color: #0066FF;"></i></div>
-                    <h4>Guide Liaison Primaire-Collège</h4>
-                    <p>Checklist + formulaire transition 6e (complète doc ci-dessus).</p>
-                    <button style="background: #0066FF; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Télécharger</button>
-                </div>
-
-                <div class="card" style="text-align: center;">
-                    <div class="card-icon"><i class="fa-solid fa-file-pdf" style="color: #008941;"></i></div>
-                    <h4>Critères Détection RASED</h4>
-                    <p>Grille observation (quand demander bilan RASED).</p>
-                    <button style="background: #008941; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Télécharger</button>
-                </div>
-
-                <div class="card" style="text-align: center;">
-                    <div class="card-icon"><i class="fa-solid fa-file-pdf" style="color: #6E445A;"></i></div>
-                    <h4>Communication MDPH Pour Parents</h4>
-                    <p>Lettre template expliquant démarche MDPH aux familles.</p>
-                    <button style="background: #6E445A; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Télécharger</button>
-                </div>
-            </div>
-
-            <!-- CONTACT SUPPORT -->
-            <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 8px; color: white; margin-top: 2rem;">
-                <h3 style="color: white; margin-top: 0;">📞 Questions sur Continuité Primaire ?</h3>
-                <p>Vous êtes enseignant ou directeur primaire avec question sur LPI, liaison collège, ou cas particulier ?</p>
-                <p><strong>Contactez coordinateur collège :</strong> [EMAIL DIRECTION] ou appelez secrétariat.</p>
-                <p><strong>Formation disponible :</strong> Demandez participation formation "Primaire & Continuité" (M2-3).</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CAS SPÉCIFIQUES -->
-    <section id="tpl-situations">
-        <div class="reveal">
-            <h2>Cas Spécifiques</h2>
-            <p class="section-desc">Gestion des situations particulières (changement d'établissement, urgences, etc.).</p>
-            <div class="grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-exchange-alt"></i></div>
-                    <h4>Déménagement</h4>
-                    <p>Transfert automatique du livret vers le nouvel établissement.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-clock"></i></div>
-                    <h4>Urgences</h4>
-                    <p>Procédures accélérées pour les aménagements temporaires.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-users-cog"></i></div>
-                    <h4>Équipe pluridisciplinaire</h4>
-                    <p>Collaboration avec les professionnels de santé externes.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
 </div>
-
+<!-- IMPLICATION PARENTS -->
+<h3>👨‍👩‍👧 Implication Parents en Primaire</h3>
+<div class="grid" style="grid-template-columns: 1fr 1fr;">
+<div class="card">
+<h4>✓ À Faire</h4>
+<ul>
+<li>Signaler changement situation (déménagement, divorce)</li>
+<li>Participer réunion transition 6e</li>
+<li>Signer documents PPRE/PAP</li>
+<li>Partager infos médicales (allergies, traitement)</li>
+<li>Consulter livret régulièrement</li>
+</ul>
+</div>
+<div class="card">
+<h4>✗ À Éviter</h4>
+<ul>
+<li>Délai signature (retarde processus)</li>
+<li>Absence réunion transition (rupture info)</li>
+<li>Cacher infos santé (risque élève)</li>
+<li>Attendre "trop tard" pour signaler difficulté</li>
+<li>Supposer collège sait déjà (redire!)</li>
+</ul>
+</div>
+</div>
+<!-- FAQ PRIMAIRE -->
+<h3>❓ FAQ Primaire</h3>
+<div style="background: #f9f9f9; padding: 1.5rem; border-radius: 8px;">
+<details style="margin-bottom: 1rem;">
+<summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : Si élève a eu PPRE primaire, automatique collège ?</summary>
+<div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
+<p><strong>Non.</strong> Collège réévalue situation S1 (peut continuer, arrêter ou PAP si nouveau diagnostic). PPRE primaire = point départ, pas automatisme.</p>
+</div>
+</details>
+<details style="margin-bottom: 1rem;">
+<summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : RASED obligation ou volontaire ?</summary>
+<div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
+<p><strong>Recommandé (pas obligation).</strong> Demande directeur si suspicion trouble. Parents peuvent refuser (rare). Permet diagnostic avant collège = meilleur suivi.</p>
+</div>
+</details>
+<details style="margin-bottom: 1rem;">
+<summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : Combien de temps avant transition infos arrivent collège ?</summary>
+<div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
+<p><strong>Idéalement juin-juillet.</strong> Permet collège préparer intégration été. Si retard, réunion ESS rapide (septembre possible).</p>
+</div>
+</details>
+<details style="margin-bottom: 1rem;">
+<summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : Et si élève "va bien" mais parents demandent PPRE préventivement ?</summary>
+<div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
+<p><strong>À évaluer.</strong> PPRE = outil pour élèves en difficulté réelle (pas prévention générale). Discuter avec parents : vigilance oui, PPRE peut-être excessive.</p>
+</div>
+</details>
+<details style="margin-bottom: 1rem;">
+<summary style="cursor: pointer; font-weight: bold; color: #667eea;">Q : Confidentiel dossier PPRE → collège ?</summary>
+<div style="padding: 1rem; background: white; margin-top: 0.5rem; border-left: 3px solid #667eea;">
+<p><strong>Non, transmission obligatoire.</strong> PPRE = document officiel enseignant-direction-parents. Collège = légalement informé pour continuité. RGPD = respecté (transfert éducatif).</p>
+</div>
+</details>
+</div>
+<!-- RESSOURCES TÉLÉCHARGEABLES -->
+<h3>📥 Ressources Téléchargeables</h3>
+<div class="grid">
+<div class="card" style="text-align: center;">
+<div class="card-icon"><i class="fa-solid fa-file-pdf" style="color: #D93500;"></i></div>
+<h4>Modèle PPRE Primaire</h4>
+<p>Template remplissable 1 page pour PPRE classe élémentaire.</p>
+<button style="background: #D93500; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Télécharger</button>
+</div>
+<div class="card" style="text-align: center;">
+<div class="card-icon"><i class="fa-solid fa-file-pdf" style="color: #0066FF;"></i></div>
+<h4>Guide Liaison Primaire-Collège</h4>
+<p>Checklist + formulaire transition 6e (complète doc ci-dessus).</p>
+<button style="background: #0066FF; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Télécharger</button>
+</div>
+<div class="card" style="text-align: center;">
+<div class="card-icon"><i class="fa-solid fa-file-pdf" style="color: #008941;"></i></div>
+<h4>Critères Détection RASED</h4>
+<p>Grille observation (quand demander bilan RASED).</p>
+<button style="background: #008941; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Télécharger</button>
+</div>
+<div class="card" style="text-align: center;">
+<div class="card-icon"><i class="fa-solid fa-file-pdf" style="color: #6E445A;"></i></div>
+<h4>Communication MDPH Pour Parents</h4>
+<p>Lettre template expliquant démarche MDPH aux familles.</p>
+<button style="background: #6E445A; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Télécharger</button>
+</div>
+</div>
+<!-- CONTACT SUPPORT -->
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 8px; color: white; margin-top: 2rem;">
+<h3 style="color: white; margin-top: 0;">📞 Questions sur Continuité Primaire ?</h3>
+<p>Vous êtes enseignant ou directeur primaire avec question sur LPI, liaison collège, ou cas particulier ?</p>
+<p><strong>Contactez coordinateur collège :</strong> [EMAIL DIRECTION] ou appelez secrétariat.</p>
+<p><strong>Formation disponible :</strong> Demandez participation formation "Primaire &amp; Continuité" (M2-3).</p>
+</div>
+</div>
+</section>
+<!-- CAS SPÉCIFIQUES -->
+<section id="tpl-situations">
+<div class="reveal">
+<h2>Cas Spécifiques</h2>
+<p class="section-desc">Gestion des situations particulières (changement d'établissement, urgences, etc.).</p>
+<div class="grid">
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-exchange-alt"></i></div>
+<h4>Déménagement</h4>
+<p>Transfert automatique du livret vers le nouvel établissement.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-clock"></i></div>
+<h4>Urgences</h4>
+<p>Procédures accélérées pour les aménagements temporaires.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-users-cog"></i></div>
+<h4>Équipe pluridisciplinaire</h4>
+<p>Collaboration avec les professionnels de santé externes.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
 <script>
     const navItems = document.querySelectorAll('.nav-item');
     const viewport = document.getElementById('view-port');
@@ -2220,6 +2083,5 @@ Date : __________  Signature : __________________________________</pre>
     }
 
 </script>
-
 </body>
 </html>
